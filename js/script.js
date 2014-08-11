@@ -116,13 +116,6 @@ $(function() {
 		</div>');
 	}
 
-	/*$('#social').find('a').each(function() {
-		addCollapse('#socialPanels','panel-'+($(this).attr('id')),($(this).attr('href')));
-		$(this).attr('data-toggle','collapse');
-		$(this).attr('data-parent','#socialPanels');
-		$(this).attr('href','#panel-'+($(this).attr('id')));
-	});//*/
-
 	// Set up event for correctly entering the code
 	var msgText = "Oh aren't you a smart one, trying the Konami code? Well sorry but I'm too lazy to actually do something cool here.";
 	addCollapse('#mainContent','codePanel',msgText,true);
