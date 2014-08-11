@@ -117,7 +117,7 @@ $(function() {
 	}
 
 	// Set up event for correctly entering the code
-	var msgText = "Oh aren't you a smart one, trying the Konami code? Well sorry but I'm too lazy to actually do something cool here.";
+	var msgText = decode("Bu nera'g lbh n fzneg bar, gelvat gur Xbanzv pbqr? Jryy fbeel ohg V'z gbb ynml gb npghnyyl qb fbzrguvat pbby urer.");
 	addCollapse('#mainContent','codePanel',msgText,true);
 	var kn = new Konami(function() {
 		$('#codePanel').collapse('show');
