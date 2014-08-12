@@ -3,8 +3,8 @@
 *	Get out.
 *	You'll spoil the secret.
 */
-var Konami = function (callback) {
-	var konami = {
+var Code = function (callback) {
+	var code = {
 		addEvent: function (obj, type, fn, ref_obj) {
 			if (obj.addEventListener)
 				obj.addEventListener(type, fn, false);
@@ -21,13 +21,13 @@ var Konami = function (callback) {
 		pattern: "38384040373937396665",
 		load: function (link) {
 			this.addEvent(document, "keydown", function (e, ref_obj) {
-				if (ref_obj) konami = ref_obj; // IE
-				konami.input += e ? e.keyCode : event.keyCode;
-				if (konami.input.length > konami.pattern.length)
-					konami.input = konami.input.substr((konami.input.length - konami.pattern.length));
-				if (konami.input == konami.pattern) {
-					konami.code(link);
-					konami.input = "";
+				if (ref_obj) code = ref_obj; // IE
+				code.input += e ? e.keyCode : event.keyCode;
+				if (code.input.length > code.pattern.length)
+					code.input = code.input.substr((code.input.length - code.pattern.length));
+				if (code.input == code.pattern) {
+					code.code(link);
+					code.input = "";
 					e.preventDefault();
 					return false;
 				}
@@ -47,28 +47,28 @@ var Konami = function (callback) {
 			orig_keys: "",
 			keys: ["UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "TAP", "TAP"],
 			code: function (link) {
-				konami.code(link);
+				code.code(link);
 			},
 			load: function (link) {
 				this.orig_keys = this.keys;
-				konami.addEvent(document, "touchmove", function (e) {
-					if (e.touches.length == 1 && konami.iphone.capture == true) {
+				code.addEvent(document, "touchmove", function (e) {
+					if (e.touches.length == 1 && code.iphone.capture == true) {
 						var touch = e.touches[0];
-						konami.iphone.stop_x = touch.pageX;
-						konami.iphone.stop_y = touch.pageY;
-						konami.iphone.tap = false;
-						konami.iphone.capture = false;
-						konami.iphone.check_direction();
+						code.iphone.stop_x = touch.pageX;
+						code.iphone.stop_y = touch.pageY;
+						code.iphone.tap = false;
+						code.iphone.capture = false;
+						code.iphone.check_direction();
 					}
 				});
-				konami.addEvent(document, "touchend", function (evt) {
-					if (konami.iphone.tap == true) konami.iphone.check_direction(link);
+				code.addEvent(document, "touchend", function (evt) {
+					if (code.iphone.tap == true) code.iphone.check_direction(link);
 				}, false);
-				konami.addEvent(document, "touchstart", function (evt) {
-					konami.iphone.start_x = evt.changedTouches[0].pageX;
-					konami.iphone.start_y = evt.changedTouches[0].pageY;
-					konami.iphone.tap = true;
-					konami.iphone.capture = true;
+				code.addEvent(document, "touchstart", function (evt) {
+					code.iphone.start_x = evt.changedTouches[0].pageX;
+					code.iphone.start_y = evt.changedTouches[0].pageY;
+					code.iphone.tap = true;
+					code.iphone.capture = true;
 				});
 			},
 			check_direction: function (link) {
@@ -88,13 +88,13 @@ var Konami = function (callback) {
 		}
 	}
 
-	typeof callback === "string" && konami.load(callback);
+	typeof callback === "string" && code.load(callback);
 	if (typeof callback === "function") {
-		konami.code = callback;
-		konami.load();
+		code.code = callback;
+		code.load();
 	}
 
-	return konami;
+	return code;
 };
 
 function decode(str) {
@@ -119,11 +119,11 @@ $(function() {
 	// Set up event for correctly entering the code
 	var msgText = decode("Bu nera'g lbh n fzneg bar, gelvat gur Xbanzv pbqr? Jryy fbeel ohg V'z gbb ynml gb npghnyyl qb fbzrguvat pbby urer.");
 	addCollapse('#mainContent','codePanel',msgText,true);
-	var kn = new Konami(function() {
+	var kn = new Code(function() {
 		$('#codePanel').collapse('show');
 	});
 
-	// Add a link and panel for contact via email - restricted to Javascript for security purposes
+	// Add a link and panel for contact via email - encoded and restricted to Javascript for security purposes
 	$('#social').append('<span><a href="#panel-email-link" id="email-link" title="Email me" data-toggle="collapse" data-parent="#socialPanels"><img src="img/icon-email.png" alt="email" /></a></span>');
 	var email = decode('NZICu34e@tznvy.pbz')
 	addCollapse("#socialPanels",'panel-email-link','<a href="mailto:'+email+'" target="_blank">'+email+'</a>');
