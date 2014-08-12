@@ -105,7 +105,7 @@ function decode(str) {
 
 $(function() {
 	// Adds a collapsable panel to an existing element
-	function addCollapse(appendTo,id,content,hidden) {
+	function addCollapse(appendTo, id, content, hidden) {
 		hidden = typeof hidden !== 'undefined' ? hidden : false;
 		$(appendTo).append('<div class="panel panel-default'+(hidden == true ? ' nobg' : '')+'">\
 			<div id="'+(id)+'" class="panel-collapse collapse">\
