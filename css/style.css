@@ -73,7 +73,10 @@ body {background:url(../img/pattern.png) repeat center 0 #fff;}
 
 #social {padding-bottom:10px;}
 #social span + span {margin-left:4px;}
-#social a {display:inline-block;}
+#social a {
+	outline:0;
+	display:inline-block;
+}
 #social img {
 	width:45px;
 	cursor:pointer;
