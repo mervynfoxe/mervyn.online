@@ -106,7 +106,7 @@ body {
 	cursor: pointer;
 }
 
-#social img: hover {
+#social img:hover {
 	opacity: 0.75;
 	filter: Alpha(opacity=75);
 }
