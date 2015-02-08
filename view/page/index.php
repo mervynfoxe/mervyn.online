@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>AMV_Ph34r</title>
-		<link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="img/favicon.ico">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-		<!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/style.min.css" />
-	</head>
-<body>
+<?php Template::includeTemplate('html_header.php'); ?>
 <div class="background"></div>
 <div class="row-fluid">
 	<div class="hidden-xs logo"></div>
@@ -26,15 +13,12 @@
 				<span><a href="https://steamcommunity.com/id/AMV-Ph34r/" id="steam-link" title="AMV_Ph34r on Steam" target="_blank"><img src="img/icon-steam.png" alt="steam" /></a></span>
 				<span><a href="https://twitter.com/AMV_Ph34r" id="twitter-link" title="@AMV_Ph34r on Twitter" target="_blank"><img src="img/icon-twitter.png" alt="twitter" /></a></span>
 				<span><a href="https://www.youtube.com/user/AMVPh34r" id="youtube-link" title="AMVPh34r on YouTube" target="_blank"><img src="img/icon-youtube.png" alt="youtube" /></a></span>
+				<span><a href="https://www.linkedin.com/in/arschaeffer" id="linkedin-link" title="Alex Schaeffer on LinkedIn" target="_blank"><img src="img/icon-linkedin.png" alt="linkedin" /></a></span>
 			</div>
 			<div class="panel-group" id="socialPanels"></div>
 		</div>
-		<div class="copyright col-lg-12 text-center">&copy;2014 Alex Schaeffer</div>
+		<div class="copyright col-lg-12 text-center">&copy;2014-2015 Alex Schaeffer</div>
 	</div>
 </div>
 
-<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/script.min.js"></script>
-</body>
-</html>
+<?php Template::includeTemplate('html_footer.php'); ?>
