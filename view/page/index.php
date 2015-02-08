@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>AMV_Ph34r</title>
-		<link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="img/favicon.ico">
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-		<!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/style.min.css" />
-	</head>
-<body>
+<?php Template::includeTemplate('html_header.php'); ?>
 <div class="background"></div>
 <div class="row-fluid">
 	<div class="hidden-xs logo"></div>
@@ -33,8 +20,4 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/script.min.js"></script>
-</body>
-</html>
+<?php Template::includeTemplate('html_footer.php'); ?>

@@ -97,8 +97,12 @@ body {
 }
 
 #social a {
-	outline: 0;
 	display: inline-block;
+}
+
+#social a:link,
+#social a:active {
+	outline:none;
 }
 
 #social img {
@@ -106,6 +110,7 @@ body {
 	cursor: pointer;
 }
 
+#social a:focus,
 #social img:hover {
 	opacity: 0.75;
 	filter: Alpha(opacity=75);
