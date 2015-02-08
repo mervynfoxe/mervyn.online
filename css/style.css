@@ -113,7 +113,6 @@ body {
 #social a:focus,
 #social img:hover {
 	opacity: 0.75;
-	filter: Alpha(opacity=75);
 }
 
 #copyright {
