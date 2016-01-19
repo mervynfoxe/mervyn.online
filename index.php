@@ -1,7 +1,9 @@
 <?php
-// Dependicies.
+define('ENVIRONMENT', isset($_SERVER['ENV']) ? $_SERVER['ENV'] : 'development');
 
-ini_set('display_errors',1);
+if (ENVIRONMENT !== 'production') {
+	ini_set('display_errors', 1);
+}
 
 class PATH
 {
