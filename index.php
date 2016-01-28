@@ -56,6 +56,6 @@ function renderPage($request) {
 
 session_start();
 
-$request = isset($_GET['q']) ? $_GET['q'] : 'index';
+$request = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : 'index';
 renderPage($request);
 ?>
