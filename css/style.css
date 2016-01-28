@@ -11,11 +11,11 @@ body {
 	background: url(../img/pattern.png) repeat center 0 #fff;
 }
 
-a {
+a.link-light {
 	color: #ccc;
 }
 
-a:hover {
+a.link-light:hover {
 	color: #fff;
 	text-decoration: none;
 }
