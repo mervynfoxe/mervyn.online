@@ -6,7 +6,6 @@
 			<h1>404</h1>
 			<p>Sorry, I couldn't find that page!</p>
 			<p><a href="/index" class="link-light">Click here</a> to return home and try again, or to contact me if you have any trouble.</p>
-			<div class="panel-group" id="socialPanels"></div>
 		</div>
 		<?php Template::includeTemplate('copyright.php'); ?>
 	</div>
