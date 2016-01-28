@@ -1,7 +1,9 @@
 <?php
-// Dependicies.
+define('ENVIRONMENT', isset($_SERVER['ENV']) ? $_SERVER['ENV'] : 'development');
 
-ini_set('display_errors',1);
+if (ENVIRONMENT !== 'production') {
+	ini_set('display_errors', 1);
+}
 
 class PATH
 {
@@ -54,6 +56,6 @@ function renderPage($request) {
 
 session_start();
 
-$request = isset($_GET['q']) ? $_GET['q'] : 'index';
+$request = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : 'index';
 renderPage($request);
 ?>

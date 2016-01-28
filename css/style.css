@@ -11,6 +11,15 @@ body {
 	background: url(../img/pattern.png) repeat center 0 #fff;
 }
 
+a.link-light {
+	color: #ccc;
+}
+
+a.link-light:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
 .background {
 	background: #222;
 	border-bottom: 4px solid rgb(46, 130, 138);
