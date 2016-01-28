@@ -18,7 +18,7 @@
 			</div>
 			<div class="panel-group" id="socialPanels"></div>
 		</div>
-		<div class="copyright col-lg-12 text-center">&copy;2014-2015 Alex Schaeffer</div>
+		<?php Template::includeTemplate('copyright.php'); ?>
 	</div>
 </div>
 
