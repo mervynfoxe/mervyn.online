@@ -9,10 +9,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<?php if (ENVIRONMENT == 'production'): ?>
-		<link rel="stylesheet" href="/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
 		<link rel="stylesheet" href="/css/style.min.css" />
 		<?php else: ?>
-		<link rel="stylesheet" href="/css/bootstrap.css" />
+		<link rel="stylesheet" href="/css/vendor/bootstrap.css" />
 		<link rel="stylesheet" href="/css/style.css" />
 		<?php endif; ?>
 	</head>
