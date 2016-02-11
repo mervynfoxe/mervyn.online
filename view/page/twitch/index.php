@@ -8,4 +8,5 @@
 		<iframe src="http://www.twitch.tv/amvph34r/chat?popout=" frameborder="0" scrolling="no"></iframe>
 	</div>
 </div>
+<?php Template::includeTemplate('twitch/modals/poll.php'); ?>
 <?php Template::includeTemplate('twitch/html_footer.php'); ?>
