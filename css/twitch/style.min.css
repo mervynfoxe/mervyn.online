@@ -1,0 +1,1 @@
+@import url("../fonts.css");html,body,.wrapper{height:100%;width:100%;margin:0;padding:0}body{padding-bottom:50px;background:none}.player,.chat{height:100%;float:left;clear:none}.player iframe,.chat iframe{width:100%;height:100%}.player{width:75%}.chat{width:25%}
