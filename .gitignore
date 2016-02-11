@@ -1,2 +1,6 @@
 # Ignore sublime text files
 *.sublime-*
+
+# Ignore non-source scripts
+scripts/
+
