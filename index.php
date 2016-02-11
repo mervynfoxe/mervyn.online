@@ -32,6 +32,8 @@ require_once 'Config.php';
 function loadController($controller) {
 	if (is_file(PATH::$CONTROLLER_DIRECTORY . PATH::$DS . $controller . '.php')) {
 		include_once(PATH::$CONTROLLER_DIRECTORY . PATH::$DS . $controller . '.php');
+	} else if (is_file(PATH::$CONTROLLER_DIRECTORY . PATH::$DS . $controller . PATH::$DS . 'index.php')) {
+		include_once(PATH::$CONTROLLER_DIRECTORY . PATH::$DS . $controller . PATH::$DS . 'index.php');
 	} else {
 		renderPage('404');
 	}
@@ -40,6 +42,8 @@ function loadController($controller) {
 function loadPage($page) {
 	if (is_file(PATH::$PAGE_DIRECTORY . PATH::$DS . $page . '.php')) {
 		include_once(PATH::$PAGE_DIRECTORY . PATH::$DS . $page . '.php');
+	} else if (is_file(PATH::$PAGE_DIRECTORY . PATH::$DS . $page . PATH::$DS . 'index.php')) {
+		include_once(PATH::$PAGE_DIRECTORY . PATH::$DS . $page . PATH::$DS . 'index.php');
 	} else {
 		renderPage('404');
 	}
