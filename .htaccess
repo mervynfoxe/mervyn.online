@@ -1,4 +1,12 @@
 ##
+# URL Rewriting
+##
+RewriteEngine on
+RewriteBase /
+RewriteCond $1 !^(index\.php|img|css|js|fonts)
+RewriteRule ^(.*)$ /index.php?q=$1 [L]
+
+##
 # Browser caching
 ##
 # 1 year
