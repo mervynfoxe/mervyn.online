@@ -28,7 +28,7 @@ class PATH
 PATH::load();
 require_once 'config/Config.php';
 require_once 'class/Template.php';
-require_once 'class/DOI.php';
+// require_once 'class/DOI.php';
 
 function loadController($controller) {
 	if (is_file(PATH::$CONTROLLER_DIRECTORY . PATH::$DS . $controller . '.php')) {
