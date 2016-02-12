@@ -1,7 +1,7 @@
 var containerWidth = $(".wrapper").width();
 var padding = 0;
 
-$(".panel")
+/*$(".panel")
 	.mousedown(function() {
 		// $(this).find(".mask").show();
 	})
@@ -18,4 +18,4 @@ $(".panel")
 		$(".panel").width(containerWidth - currentWidth);
 		$(this).width(currentWidth);
 	}
-});
+});*/
