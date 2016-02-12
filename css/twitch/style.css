@@ -26,6 +26,16 @@ body {
 	height: 100%;
 }
 
+.panel .mask {
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	display: none;
+}
+
 .player {
 	width: 75%;
 }
