@@ -12,10 +12,10 @@ class DOI {
 	private static $oHandler = NULL;
 
 	private static function load() {
-		self::$sHost = DB::$sDBHost;
-		self::$sDatabase = DB::$sDBName;
-		self::$sUsername = DB::$sDBUsername;
-		self::$sPassword = DB::$sDBPassword;
+		self::$sHost = DB::$sHost;
+		self::$sDatabase = DB::$sName;
+		self::$sUsername = DB::$sUser;
+		self::$sPassword = DB::$sPass;
 		self::$sConn = sprintf("mysql:host=%s;dbname=%s", self::$sHost, self::$sDatabase);
 		self::$aOptions = array(
 			PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
