@@ -3,10 +3,10 @@ var padding = 0;
 
 $(".panel")
 	.mousedown(function() {
-		$(this).find(".mask").show();
+		// $(this).find(".mask").show();
 	})
 	.mouseup(function() {
-		$(this).find(".mask").hide();
+		// $(this).find(".mask").hide();
 	})
 	.resizable({
 	handles: 'e',
