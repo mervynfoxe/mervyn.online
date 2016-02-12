@@ -1,6 +1,7 @@
-# Ignore sublime text files
-*.sublime-*
+# Files containing potentially sensitive information
+config/Database.php
 
-# Ignore non-source scripts
-scripts/
+# Development files and directories
+*.sublime-*
+scripts
 
