@@ -10,9 +10,11 @@
 
 		<?php if (ENVIRONMENT == 'production'): ?>
 		<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
+		<link rel="stylesheet" href="/css/vendor/jquery-ui.min.css" />
 		<link rel="stylesheet" href="/css/twitch/style.min.css" />
 		<?php else: ?>
 		<link rel="stylesheet" href="/css/vendor/bootstrap.css" />
+		<link rel="stylesheet" href="/css/vendor/jquery-ui.css" />
 		<link rel="stylesheet" href="/css/twitch/style.css" />
 		<?php endif; ?>
 	</head>
