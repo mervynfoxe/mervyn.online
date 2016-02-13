@@ -12,6 +12,12 @@ body {
 	background: none;
 }
 
+.navbar-brand img {
+	height: 90%;
+	vertical-align: top;
+	margin-right: 5px;
+}
+
 .panel {
 	height: 100%;
 	float: left;
