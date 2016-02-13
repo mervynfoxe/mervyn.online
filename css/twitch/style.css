@@ -43,3 +43,15 @@ body {
 .chat {
 	width: 30%;
 }
+
+#poll-modal .modal-body {
+	height: 60vh;
+	padding: 0;
+}
+
+iframe.poll {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
