@@ -1,11 +1,27 @@
 $(function() {
-	if(window.location.hash === "#poll") {
-		$("#poll-modal")
-			.modal('show')
-			.on('hide.bs.modal', function() {
-				window.location.hash = "";
-			});
+	function checkHash() {
+		if(window.location.hash === "#poll") {
+			$("#poll-modal")
+				.modal('show')
+				.on('hide.bs.modal', function() {
+					window.location.hash = "";
+				});
+		}
 	}
+
+	if ("onhashchange" in window) { // event supported?
+		window.onhashchange = checkHash;
+	} else { // event not supported:
+		var storedHash = window.location.hash;
+		window.setInterval(function () {
+			if (window.location.hash != storedHash) {
+				storedHash = window.location.hash;
+				checkHash();
+			}
+		}, 100);
+	}
+
+	checkHash();
 
 	/*var containerWidth = $(".wrapper").width();
 	var padding = 0;
