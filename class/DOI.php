@@ -1,8 +1,8 @@
 <?php
 
-require_once 'config/Database.php';
-
 class DOI {
+	public static $bEnabled = TRUE;
+
 	private static $sHost;
 	private static $sDatabase;
 	private static $sUsername;
@@ -12,6 +12,13 @@ class DOI {
 	private static $oHandler = NULL;
 
 	private static function load() {
+		if (!is_file(PATH::$CONFIG_DIRECTORY . PATH::$DS . 'Database.php')) {
+			self::$bEnabled = FALSE;
+			return FALSE;
+		}
+
+		require_once 'config/Database.php';
+
 		self::$sHost = DB::$sHost;
 		self::$sDatabase = DB::$sName;
 		self::$sUsername = DB::$sUser;
@@ -25,6 +32,10 @@ class DOI {
 	public static function getPDO() {
 		if (self::$oHandler === NULL) {
 			self::load();
+
+			if (self::$bEnabled === FALSE)
+				return NULL;
+
 			self::$oHandler = new PDO(self::$sConn, self::$sUsername, self::$sPassword, self::$aOptions);
 		}
 

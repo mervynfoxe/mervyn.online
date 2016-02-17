@@ -10,6 +10,7 @@ class PATH
 	public static $ROOT_DIR;
 	public static $DS;
 	public static $TEMPLATE_DIRECTORY;
+	public static $CONFIG_DIRECTORY;
 	public static $MODEL_DIRECTORY;
 	public static $CONTROLLER_DIRECTORY;
 	public static $PAGE_DIRECTORY;
@@ -18,7 +19,8 @@ class PATH
 	{
 		self::$ROOT_DIR = getcwd();
 		self::$DS = DIRECTORY_SEPARATOR;
-		self::$TEMPLATE_DIRECTORY = (self::$ROOT_DIR . self::$DS . 'view' . self::$DS . '_include');
+		self::$CONFIG_DIRECTORY = self::$ROOT_DIR . self::$DS . 'config';
+		self::$TEMPLATE_DIRECTORY = self::$ROOT_DIR . self::$DS . 'view' . self::$DS . '_include';
 		self::$MODEL_DIRECTORY = self::$ROOT_DIR . self::$DS . 'model';
 		self::$CONTROLLER_DIRECTORY = self::$ROOT_DIR . self::$DS . 'controller';
 		self::$PAGE_DIRECTORY = self::$ROOT_DIR . self::$DS . 'view' . self::$DS . 'page';
@@ -28,7 +30,7 @@ class PATH
 PATH::load();
 require_once 'config/Config.php';
 require_once 'class/Template.php';
-// require_once 'class/DOI.php';
+require_once 'class/DOI.php';
 
 function loadController($controller) {
 	if (is_file(PATH::$CONTROLLER_DIRECTORY . PATH::$DS . $controller . '.php')) {
