@@ -7,6 +7,9 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 		<!--[if IE]><link rel="shortcut icon" href="/img/favicon.ico"><![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:title" content="AMV_Ph34r's Hub'" />
+		<meta property="og:url" content="<?= CONFIG::$sBaseURL ?>" />
+		<meta property="og:image" content="<?= CONFIG::$sBaseURL ?>img/logo-a.png" />
 
 		<?php if (ENVIRONMENT == 'production'): ?>
 		<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
