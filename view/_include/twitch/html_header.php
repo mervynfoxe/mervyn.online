@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="og:title" content="AMVPh34r on Twitch" />
 		<meta property="og:url" content="<?= CONFIG::$sBaseURL ?>twitch" />
-		<meta property="og:image" content="<?= CONFIG::$sBaseURL ?>img/logo-a.png" />
+		<meta property="og:image" content="<?= CONFIG::$sBaseURL ?>img/logo-a-600.png" />
 
 		<?php if (ENVIRONMENT == 'production'): ?>
 		<link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
