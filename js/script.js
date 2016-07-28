@@ -125,7 +125,7 @@ $(function() {
 
 	// Add a link and panel for contact via email - encoded and restricted to Javascript for security purposes
 	$('#social').append('<span><a href="#panel-email-link" id="email-link" title="Email me" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-email.png" alt="email" /></a></span>');
-	var email = decode('NZICu34e@tznvy.pbz')
+	var email = decode(sEmail);
 	addCollapse("#socialPanels",'panel-email-link','<a href="mailto:'+email+'" target="_blank">'+email+'</a>');
 	
 	// Enable tooltips
