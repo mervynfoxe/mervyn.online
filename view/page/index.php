@@ -1,11 +1,3 @@
-<script>
-<?php if (strpos(PATH::$HOST, 'amv-ph34r') !== false): ?>
-	var sEmail = 'NZICu34e@tznvy.pbz';
-<?php elseif (strpos(PATH::$HOST, 'arschaeffer') !== false): ?>
-	var sEmail = 'nyrk.e.fpunrssre@tznvy.pbz';
-<?php endif; ?>
-</script>
-
 <?php Template::includeTemplate('html_header.php'); ?>
 <div class="background"></div>
 <?php if (strpos(PATH::$HOST, 'amv-ph34r') !== false): ?>
