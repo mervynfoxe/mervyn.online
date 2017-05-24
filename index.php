@@ -7,6 +7,8 @@ if (ENVIRONMENT !== 'production') {
 
 class PATH
 {
+	public static $HOST;
+	public static $BASE_URL;
 	public static $ROOT_DIR;
 	public static $DS;
 	public static $TEMPLATE_DIRECTORY;
@@ -17,6 +19,8 @@ class PATH
 	
 	public static function load()
 	{
+		self::$HOST = $_SERVER['SERVER_NAME'];
+		self::$BASE_URL = 'http://' . $_SERVER['SERVER_NAME'] . '/';
 		self::$ROOT_DIR = getcwd();
 		self::$DS = DIRECTORY_SEPARATOR;
 		self::$CONFIG_DIRECTORY = self::$ROOT_DIR . self::$DS . 'config';
