@@ -1,0 +1,109 @@
+==================================================================
+https://keybase.io/amv_ph34r
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://amv-ph34r.com
+  * I am amv_ph34r (https://keybase.io/amv_ph34r) on keybase.
+  * I have a public key ASC0-fAdPY8Bn7T9AwnnplogYrjdick_NJJEZPIacTOGEAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "host": "keybase.io",
+            "kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "uid": "7c4173eb6b3b0dc5d2d16d14487bcc19",
+            "username": "amv_ph34r"
+        },
+        "service": {
+            "hostname": "amv-ph34r.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.22"
+    },
+    "ctime": 1495638069,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1495638056,
+        "hash": "563a1306b4047e295e341fc6c44685375d6899988783cadb182750bdc58429c6b06559a2bca084953d66c2bb901dd0c7c9469b3614f498f7e3f31a26411d026d",
+        "seqno": 1106562
+    },
+    "prev": "7c59232e8e0cffb55e7352bb8667b4f91ffdbbf2950983897117889ae3c77870",
+    "seqno": 38,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtPnwHT2PAZ+0/QMJ56ZaIGK43YnJPzSSRGTyGnEzhhAKp3BheWxvYWTFAvh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwidWlkIjoiN2M0MTczZWI2YjNiMGRjNWQyZDE2ZDE0NDg3YmNjMTkiLCJ1c2VybmFtZSI6ImFtdl9waDM0ciJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYW12LXBoMzRyLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIyIn0sImN0aW1lIjoxNDk1NjM4MDY5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTU2MzgwNTYsImhhc2giOiI1NjNhMTMwNmI0MDQ3ZTI5NWUzNDFmYzZjNDQ2ODUzNzVkNjg5OTk4ODc4M2NhZGIxODI3NTBiZGM1ODQyOWM2YjA2NTU5YTJiY2EwODQ5NTNkNjZjMmJiOTAxZGQwYzdjOTQ2OWIzNjE0ZjQ5OGY3ZTNmMzFhMjY0MTFkMDI2ZCIsInNlcW5vIjoxMTA2NTYyfSwicHJldiI6IjdjNTkyMzJlOGUwY2ZmYjU1ZTczNTJiYjg2NjdiNGY5MWZmZGJiZjI5NTA5ODM4OTcxMTc4ODlhZTNjNzc4NzAiLCJzZXFubyI6MzgsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RACnRB6DxZREcXPlONFz4Fy8aJDJc74i97/q2x5TKW1oP+LDOD1u+zbh1djh50eYbgAgYULySyy8H2DsQ5nvH5AahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICqzKjgz5n4lK7R8wP3PqFHbSWzTWa9kcMokXpSvdtJuo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/amv_ph34r
+
+==================================================================
+
+==================================================================
+https://keybase.io/amv_ph34r
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://arschaeffer.com
+  * I am amv_ph34r (https://keybase.io/amv_ph34r) on keybase.
+  * I have a public key ASC0-fAdPY8Bn7T9AwnnplogYrjdick_NJJEZPIacTOGEAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "host": "keybase.io",
+            "kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "uid": "7c4173eb6b3b0dc5d2d16d14487bcc19",
+            "username": "amv_ph34r"
+        },
+        "service": {
+            "hostname": "arschaeffer.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.22"
+    },
+    "ctime": 1495638186,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1495638165,
+        "hash": "aa26aa403a5742f2f40c7055d46446f027b8a6ffb60bec3cbf7b84c87b5e40e332d9333c504bfcaa8bd24a242c51e0c736a16c0d954b2d2d06681521b72cbd5e",
+        "seqno": 1106571
+    },
+    "prev": "4f3d2f4eefc7f0d2b53aa8c0b2b6daa92805a2b9a8daed5d6b44c8a67bed3be1",
+    "seqno": 39,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtPnwHT2PAZ+0/QMJ56ZaIGK43YnJPzSSRGTyGnEzhhAKp3BheWxvYWTFAvl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwidWlkIjoiN2M0MTczZWI2YjNiMGRjNWQyZDE2ZDE0NDg3YmNjMTkiLCJ1c2VybmFtZSI6ImFtdl9waDM0ciJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYXJzY2hhZWZmZXIuY29tIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMiJ9LCJjdGltZSI6MTQ5NTYzODE4NiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDk1NjM4MTY1LCJoYXNoIjoiYWEyNmFhNDAzYTU3NDJmMmY0MGM3MDU1ZDQ2NDQ2ZjAyN2I4YTZmZmI2MGJlYzNjYmY3Yjg0Yzg3YjVlNDBlMzMyZDkzMzNjNTA0YmZjYWE4YmQyNGEyNDJjNTFlMGM3MzZhMTZjMGQ5NTRiMmQyZDA2NjgxNTIxYjcyY2JkNWUiLCJzZXFubyI6MTEwNjU3MX0sInByZXYiOiI0ZjNkMmY0ZWVmYzdmMGQyYjUzYWE4YzBiMmI2ZGFhOTI4MDVhMmI5YThkYWVkNWQ2YjQ0YzhhNjdiZWQzYmUxIiwic2Vxbm8iOjM5LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJoGLNcUvGaPFxXPiZUl9aSAnIovGP6GVhQt+on3IVbD0TL6Uux6b4ajyVF/6hXLwnPK5N6tZ4NXMZdVLNzlgw6oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCBPAe1vI2nG4c6tETHGGanXodb/Iqk1ZIu236DaSjY6/aN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/amv_ph34r
+
+==================================================================
