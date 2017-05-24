@@ -8,7 +8,7 @@
 <?php endif; ?>
 <div class="container-fluid center-box">
 	<div class="row-fluid">
-		<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center" id="mainContent">
+		<div class="col-lg-6 col-lg-offset-4 col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center" id="mainContent">
 			<h1>Alex Schaeffer</h1>
 			<?php if (strpos(PATH::$HOST, 'amv-ph34r') !== false): ?>
 				<p>Web Developer | Programmer | Slacker</p>
