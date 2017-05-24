@@ -33,7 +33,6 @@ a.link-light:hover {
 	background: url(../img/logo.png) no-repeat;
 	width: 700px;
 	height: 80px;
-	z-index: 99;
 }
 .logo.small {
 	width: 100%;
