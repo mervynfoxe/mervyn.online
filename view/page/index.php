@@ -33,6 +33,10 @@
 						<div id="panel-other-links" class="panel-collapse collapse">
 							<div class="panel-body flex-container">
 								<div class="flex-item">
+									<strong>Keybase</strong><br />
+									<a href="https://keybase.io/amv_ph34r" target="_blank">AMV_Ph34r</a>
+								</div>
+								<div class="flex-item">
 									<strong>Tumblr</strong><br />
 									<a href="http://tumblr.amv-ph34r.com/" target="_blank">amv-ph34r</a>
 								</div>
