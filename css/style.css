@@ -89,6 +89,8 @@ a.link-light:hover {
 
 .panel-body {
 	padding: 10px;
+	max-height: 225px;
+	overflow: scroll;
 }
 
 #mainContent {
