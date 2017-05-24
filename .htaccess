@@ -3,7 +3,7 @@
 ##
 RewriteEngine on
 RewriteBase /
-RewriteCond $1 !^(index\.php|img|css|js|fonts)
+RewriteCond $1 !^(index\.php|img|css|js|fonts|.well-known)
 RewriteRule ^(.*)$ /index.php?q=$1 [L]
 
 ##
