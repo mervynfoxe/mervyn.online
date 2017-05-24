@@ -87,6 +87,10 @@ a.link-light:hover {
 	background-color: inherit;
 }
 
+.panel-body {
+	padding: 10px;
+}
+
 #mainContent {
 	background: rgb(46, 130, 138);
 	color: #fff;
@@ -132,6 +136,11 @@ a.link-light:hover {
 #social a:focus,
 #social img:hover {
 	opacity: 0.75;
+}
+
+#social-proofs-link {
+	margin: 0;
+	padding: 0;
 }
 
 #copyright {

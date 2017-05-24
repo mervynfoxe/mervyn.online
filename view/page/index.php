@@ -56,6 +56,9 @@
 									<strong>Switch</strong><br />
 									SW-6318-7125-1032
 								</div>
+								<div class="col-md-1 col-md-offset-11 small">
+									<a href="https://keybase.pub/amv_ph34r/profiles.txt" id="social-proofs-link" target="_blank"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="sr-only">Signed list</span></a>
+								</div>
 							</div>
 						</div>
 					</div>
