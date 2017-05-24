@@ -59,6 +59,17 @@ a.link-light:hover {
 	vertical-align: middle;
 }
 
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-container .flex-item {
+	flex: 1 0 50%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
 /*
 	Social link styles
 */
