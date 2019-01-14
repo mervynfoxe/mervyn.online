@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>
-			<?php if (strpos(PATH::$HOST, 'amv-ph34r') !== false): ?>
+			<?php if (Config::$sCurrentEnv == 'public'): ?>
 				<?php echo CONFIG::$sSiteTitle; ?>
-			<?php elseif (strpos(PATH::$HOST, 'arschaeffer') !== false): ?>
+			<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
 				Alex Schaeffer
 			<?php endif; ?>
 			- Home
@@ -14,10 +14,10 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 		<!--[if IE]><link rel="shortcut icon" href="/img/favicon.ico"><![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<?php if (strpos(PATH::$HOST, 'amv-ph34r') !== false): ?>
-			<meta property="og:title" content="AMV_Ph34r's Hub" />
+		<?php if (Config::$sCurrentEnv == 'public'): ?>
+			<meta property="og:title" content="Mervyn's Hub" />
 			<meta property="og:url" content="<?= PATH::$BASE_URL ?>" />
-		<?php elseif (strpos(PATH::$HOST, 'arschaeffer') !== false): ?>
+		<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
 			<meta property="og:title" content="Homepage of Alex Schaeffer" />
 			<meta property="og:url" content="<?= PATH::$BASE_URL ?>" />
 		<?php endif; ?>

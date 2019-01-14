@@ -1,7 +1,7 @@
 <script>
-<?php if (strpos(PATH::$HOST, 'amv-ph34r') !== false): ?>
+<?php if (Config::$sCurrentEnv == 'public'): ?>
 	var sEmail = 'NZICu34e@tznvy.pbz';
-<?php elseif (strpos(PATH::$HOST, 'arschaeffer') !== false): ?>
+<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
 	var sEmail = 'nyrk.e.fpunrssre@tznvy.pbz';
 <?php endif; ?>
 </script>
