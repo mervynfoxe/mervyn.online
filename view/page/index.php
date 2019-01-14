@@ -35,7 +35,7 @@ shuffle($text_arr);
 				<?php if (Config::$sCurrentEnv == 'public'): ?>
 					<span><a href="https://steamcommunity.com/id/AMV-Ph34r/" id="steam-link" title="AMV_Ph34r on Steam" target="_blank"><img src="/img/social/icon-steam.png" alt="steam" /></a></span>
 					<span><a href="https://twitter.com/MervynFoxe" id="twitter-link" title="@MervynFoxe on Twitter" target="_blank"><img src="/img/social/icon-twitter.png" alt="birdsite" /></a></span>
-					<span><a href="https://www.youtube.com/user/AMVPh34r" id="youtube-link" title="AMVPh34r on YouTube" target="_blank"><img src="/img/social/icon-youtube.png" alt="youtube" /></a></span>
+<!--					<span><a href="https://www.youtube.com/user/AMVPh34r" id="youtube-link" title="AMVPh34r on YouTube" target="_blank"><img src="/img/social/icon-youtube.png" alt="youtube" /></a></span>-->
 					<span><a href="/twitch" id="twitch-link" title="AMVPh34r on Twitch"><img src="/img/social/icon-twitch.png" alt="twitch" /></a></span>
 					<span><a href="#panel-other-links" id="other-links" title="Everywhre else" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-other.png" alt="other" /></a></span>
 				<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
