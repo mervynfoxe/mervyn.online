@@ -1,9 +1,7 @@
 <?php
-define('ENVIRONMENT', isset($_SERVER['ENV']) ? $_SERVER['ENV'] : 'development');
+define('ENVIRONMENT', isset($_SERVER['ENV']) ? $_SERVER['ENV'] : 'production');
 
-if (ENVIRONMENT !== 'production') {
-	ini_set('display_errors', 1);
-}
+ini_set('display_errors', ENVIRONMENT === 'production' ? 0 : 1);
 
 class PATH
 {
