@@ -16,6 +16,7 @@ body {
 	height: 90%;
 	vertical-align: top;
 	margin-right: 5px;
+	display: inline;
 }
 
 .panel {
