@@ -6,7 +6,10 @@ $text_arr = array(
     'Bad Boy',
     'Bad at Games',
     'Time-waster',
-    'Coffee-consumer'
+    'Coffee-consumer',
+    'Lucio Main',
+    'No one of Importance',
+    'Never Sleeps'
 );
 shuffle($text_arr);
 ?>
