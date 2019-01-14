@@ -130,4 +130,5 @@ $(function() {
 	
 	// Enable tooltips
 	$('#social a').tooltip();
+	$('.tooltip-enable').tooltip();
 });
