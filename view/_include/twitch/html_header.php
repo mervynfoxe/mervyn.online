@@ -7,7 +7,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 		<!--[if IE]><link rel="shortcut icon" href="/img/favicon.ico"><![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:title" content="AMVPh34r on Twitch" />
+		<meta property="og:title" content="MervynFoxe on Twitch" />
 		<meta property="og:url" content="<?= PATH::$BASE_URL ?>twitch" />
 		<meta property="og:image" content="<?= PATH::$BASE_URL ?>img/logo-a-600.png" />
 
