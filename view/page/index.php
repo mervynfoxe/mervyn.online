@@ -62,7 +62,7 @@ shuffle($text_arr);
 								</div>
 								<div class="flex-item">
 									<strong>Battle.net</strong><br />
-									AMVPh34r#1898
+									MervynFoxe#1946
 								</div>
 								<div class="flex-item">
 									<strong>3DS</strong><br />
