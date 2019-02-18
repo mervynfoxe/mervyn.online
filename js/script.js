@@ -104,30 +104,20 @@ function decode(str) {
 }
 
 $(function() {
-	// Adds a collapsable panel to an existing element
-	function addCollapse(appendTo, id, content, hidden) {
-		hidden = typeof hidden !== 'undefined' ? hidden : false;
-		$(appendTo).append('<div class="panel panel-default'+(hidden == true ? ' nobg' : '')+'">\
-			<div id="'+(id)+'" class="panel-collapse collapse">\
-				<div class="panel-body">\
-					'+(content)+'\
-				</div>\
-			</div>\
-		</div>');
-	}
-
 	// Set up event for correctly entering the code
-	var msgText = decode("Bu nera'g lbh n fzneg bar, gelvat gur Xbanzv pbqr? Jryy fbeel ohg V'z gbb ynml gb npghnyyl qb fbzrguvat pbby urer.");
-	addCollapse('#mainContent','codePanel',msgText,true);
 	var kn = new Code(function() {
 		$('#codePanel').collapse('show');
 	});
 
-	// Add a link and panel for contact via email - encoded and restricted to Javascript for security purposes
-	$('#social').append('<span><a href="#panel-email-link" id="email-link" title="Email me" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-email.png" alt="email" /></a></span>');
+	// Decode email and update it in the panel
 	var email = decode(sEmail);
-	addCollapse("#socialPanels",'panel-email-link','<a href="mailto:'+email+'" target="_blank">'+email+'</a>');
-	
+	$('#panel-email-link .panel-body a').attr('href', 'mailto:'+email).text(email);
+
+	// Decode other encoded text fields
+	$('.encoded').each(function() {
+		$(this).text(decode($(this).text()));
+	});
+
 	// Enable tooltips
 	$('#social a').tooltip();
 	$('.tooltip-enable').tooltip();
