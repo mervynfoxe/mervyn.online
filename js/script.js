@@ -110,7 +110,7 @@ $(function() {
 	});
 
 	// Decode email and update it in the panel
-	if (typeof variable !== 'undefined') {
+	if (typeof sEmail !== 'undefined') {
 		var email = decode(sEmail);
 		$('#panel-email-link .panel-body a').attr('href', 'mailto:' + email).text(email);
 	}
