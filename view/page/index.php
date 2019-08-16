@@ -3,13 +3,15 @@ $text_arr = array(
     'Web Dev',
     'Internet Fox',
     'Slacker',
-    'Bad Boy',
+    'Bad to the Bone',
     'Bad at Games',
     'Time-waster',
     'Coffee-consumer',
     'Lucio Main',
     'No one of Importance',
-    'Never Sleeps'
+    'Never Sleeps',
+    'Key Smasher',
+    'Soft Friend'
 );
 shuffle($text_arr);
 ?>
@@ -33,16 +35,17 @@ shuffle($text_arr);
 			<?php endif; ?>
 			<div id="social">
 				<?php if (Config::$sCurrentEnv == 'public'): ?>
-					<span><a href="https://steamcommunity.com/id/AMV-Ph34r/" id="steam-link" title="AMV_Ph34r on Steam" target="_blank"><img src="/img/social/icon-steam.png" alt="steam" /></a></span>
+					<span><a href="https://steamcommunity.com/id/MervynFoxe" id="steam-link" title="Mervyn on Steam" target="_blank"><img src="/img/social/icon-steam.png" alt="steam" /></a></span>
 					<span><a href="https://twitter.com/MervynFoxe" id="twitter-link" title="@MervynFoxe on Twitter" target="_blank"><img src="/img/social/icon-twitter.png" alt="birdsite" /></a></span>
-<!--					<span><a href="https://www.youtube.com/user/AMVPh34r" id="youtube-link" title="AMVPh34r on YouTube" target="_blank"><img src="/img/social/icon-youtube.png" alt="youtube" /></a></span>-->
+					<span><a href="https://www.flickr.com/photos/mervynfoxe" id="flickr-link" title="Mervyn Fox on Flickr" target="_blank"><img src="/img/social/icon-flickr.png" alt="flickr" /></a></span>
 					<span><a href="/twitch" id="twitch-link" title="MervynFoxe on Twitch"><img src="/img/social/icon-twitch.png" alt="twitch" /></a></span>
 					<span><a href="#panel-other-links" id="other-links" title="Everywhre else" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-other.png" alt="other" /></a></span>
+                    <span><a href="#panel-support" id="support-me" title="Support me" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-money.png" alt="support" /></a></span>
 				<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
 					<span><a href="http://static.amv-ph34r.com/files/resume.pdf" id="resume-link" title="My Resume" target="_blank"><img src="/img/social/icon-document.png" alt="resume" /></a></span>
 					<span><a href="https://www.linkedin.com/in/arschaeffer" id="linkedin-link" title="Alex Schaeffer on LinkedIn" target="_blank"><img src="/img/social/icon-linkedin.png" alt="linkedin" /></a></span>
+                    <span><a href="#panel-email-link" id="email-link" title="Email me" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-email.png" alt="email" /></a></span>
 				<?php endif; ?>
-                <span><a href="#panel-email-link" id="email-link" title="Email me" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-email.png" alt="email" /></a></span>
 			</div>
 			<div class="panel-group" id="socialPanels">
 				<?php if (Config::$sCurrentEnv == 'public'): ?>
@@ -83,8 +86,25 @@ shuffle($text_arr);
                                 </div>
 							</div>
 						</div>
+                        <div id="panel-support" class="panel-collapse collapse">
+                            <div class="panel-body flex-container">
+                                <div class="flex-item">
+                                    <a href="https://paypal.me/AMVPh34r" target="_blank">PayPal</a>
+                                </div>
+                                <div class="flex-item">
+                                    <a href="https://cash.app/$AMVPh34r" target="_blank">Cash App</a>
+                                </div>
+                                <div class="flex-item">
+                                    <a href="https://ko-fi.com/mervyn" target="_blank">Ko-fi</a>
+                                </div>
+                                <div class="flex-item">
+                                    <a href="https://streamlabs.com/mervynfoxe/tip" target="_blank">Streamlabs</a>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 				<?php endif; ?>
+                <?php if (Config::$sCurrentEnv == 'professional'): ?>
                 <div class="panel panel-default">
                     <div id="panel-email-link" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -92,6 +112,7 @@ shuffle($text_arr);
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
                 <div class="panel panel-default nobg">
                     <div id="codePanel" class="panel-collapse collapse">
                         <div class="panel-body encoded">
