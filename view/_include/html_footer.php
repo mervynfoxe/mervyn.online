@@ -1,9 +1,12 @@
 <script>
-<?php if (Config::$sCurrentEnv == 'public'): ?>
-	var sEmail = 'NZICu34e@tznvy.pbz';
-<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
-	var sEmail = 'nyrk.e.fpunrssre@tznvy.pbz';
-<?php endif; ?>
+<?php
+if (Config::$sCurrentEnv == 'public') {
+	// Not showing email on public site, but keeping record of encoded address
+    //echo 'var sEmail = \'NZICu34e@tznvy.pbz\';';
+} elseif (Config::$sCurrentEnv == 'professional') {
+    echo 'var sEmail = \'nyrk.e.fpunrssre@tznvy.pbz\';';
+}
+?>
 </script>
 
 <?php if (ENVIRONMENT == 'production'): ?>
