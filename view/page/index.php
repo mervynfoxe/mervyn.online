@@ -92,7 +92,7 @@ shuffle($text_arr);
                                     <a href="https://paypal.me/AMVPh34r" target="_blank">PayPal</a>
                                 </div>
                                 <div class="flex-item">
-                                    <a href="https://cash.app/$AMVPh34r" target="_blank">Cash App</a>
+                                    <a href="https://cash.app/$MervynFoxe" target="_blank">Cash App</a>
                                 </div>
                                 <div class="flex-item">
                                     <a href="https://ko-fi.com/mervyn" target="_blank">Ko-fi</a>
