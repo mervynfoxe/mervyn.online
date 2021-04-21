@@ -39,7 +39,7 @@ shuffle($text_arr);
 					<span><a href="https://twitter.com/MervynFoxe" id="twitter-link" title="@MervynFoxe on Twitter" target="_blank"><img src="/img/social/icon-twitter.png" alt="birdsite" /></a></span>
 					<span><a href="https://www.flickr.com/photos/mervynfoxe" id="flickr-link" title="Mervyn Fox on Flickr" target="_blank"><img src="/img/social/icon-flickr.png" alt="flickr" /></a></span>
 					<span><a href="/twitch" id="twitch-link" title="MervynFoxe on Twitch"><img src="/img/social/icon-twitch.png" alt="twitch" /></a></span>
-					<span><a href="#panel-other-links" id="other-links" title="Everywhre else" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-other.png" alt="other" /></a></span>
+					<span><a href="#panel-other-links" id="other-links" title="Everywhere else" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-other.png" alt="other" /></a></span>
                     <span><a href="#panel-support" id="support-me" title="Support me" data-toggle="collapse" data-parent="#socialPanels"><img src="/img/social/icon-money.png" alt="support" /></a></span>
 				<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
 					<span><a href="http://static.amv-ph34r.com/files/resume.pdf" id="resume-link" title="My Resume" target="_blank"><img src="/img/social/icon-document.png" alt="resume" /></a></span>
@@ -54,7 +54,7 @@ shuffle($text_arr);
 							<div class="panel-body flex-container">
 								<div class="flex-item">
 									<strong>Keybase</strong><br />
-									<a href="https://keybase.io/amv_ph34r" target="_blank">AMV_Ph34r</a>
+									<a href="https://keybase.io/mervynfoxe" target="_blank">mervynfoxe</a>
 								</div>
 								<div class="flex-item">
 									<strong>Tumblr</strong><br />
