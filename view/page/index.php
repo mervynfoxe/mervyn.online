@@ -54,7 +54,7 @@ shuffle($text_arr);
 							<div class="panel-body flex-container">
 								<div class="flex-item">
 									<strong>Keybase</strong><br />
-									<a href="https://keybase.io/amv_ph34r" target="_blank">AMV_Ph34r</a>
+									<a href="https://keybase.io/mervynfoxe" target="_blank">mervynfoxe</a>
 								</div>
 								<div class="flex-item">
 									<strong>Tumblr</strong><br />
