@@ -58,7 +58,7 @@ shuffle($text_arr);
 								</div>
 								<div class="flex-item">
 									<strong>Tumblr</strong><br />
-									<a href="http://tumblr.amv-ph34r.com/" target="_blank">amv-ph34r</a>
+									<a href="https://tumblr.mervyn.online/" target="_blank">mervynfoxe</a>
 								</div>
 								<div class="flex-item">
 									<strong>Discord</strong><br />
