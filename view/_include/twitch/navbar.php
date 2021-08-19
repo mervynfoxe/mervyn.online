@@ -4,11 +4,11 @@
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><img src="/img/logo-a.png"/>Home</a>
+        <a class="navbar-brand" href="/"><img src="/img/logo-a.png" alt="Logo" />Home</a>
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="http://twitch.tv/<?= Template::get('sTwitchChannel'); ?>" target="_blank">Twitch Channel</a>
+            <li><a href="https://twitch.tv/<?= Template::get('sTwitchChannel') ?>" target="_blank">Twitch Channel</a>
             </li>
             <li><a href="#" data-toggle="modal" data-target="#poll-modal">Stream Poll</a></li>
 			<?php if (Template::get('discord_enabled')): ?>

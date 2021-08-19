@@ -18,25 +18,19 @@ shuffle($text_arr);
 ?>
 <?php Template::includeTemplate('html_header.php'); ?>
 <div class="background"></div>
-<?php if (Config::$sCurrentEnv == 'public' && FALSE): ?>
-    <div class="row-fluid">
-        <div class="hidden-xs logo"></div>
-        <div class="visible-xs logo small"></div>
-    </div>
-<?php endif; ?>
 <div class="container-fluid center-box">
     <div class="row-fluid">
         <div class="col-lg-6 col-lg-offset-4 col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center"
              id="mainContent">
-			<?php if (Config::$sCurrentEnv == 'public'): ?>
+			<?php if (Config::$sCurrentEnv === 'public'): ?>
                 <h1>Mervyn Fox</h1>
-                <p><?= implode(' | ', array_slice($text_arr, 0, 3)); ?></p>
-			<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
+                <p><?= implode(' | ', array_slice($text_arr, 0, 3)) ?></p>
+			<?php elseif (Config::$sCurrentEnv === 'professional'): ?>
                 <h1>Alex Schaeffer</h1>
                 <p>Applications | Websites | Databases</p>
 			<?php endif; ?>
             <div id="social">
-				<?php if (Config::$sCurrentEnv == 'public'): ?>
+				<?php if (Config::$sCurrentEnv === 'public'): ?>
                     <span><a href="https://steamcommunity.com/id/MervynFoxe" id="steam-link" title="Mervyn on Steam"
                              target="_blank"><img src="/img/social/icon-steam.png" alt="steam"/></a></span>
                     <span><a href="https://twitter.com/MervynFoxe" id="twitter-link" title="@MervynFoxe on Twitter"
@@ -51,7 +45,7 @@ shuffle($text_arr);
                     <span><a href="#panel-support" id="support-me" title="Support me" data-toggle="collapse"
                              data-parent="#socialPanels"><img src="/img/social/icon-money.png"
                                                               alt="support"/></a></span>
-				<?php elseif (Config::$sCurrentEnv == 'professional'): ?>
+				<?php elseif (Config::$sCurrentEnv === 'professional'): ?>
                     <span><a href="http://static.amv-ph34r.com/files/resume.pdf" id="resume-link" title="My Resume"
                              target="_blank"><img src="/img/social/icon-document.png" alt="resume"/></a></span>
                     <span><a href="https://www.linkedin.com/in/arschaeffer" id="linkedin-link"
@@ -62,7 +56,7 @@ shuffle($text_arr);
 				<?php endif; ?>
             </div>
             <div class="panel-group" id="socialPanels">
-				<?php if (Config::$sCurrentEnv == 'public'): ?>
+				<?php if (Config::$sCurrentEnv === 'public'): ?>
                     <div class="panel panel-default">
                         <div id="panel-other-links" class="panel-collapse collapse">
                             <div class="panel-body flex-container">
@@ -130,7 +124,7 @@ shuffle($text_arr);
                         </div>
                     </div>
 				<?php endif; ?>
-				<?php if (Config::$sCurrentEnv == 'professional'): ?>
+				<?php if (Config::$sCurrentEnv === 'professional'): ?>
                     <div class="panel panel-default">
                         <div id="panel-email-link" class="panel-collapse collapse">
                             <div class="panel-body">
