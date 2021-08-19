@@ -69,6 +69,11 @@ a.link-light:hover {
 	padding: 10px;
 }
 
+.disclaimer {
+	color: #767676;
+	font-style: italic;
+}
+
 /*
 	Social link styles
 */

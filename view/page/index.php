@@ -7,11 +7,12 @@ $text_arr = array(
     'Bad at Games',
     'Time-waster',
     'Coffee-consumer',
-    'Lucio Main',
+//    'Lucio Main',
     'No one of Importance',
     'Never Sleeps',
     'Key Smasher',
-    'Soft Friend'
+    'Soft Friend',
+    'Photo-taker'
 );
 shuffle($text_arr);
 ?>
@@ -87,6 +88,13 @@ shuffle($text_arr);
                                 <div class="flex-item">
                                     <strong>Mastodon</strong><br />
                                     <a href="https://yiff.life/@mervyn" target="_blank">@mervyn@yiff.life</a>
+                                </div>
+                                <div class="row" style="display: none;">
+                                    <div class="col-lg-10 col-lg-offset-1">
+                                        <p class="disclaimer">
+                                            Not all of these are platforms I use actively, but if you need to verify someone's me, this should help!
+                                        </p>
+                                    </div>
                                 </div>
 							</div>
 						</div>
