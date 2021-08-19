@@ -164,3 +164,60 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/amv_ph34r
 
 ==================================================================
+
+==================================================================
+https://keybase.io/mervynfoxe
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mervyn.online
+  * I am mervynfoxe (https://keybase.io/mervynfoxe) on keybase.
+  * I have a public key ASDvg-wlPr4K9IhQMaUb5jv4qnIePkmHt_KcILO6XDSQjgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ef83ec253ebe0af4885031a51be63bf8aa721e3e4987b7f29c20b3ba5c34908e0a",
+      "host": "keybase.io",
+      "kid": "0120ef83ec253ebe0af4885031a51be63bf8aa721e3e4987b7f29c20b3ba5c34908e0a",
+      "uid": "e2d4019bb70487ad2d50b85e47a45719",
+      "username": "mervynfoxe"
+    },
+    "merkle_root": {
+      "ctime": 1618965177,
+      "hash": "265c5b4a92c949910b88c83a280f8bfb12928805745760f3fd033e56362bb979b75a317bbf6a583791b8ee040398f63fca56a4079c8a3081714b3959cda4cf5e",
+      "hash_meta": "0167dae21c95048516794f30df64a7df9256c5cf20829cb8783cc7b478c475b0",
+      "seqno": 19693767
+    },
+    "service": {
+      "entropy": "Qt8RpymofNW5LqQRoQXjwqQM",
+      "hostname": "mervyn.online",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.2"
+  },
+  "ctime": 1618965188,
+  "expire_in": 504576000,
+  "prev": "0986171ae387e369b00aeee7e141a57a4ab4824f2dc91036d89b5b721abea686",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg74PsJT6+CvSIUDGlG+Y7+KpyHj5Jh7fynCCzulw0kI4Kp3BheWxvYWTESpcCCcQgCYYXGuOH42mwCu7n4UGlekq0gk8tyRA22Jtbchq+pobEIDI8OMliWRZQDgqnSt2mVRVGFjhxMKll8hrZMhDkhwslAgHCo3NpZ8RAprhrOZ3d6bDQt2IfFCpyWTiF6MH1DdjMuE92u/bGLq3Yj7F+yh/g6AF5Nfvc1CHacf2w4ur9EevwDipMuYXdBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIG0hGOChLFMF42P1tHz1pJxg5M46N5bc7rFOjJm99c4uo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mervynfoxe
+
+==================================================================
