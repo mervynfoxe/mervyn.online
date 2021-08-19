@@ -38,8 +38,8 @@ shuffle($text_arr);
                     <span><a href="https://www.flickr.com/photos/mervynfoxe" id="flickr-link"
                              title="Mervyn Fox on Flickr" target="_blank"><img src="/img/social/icon-flickr.png"
                                                                                alt="flickr"/></a></span>
-                    <span><a href="/twitch" id="twitch-link" title="MervynFoxe on Twitch"><img
-                                    src="/img/social/icon-twitch.png" alt="twitch"/></a></span>
+                    <span><a href="https://twitch.tv/mervynfoxe" id="twitch-link" title="MervynFoxe on Twitch"
+                             target="_blank"><img src="/img/social/icon-twitch.png" alt="twitch"/></a></span>
                     <span><a href="#panel-other-links" id="other-links" title="Everywhere else" data-toggle="collapse"
                              data-parent="#socialPanels"><img src="/img/social/icon-other.png" alt="other"/></a></span>
                     <span><a href="#panel-support" id="support-me" title="Support me" data-toggle="collapse"
