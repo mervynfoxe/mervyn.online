@@ -60,9 +60,13 @@ shuffle($text_arr);
 									<strong>Tumblr</strong><br />
 									<a href="https://tumblr.mervyn.online/" target="_blank">mervynfoxe</a>
 								</div>
+                                <div class="flex-item">
+                                    <strong>Instagram</strong><br />
+                                    <a href="https://www.instagram.com/mervynfoxe/" target="_blank">mervynfoxe</a>
+                                </div>
 								<div class="flex-item">
 									<strong>Discord</strong><br />
-									AMV_Ph34r#4895
+									Mervyn#0827
 								</div>
 								<div class="flex-item">
 									<strong>Battle.net</strong><br />
