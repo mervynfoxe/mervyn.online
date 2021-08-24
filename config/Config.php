@@ -8,10 +8,10 @@ class Config {
 	public static $aEnvMap = array(
 	    'public' => array(
 	        'amv-ph34r.com', 'amv-ph34r.local.com',
-            'mervyn.online', 'mervyn.local.com'
+            'mervyn.online', 'mervyn.local'
         ),
         'professional' => array(
-            'arschaeffer.com', 'arschaeffer.local.com'
+            'arschaeffer.com', 'arschaeffer.local'
         )
     );
 	public static $sCurrentEnv = 'public';
