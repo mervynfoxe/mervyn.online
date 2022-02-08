@@ -105,7 +105,7 @@ a.link-light:hover {
 }
 
 #mainContent h1 {
-    font-family: bebas_neue;
+    font-family: bebas_neue, sans-serif;
     font-size: 4em;
     line-height: 60px;
     margin: 0;
@@ -138,7 +138,8 @@ a.link-light:hover {
 }
 
 #social a:focus,
-#social img:hover {
+#social img:hover,
+#social a[aria-expanded="true"] {
     opacity: 0.75;
 }
 
