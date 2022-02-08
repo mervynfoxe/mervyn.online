@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Scripts" pattern="file[amv-ph34r]:js//*&amp;&amp;!file[amv-ph34r]:js/vendor//*" />
+</component>
