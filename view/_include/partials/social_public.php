@@ -1,19 +1,19 @@
 <?php
 $socials = array(
 	array(
-		'url' => 'https://steamcommunity.com/id/MervynFoxe',
-		'icon' => 'icon-steam.png',
-		'id' => 'steam-link',
-		'alt' => 'steam',
-		'title' => 'Mervyn on Steam',
-		'panel_links' => NULL
-	),
-	array(
 		'url' => 'https://twitter.com/MervynFoxe',
 		'icon' => 'icon-twitter.png',
 		'id' => 'twitter-link',
 		'alt' => 'birdsite',
 		'title' => '@MervynFoxe on Twitter',
+		'panel_links' => NULL
+	),
+	array(
+		'url' => 'https://steamcommunity.com/id/MervynFoxe',
+		'icon' => 'icon-steam.png',
+		'id' => 'steam-link',
+		'alt' => 'steam',
+		'title' => 'Mervyn on Steam',
 		'panel_links' => NULL
 	),
 	array(
@@ -24,14 +24,14 @@ $socials = array(
 		'title' => 'Mervyn Fox on Flickr',
 		'panel_links' => NULL
 	),
-	array(
-		'url' => 'https://twitch.tv/mervynfoxe',
-		'icon' => 'icon-twitch.png',
-		'id' => 'twitch-link',
-		'alt' => 'twitch',
-		'title' => 'MervynFoxe on Twitch',
-		'panel_links' => NULL
-	),
+//	array(
+//		'url' => 'https://twitch.tv/mervynfoxe',
+//		'icon' => 'icon-twitch.png',
+//		'id' => 'twitch-link',
+//		'alt' => 'twitch',
+//		'title' => 'MervynFoxe on Twitch',
+//		'panel_links' => NULL
+//	),
 	array(
 		'url' => '#panel-other-links',
 		'icon' => 'icon-other.png',
@@ -53,8 +53,8 @@ $socials = array(
 $panels = array(
 	'panel-other-links' => array(
 		array(
-			'label' => 'Keybase',
-			'url' => 'https://keybase.io/mervynfoxe',
+			'label' => 'Instagram',
+			'url' => 'https://www.instagram.com/mervynfoxe/',
 			'title' => 'mervynfoxe'
 		),
 		array(
@@ -63,14 +63,14 @@ $panels = array(
 			'title' => 'mervynfoxe'
 		),
 		array(
-			'label' => 'Instagram',
-			'url' => 'https://www.instagram.com/mervynfoxe/',
-			'title' => 'mervynfoxe'
-		),
-		array(
 			'label' => 'Discord',
 			'url' => NULL,
 			'title' => 'Mervyn#0827'
+		),
+		array(
+			'label' => 'Telegram',
+			'url' => 'https://t.me/MervynFoxe',
+			'title' => '@MervynFoxe'
 		),
 		array(
 			'label' => 'Battle.net',
@@ -87,16 +87,11 @@ $panels = array(
 			'url' => NULL,
 			'title' => 'SW-6318-7125-1032'
 		),
-		array(
-			'label' => 'Telegram',
-			'url' => 'https://t.me/MervynFoxe',
-			'title' => '@MervynFoxe'
-		),
-		array(
-			'label' => 'Mastodon',
-			'url' => 'https://yiff.life/@mervyn',
-			'title' => '@mervyn@yiff.life'
-		)
+//		array(
+//			'label' => 'Mastodon',
+//			'url' => 'https://yiff.life/@mervyn',
+//			'title' => '@mervyn@yiff.life'
+//		),
 	),
 	'panel-support' => array(
 		array(
@@ -114,11 +109,11 @@ $panels = array(
 			'url' => 'https://ko-fi.com/mervyn',
 			'title' => 'Ko-fi'
 		),
-		array(
-			'label' => NULL,
-			'url' => 'https://streamlabs.com/mervynfoxe/tip',
-			'title' => 'Streamlabs'
-		),
+//		array(
+//			'label' => NULL,
+//			'url' => 'https://streamlabs.com/mervynfoxe/tip',
+//			'title' => 'Streamlabs'
+//		),
 	)
 );
 ?>
