@@ -12,7 +12,10 @@ class Config {
         ),
         'professional' => array(
             'arschaeffer.com', 'arschaeffer.local'
-        )
+        ),
+		'professional-ren' => array(
+			'renfox.online', 'renfox.local'
+		)
     );
 	public static $sCurrentEnv = 'public';
 

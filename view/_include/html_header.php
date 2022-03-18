@@ -1,14 +1,21 @@
+<?php
+$site_titles = array(
+	'public' => CONFIG::$sSiteTitle,
+	'professional' => 'Alex Schaeffer',
+	'professional-ren' => 'Ren Fox'
+)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>
-		<?php if (Config::$sCurrentEnv === 'public'): ?>
-			<?php echo CONFIG::$sSiteTitle; ?>
-		<?php elseif (Config::$sCurrentEnv === 'professional'): ?>
-            Alex Schaeffer
-		<?php endif; ?>
-        - Home
+        <?php
+        if (array_key_exists(Config::$sCurrentEnv, $site_titles)) {
+            echo $site_titles[Config::$sCurrentEnv] . ' - ';
+        }
+        ?>
+        Home
     </title>
     <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -20,6 +27,9 @@
         <meta property="og:url" content="<?= PATH::$BASE_URL ?>"/>
 	<?php elseif (Config::$sCurrentEnv === 'professional'): ?>
         <meta property="og:title" content="Homepage of Alex Schaeffer"/>
+        <meta property="og:url" content="<?= PATH::$BASE_URL ?>"/>
+	<?php elseif (Config::$sCurrentEnv === 'professional-ren'): ?>
+        <meta property="og:title" content="Homepage of Ren Fox"/>
         <meta property="og:url" content="<?= PATH::$BASE_URL ?>"/>
 	<?php endif; ?>
     <meta property="og:image" content="<?= PATH::$BASE_URL ?>img/logo-a.png"/>
