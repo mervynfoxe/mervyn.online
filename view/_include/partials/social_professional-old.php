@@ -1,5 +1,5 @@
 <div id="social">
-    <span><a href="http://static.amv-ph34r.com/files/resume-ren.pdf" id="resume-link" title="My Resume" target="_blank"><img
+    <span><a href="http://static.amv-ph34r.com/files/resume.pdf" id="resume-link" title="My Resume" target="_blank"><img
                     src="/img/social/icon-document.png" alt="resume"/></a></span>
     <span><a href="https://www.linkedin.com/in/arschaeffer" id="linkedin-link" title="Alex Schaeffer on LinkedIn"
              target="_blank"><img src="/img/social/icon-linkedin.png" alt="linkedin"/></a></span>

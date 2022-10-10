@@ -1,9 +1,9 @@
 <script>
 	<?php
 	if (Config::$sCurrentEnv === 'professional') {
-		echo 'var sEmail = \'nyrk.e.fpunrssre@tznvy.pbz\';';
-	} elseif (Config::$sCurrentEnv === 'professional-ren') {
 		echo 'var sEmail = \'era.z.sbk@tznvy.pbz\';';
+	} elseif (Config::$sCurrentEnv === 'professional-old') {
+		echo 'var sEmail = \'nyrk.e.fpunrssre@tznvy.pbz\';';
     }
 	?>
 </script>

@@ -1,8 +1,8 @@
 <?php
 $site_titles = array(
 	'public' => CONFIG::$sSiteTitle,
-	'professional' => 'Alex Schaeffer',
-	'professional-ren' => 'Ren Fox'
+	'professional' => 'Ren Fox',
+	'professional-old' => 'Alex Schaeffer'
 )
 ?>
 <!DOCTYPE html>
@@ -26,10 +26,10 @@ $site_titles = array(
         <meta property="og:title" content="Mervyn's Hub"/>
         <meta property="og:url" content="<?= PATH::$BASE_URL ?>"/>
 	<?php elseif (Config::$sCurrentEnv === 'professional'): ?>
-        <meta property="og:title" content="Homepage of Alex Schaeffer"/>
-        <meta property="og:url" content="<?= PATH::$BASE_URL ?>"/>
-	<?php elseif (Config::$sCurrentEnv === 'professional-ren'): ?>
         <meta property="og:title" content="Homepage of Ren Fox"/>
+        <meta property="og:url" content="<?= PATH::$BASE_URL ?>"/>
+	<?php elseif (Config::$sCurrentEnv === 'professional-old'): ?>
+        <meta property="og:title" content="Homepage of Alex Schaeffer"/>
         <meta property="og:url" content="<?= PATH::$BASE_URL ?>"/>
 	<?php endif; ?>
     <meta property="og:image" content="<?= PATH::$BASE_URL ?>img/logo-a.png"/>
