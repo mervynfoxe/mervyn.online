@@ -2,7 +2,7 @@
 
 class Config {
 	public static $sSiteTitle = 'Mervyn Fox';
-	public static $sBaseURL = 'https://amv-ph34r.com/';
+	public static $sBaseURL = 'https://mervyn.online/';
 	public static $sLogDir = 'logs';
 	public static $sDateFormat = 'Y-m-d\TH-i-s';
 	public static $aEnvMap = array(
@@ -11,10 +11,10 @@ class Config {
             'mervyn.online', 'mervyn.local'
         ),
         'professional' => array(
-            'arschaeffer.com', 'arschaeffer.local'
+	        'renfox.online', 'renfox.local'
         ),
-		'professional-ren' => array(
-			'renfox.online', 'renfox.local'
+		'professional-old' => array(
+			'arschaeffer.com', 'arschaeffer.local'
 		)
     );
 	public static $sCurrentEnv = 'public';

@@ -3,8 +3,8 @@
 	<?php if (Config::$sCurrentEnv === 'public'): ?>
         Mervyn Fox
 	<?php elseif (Config::$sCurrentEnv === 'professional'): ?>
+        Ren Fox
+	<?php elseif (Config::$sCurrentEnv === 'professional-old'): ?>
         Alex Schaeffer
-	<?php elseif (Config::$sCurrentEnv === 'professional-ren'): ?>
-        <span class="tooltip-enable" title="Alex Schaeffer">Ren Fox</span>
 	<?php endif; ?>
 </div>
