@@ -53,13 +53,18 @@ $socials = array(
 $panels = array(
 	'panel-other-links' => array(
 		array(
-			'label' => 'Instagram',
-			'url' => 'https://www.instagram.com/mervynfoxe/',
+			'label' => 'Tumblr',
+			'url' => 'https://tumblr.mervyn.online/',
 			'title' => 'mervynfoxe'
 		),
 		array(
-			'label' => 'Tumblr',
-			'url' => 'https://tumblr.mervyn.online/',
+			'label' => 'Cohost',
+			'url' => 'https://cohost.org/MervynFoxe',
+			'title' => 'mervynfoxe'
+		),
+		array(
+			'label' => 'Instagram',
+			'url' => 'https://www.instagram.com/mervynfoxe/',
 			'title' => 'mervynfoxe'
 		),
 		array(
