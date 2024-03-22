@@ -20,4 +20,9 @@ class LinkGroup extends Model
     {
         return $this->hasMany(Link::class);
     }
+
+    public function icon()
+    {
+        return $this->morphOne(Icon::class, 'iconable');
+    }
 }

@@ -15,4 +15,9 @@ class Link extends Model
     {
         return $this->belongsTo(LinkGroup::class);
     }
+
+    public function icon()
+    {
+        return $this->morphOne(Icon::class, 'iconable');
+    }
 }
