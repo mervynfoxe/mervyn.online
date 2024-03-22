@@ -20,4 +20,14 @@ class Environment extends Model
     {
         return $this->hasManyThrough(Link::class, LinkGroup::class);
     }
+
+    public function descriptors()
+    {
+        return $this->hasMany(Descriptor::class);
+    }
+
+    public function configs()
+    {
+        return $this->hasMany(Config::class);
+    }
 }
