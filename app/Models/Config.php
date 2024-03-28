@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Config extends Model
 {
@@ -13,7 +14,7 @@ class Config extends Model
 
     protected $guarded = [];
 
-    public function environment()
+    public function environment(): BelongsTo
     {
         return $this->belongsTo(Environment::class);
     }

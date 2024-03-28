@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Descriptor extends Model
 {
@@ -11,7 +12,7 @@ class Descriptor extends Model
 
     protected $guarded = [];
 
-    public function environment()
+    public function environment(): BelongsTo
     {
         return $this->belongsTo(Environment::class);
     }

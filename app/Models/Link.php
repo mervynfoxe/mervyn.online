@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Link extends Model
 {
@@ -11,12 +13,12 @@ class Link extends Model
 
     protected $guarded = [];
 
-    public function linkGroup()
+    public function linkGroup(): BelongsTo
     {
         return $this->belongsTo(LinkGroup::class);
     }
 
-    public function icon()
+    public function icon(): MorphOne
     {
         return $this->morphOne(Icon::class, 'iconable');
     }
