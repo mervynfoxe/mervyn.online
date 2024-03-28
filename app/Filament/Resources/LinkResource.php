@@ -47,15 +47,8 @@ class LinkResource extends Resource
                         return preg_replace('#^www\.(.+\.)#i', '$1', $parts['host']);
                     })
                     ->tooltip(fn (string $state): string => $state),
-                Tables\Columns\TextColumn::make('icon.path')
-                    ->formatStateUsing(fn (string $state): string => basename($state))
-                    ->tooltip(function(Link $record) {
-                        $icon = $record->icon;
-                        if (!$icon) {
-                            return NULL;
-                        }
-                        return '<img src="' . asset($icon->path) . '" alt="' . $icon->alt_text . '" />';
-                    }),
+                Tables\Columns\ImageColumn::make('icon.path')
+                    ->disk('public'),
                 Tables\Columns\TextColumn::make('tooltip_text')
             ])
             ->filters([

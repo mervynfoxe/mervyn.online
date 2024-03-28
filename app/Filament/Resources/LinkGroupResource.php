@@ -37,15 +37,8 @@ class LinkGroupResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable()
                     ->label('Group Name'),
-                Tables\Columns\TextColumn::make('icon.path')
-                    ->formatStateUsing(fn (string $state): string => basename($state))
-                    ->tooltip(function(LinkGroup $record) {
-                        $icon = $record->icon;
-                        if (!$icon) {
-                            return NULL;
-                        }
-                        return '<img src="' . asset($icon->path) . '" alt="' . $icon->alt_text . '" />';
-                    }),
+                Tables\Columns\ImageColumn::make('icon.path')
+                    ->disk('public'),
                 Tables\Columns\TextColumn::make('links_count')
                     ->label('Links')
                     ->counts('links'),
