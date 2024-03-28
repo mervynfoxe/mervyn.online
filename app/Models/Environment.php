@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
+/**
+ * @property string $name
+ * @property HasMany $linkGroups
+ * @property HasManyThrough $links
+ * @property HasMany $descriptors
+ * @property HasMany $configs
+ */
 class Environment extends Model
 {
     use HasFactory;

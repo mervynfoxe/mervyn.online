@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
+/**
+ * @property string $name
+ * @property Environment $environment
+ * @property HasMany $links
+ * @property MorphOne $icon
+ */
 class LinkGroup extends Model
 {
     use HasFactory;
