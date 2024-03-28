@@ -23,7 +23,35 @@ class LinkResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('label')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('url')
+                    ->url()
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('tooltip_text')
+                    ->maxLength(255),
+                Forms\Components\Select::make('link_group_id')
+                    ->label('Group')
+                    ->relationship('linkGroup', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->createOptionForm([
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->maxLength(255),
+//                        Forms\Components\FileUpload::make('icon')
+//                            ->image()
+//                            ->disk('public')
+//                            ->directory('images/icons'),
+                        Forms\Components\Select::make('environment')
+                            ->relationship('environment', 'name'),
+                    ]),
+//                Forms\Components\FileUpload::make('icon')
+//                    ->image()
+//                    ->disk('public')
+//                    ->directory('images/icons')
             ]);
     }
 

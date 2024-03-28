@@ -24,7 +24,15 @@ class LinkGroupResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\Select::make('environment')
+                    ->relationship('environment', 'name'),
+//                Forms\Components\FileUpload::make('icon')
+//                    ->image()
+//                    ->disk('public')
+//                    ->directory('images/icons'),
             ]);
     }
 
