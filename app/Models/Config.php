@@ -19,6 +19,17 @@ class Config extends Model
 
     protected $guarded = [];
 
+    public static function get($key, $environment = NULL, $return_model = FALSE): string|Config {
+        $environment = $environment ?? Environment::getCurrent();
+        $config = self::where('environment_id', $environment->id)->where('config_name', $key)->first();
+
+        if ($return_model) {
+            return $config;
+        }
+
+        return $config->value;
+    }
+
     public function environment(): BelongsTo
     {
         return $this->belongsTo(Environment::class);

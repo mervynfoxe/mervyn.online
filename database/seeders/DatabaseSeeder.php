@@ -18,8 +18,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
-            EnvironmentSeeder::class,
-            ConfigSeeder::class,
             LinkGroupSeeder::class,
             LinkSeeder::class,
             IconSeeder::class,

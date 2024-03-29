@@ -20,6 +20,11 @@ class Environment extends Model
 
     protected $guarded = [];
 
+    public static function getCurrent(): Environment {
+        // TODO add logic to actually check domain against environments table
+        return self::find(1);
+    }
+
     public function linkGroups(): HasMany
     {
         return $this->hasMany(LinkGroup::class);

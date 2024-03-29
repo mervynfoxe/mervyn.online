@@ -15,6 +15,7 @@ return new class extends Migration {
         Schema::create('environments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('domain');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
