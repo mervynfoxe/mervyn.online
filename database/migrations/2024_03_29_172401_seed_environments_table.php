@@ -16,8 +16,13 @@ return new class extends Migration
             [
                 'id' => 1,
                 'name' => 'default',
-                'domain' => ''
-            ]
+                'domain' => 'domain1.example.com',
+            ],
+            [
+                'id' => 2,
+                'name' => 'second',
+                'domain' => 'domain2.example.com',
+            ],
         ];
 
         DB::beginTransaction();
