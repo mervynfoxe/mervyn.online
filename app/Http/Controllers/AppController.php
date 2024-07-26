@@ -19,7 +19,8 @@ class AppController extends Controller
         ];
     }
 
-    public function index(): View {
+    public function index(Request $request): View {
+        $this->data['request'] = $request;
         return view('landing.content', $this->data);
     }
 }

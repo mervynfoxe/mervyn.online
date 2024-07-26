@@ -9,7 +9,8 @@
                 <?php /*Template::includeTemplate('partials/social_' . Config::$sCurrentEnv . '.php');*/ ?>
             </div>
             <x-copyright />
-            env: {{ $environment->name }}
+            env: {{ $environment->name }}<br />
+            domain: {{ $request->getHost() }}
         </div>
     </div>
 @endsection
