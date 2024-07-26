@@ -49,6 +49,7 @@ return new class extends Migration
         DB::beginTransaction();
         DB::table('config')
             ->where('environment_id', 1)
+            ->whereIn('config_name', ['site_title', 'meta_title', 'favicon', 'copyright_name'])
             ->delete();
         DB::commit();
     }
