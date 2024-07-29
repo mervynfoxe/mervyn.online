@@ -10,10 +10,12 @@ use Illuminate\Http\Request;
 class AppController extends Controller
 {
     public array $data = [];
+    protected Environment $environment;
 
     public function __construct() {
+        $this->environment = Environment::get(config('app.environment.id'));
         $this->data = [
-            'environment' => Environment::getCurrent(),
+            'environment' => $this->environment,
             'site_title' => Config::get('site_title'),
             'meta_title' => Config::get('meta_title')
         ];

@@ -20,6 +20,11 @@ services:
   database:
     portforward: 54577
 
+proxy:
+  appserver:
+    - mervyn-online.lndo.site
+    - renfox.lndo.site
+
 tooling:
   xdebug-on:
     service: appserver

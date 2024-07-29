@@ -44,7 +44,7 @@ class Header extends Component
     {
         $this->content_h1 = Config::get('site_title');
         // TODO set up DB config option for if feature list should be randomized and assemble list
-        $environment = Environment::getCurrent();
+        $environment = Environment::get(config('app.environment.id'));
         $feature_arr = $this->feature_opts[$environment->name];
         if ($environment->name === 'default') {
             shuffle($feature_arr);
