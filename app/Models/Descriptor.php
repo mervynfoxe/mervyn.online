@@ -17,8 +17,12 @@ class Descriptor extends Model
 
     protected $guarded = [];
 
-    public static function getFromEnvironment(int $env_id): array {
-        return self::where('environment_id', $env_id)->get()->all();
+    public static function getFromEnvironment(int $env_id, bool $active_only = TRUE): array {
+        $query = self::where('environment_id', $env_id);
+        if ($active_only !== FALSE) {
+            $query = $query->where('active', TRUE);
+        }
+        return $query->get()->all();
     }
 
     public function environment(): BelongsTo
