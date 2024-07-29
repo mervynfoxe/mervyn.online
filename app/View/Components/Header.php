@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\Models\Config;
+use App\Models\Descriptor;
 use App\Models\Environment;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -13,30 +14,6 @@ class Header extends Component
     public string $content_h1 = '';
     public array $features = [];
 
-    // TODO move this to config table to pull from
-    private array $feature_opts = [
-        'default' => [
-            'Web Dev',
-            'Internet Fox',
-            'Slacker',
-            'Bad to the Bone',
-            'Bad at Games',
-            'Time-waster',
-            'Coffee-consumer',
-            //    'Lucio Main',
-            'No one of Importance',
-            'Never Sleeps',
-            'Key Smasher',
-            'Soft Friend',
-            'Photo-taker',
-        ],
-        'professional' => [
-            'Applications',
-            'Websites',
-            'Databases',
-        ]
-    ];
-
     /**
      * Create a new component instance.
      */
@@ -45,11 +22,14 @@ class Header extends Component
         $this->content_h1 = Config::get('site_title');
         // TODO set up DB config option for if feature list should be randomized and assemble list
         $environment = Environment::get(config('app.environment.id'));
-        $feature_arr = $this->feature_opts[$environment->name];
+        $feature_arr = Descriptor::getFromEnvironment($environment->id);
         if ($environment->name === 'default') {
             shuffle($feature_arr);
         }
-        $this->features = array_slice($feature_arr, 0, 3);
+        $feature_strs = array_map(function($item) {
+            return $item['label'];
+        }, $feature_arr);
+        $this->features = array_slice($feature_strs, 0, 3);
     }
 
     /**
