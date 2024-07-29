@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 /**
+ * @property int $id
  * @property string $name
+ * @property string $domain
+ * @property bool $shuffle_descriptors
  * @property HasMany $linkGroups
  * @property HasManyThrough $links
  * @property HasMany $descriptors

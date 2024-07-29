@@ -29,6 +29,9 @@ class EnvironmentResource extends Resource
                 Forms\Components\TextInput::make('domain')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\Checkbox::make('shuffle_descriptors')
+                    ->label('Shuffle Descriptors on Homepage')
+                    ->default(TRUE),
             ]);
     }
 
@@ -39,6 +42,8 @@ class EnvironmentResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('domain'),
+                Tables\Columns\IconColumn::make('shuffle_descriptors')
+                    ->boolean(),
             ])
             ->filters([
                 //

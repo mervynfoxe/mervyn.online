@@ -20,13 +20,12 @@ class Header extends Component
     public function __construct()
     {
         $this->content_h1 = Config::get('site_title');
-        // TODO set up DB config option for if feature list should be randomized and assemble list
         $environment = Environment::get(config('app.environment.id'));
         $feature_arr = Descriptor::getFromEnvironment($environment->id);
-        if ($environment->name === 'default') {
+        if ($environment->shuffle_descriptors) {
             shuffle($feature_arr);
         }
-        $feature_strs = array_map(function($item) {
+        $feature_strs = array_map(static function($item) {
             return $item['label'];
         }, $feature_arr);
         $this->features = array_slice($feature_strs, 0, 3);
