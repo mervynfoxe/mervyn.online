@@ -13,16 +13,17 @@ class Header extends Component
 {
     public string $content_h1 = '';
     public array $features = [];
+    protected Environment $environment;
 
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(Environment $environment = NULL)
     {
+        $this->environment = $environment ?? Environment::get(config('app.environment.id'));
         $this->content_h1 = Config::get('site_title');
-        $environment = Environment::get(config('app.environment.id'));
-        $feature_arr = Descriptor::getFromEnvironment($environment->id);
-        if ($environment->shuffle_descriptors) {
+        $feature_arr = Descriptor::getFromEnvironment($this->environment->id);
+        if ($this->environment->shuffle_descriptors) {
             shuffle($feature_arr);
         }
         $feature_strs = array_map(static function($item) {
