@@ -14,8 +14,8 @@ return new class extends Migration {
     {
         Schema::create('links', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('link_group_id')->unsigned();
-            $table->integer('order');
+            $table->bigInteger('link_group_id')->unsigned()->nullable();
+            $table->integer('order')->nullable();
             $table->string('url');
             $table->string('label');
             $table->string('tooltip_text')->nullable();

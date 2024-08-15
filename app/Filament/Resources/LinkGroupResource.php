@@ -27,7 +27,7 @@ class LinkGroupResource extends Resource
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Select::make('environment')
+                Forms\Components\Select::make('environment_id')
                     ->relationship('environment', 'name'),
 //                Forms\Components\FileUpload::make('icon')
 //                    ->image()

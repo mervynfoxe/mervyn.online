@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->id();
             $table->bigInteger('environment_id')->unsigned();
             $table->string('name');
-            $table->integer('order');
+            $table->integer('order')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
 
