@@ -17,8 +17,6 @@ services:
       - composer install
       - php artisan key:generate
       - php artisan migrate
-  database:
-    portforward: 54577
 
 tooling:
   xdebug-on:
