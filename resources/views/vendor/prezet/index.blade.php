@@ -2,14 +2,14 @@
     /* @var array $nav */
     /* @var array|null|string $currentTag */
     /* @var array|null|string $currentCategory */
-    /* @var \Illuminate\Support\Collection<int,\BenBjurstrom\Prezet\Data\FrontmatterData> $articles */
+    /* @var \Illuminate\Support\Collection<int,App\Data\CustomFrontmatterData> $articles */
 @endphp
 
 <x-prezet::template>
     @seo([
-        'title' => 'Prezet: Markdown Blogging for Laravel',
+        'title' => config('prezet.name'),
         'description' =>
-            'Transform your markdown files into SEO-friendly blogs, articles, and documentation!',
+            'Mervyn Fox\'s personal blog',
         'url' => route('prezet.index'),
     ])
     <x-slot name="left">
@@ -21,12 +21,12 @@
                 <h1
                     class="font-display text-4xl font-bold tracking-tight text-gray-900"
                 >
-                    Prezet Blog
+                    The FoxBlog
                 </h1>
 
                 <div class="justify-between sm:flex">
                     <p class="text-lg leading-7 text-gray-500">
-                        A blog created with Laravel and Tailwind.css
+                        Ramblings and musings and whatever else comes to mind.
                     </p>
                     <div class="mt-4 block sm:mt-0">
                         @if ($currentTag)

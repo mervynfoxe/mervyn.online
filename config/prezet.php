@@ -1,6 +1,19 @@
 <?php
 
 return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the name of the blog application, which can be used in
+    | place of the application name if the blog has its own unique name.
+    |
+    */
+
+    'name' => env('PREZET_NAME', env('APP_NAME', 'Prezet')),
+
     /*
     |--------------------------------------------------------------------------
     | Filesystem Configuration
@@ -27,7 +40,7 @@ return [
     */
 
     'data' => [
-        'frontmatter' => BenBjurstrom\Prezet\Data\FrontmatterData::class,
+        'frontmatter' => App\Data\CustomFrontmatterData::class,
     ],
 
     /*

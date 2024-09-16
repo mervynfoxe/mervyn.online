@@ -2,11 +2,11 @@
 /* @var string $body */
 /* @var array $nav */
 /* @var array $headings */
-/* @var \BenBjurstrom\Prezet\Data\FrontmatterData $frontmatter */
+/* @var App\Data\CustomFrontmatterData $frontmatter */
 @endphp
 <x-prezet::template>
     @seo([
-        'title' => $frontmatter->title,
+        'title' => $frontmatter->title . ' - ' . config('prezet.name'),
         'description' => $frontmatter->excerpt,
         'url' => route('prezet.show', ['slug' => $frontmatter->slug]),
         'image' => $frontmatter->image,
@@ -28,6 +28,11 @@
             >
                 {{ $frontmatter->title }}
             </h1>
+            <?php if ($frontmatter->type === 'post'): ?>
+            <p class="font-display text-sm font-medium text-primary-600">
+                {{ $frontmatter->createdAt->toFormattedDateString() }}
+            </p>
+            <?php endif; ?>
         </header>
         <div
             class="prose-headings:font-display prose prose-gray max-w-none prose-a:border-b prose-a:border-dashed prose-a:border-black/30 prose-a:font-semibold prose-a:no-underline hover:prose-a:border-solid prose-img:rounded"

@@ -28,9 +28,8 @@
             href="{{ route('prezet.index') }}"
             class="inline-block flex items-center space-x-2"
         >
-            <x-prezet::logo />
             <span class="text-2xl font-bold text-gray-900">
-                {{ strtoupper(config('app.name')) }}
+                {{ strtoupper(config('prezet.name')) }}
             </span>
         </a>
     </div>
@@ -38,7 +37,7 @@
         <a
             class="group"
             aria-label="GitHub"
-            href="https://github.com/benbjurstrom/prezet"
+            href="https://github.com/mervynfoxe/mervyn.online"
             target="_blank"
         >
             <svg
