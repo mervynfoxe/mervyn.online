@@ -29,6 +29,11 @@ return [
     */
 
     'disks' => [
+        'blog' => [
+            'driver' => 'local',
+            'root' => storage_path('blog'),
+            'throw' => false,
+        ],
 
         'local' => [
             'driver' => 'local',

@@ -265,3 +265,5 @@ Temporary Items
 
 ### Project-specific
 .lando.local.yml
+prezet.sqlite
+public/prezet_sitemap.xml
