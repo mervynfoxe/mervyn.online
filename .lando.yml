@@ -17,8 +17,29 @@ services:
       - composer install
       - php artisan key:generate
       - php artisan migrate
+  node:
+    type: node:20
+    scanner: false
+    ports:
+      - 3009:3009
+    build:
+      - npm install
+
+proxy:
+  appserver:
+    - renfox.lndo.site
 
 tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  dev:
+    service: node
+    cmd: npm run dev
+  build:
+    service: node
+    cmd: npm run build
   xdebug-on:
     service: appserver
     description: Enable xdebug for apache.

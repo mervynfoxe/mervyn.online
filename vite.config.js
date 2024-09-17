@@ -12,4 +12,10 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        https: false,
+        host: true,
+        port: 3009,
+        hmr: {host: 'localhost', protocol: 'ws'},
+    },
 });
