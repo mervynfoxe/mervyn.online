@@ -1,10 +1,7 @@
-## Heading 1
+## Pinned Posts
 
-- [First Post](content/2024/09/16-first-post)
-- [Another Link](#)
-## Heading 2
+- [Hello, (my) world](content/2024/09/17-hello-world)
 
--  [Link](#)
--  [Link](#)
--  [Link](#)
--  [Link](#)
+## Navigation
+
+-  [About](content/page/about)

@@ -21,7 +21,7 @@
                 <h1
                     class="font-display text-4xl font-bold tracking-tight text-gray-900"
                 >
-                    The FoxBlog
+                    The Fox Blog
                 </h1>
 
                 <div class="justify-between sm:flex">

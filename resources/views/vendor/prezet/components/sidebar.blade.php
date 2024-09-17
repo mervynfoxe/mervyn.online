@@ -24,7 +24,8 @@
     >
         <x-prezet::nav :nav="$nav" />
         <div class="mt-16 text-xs text-gray-400">
-            <a target="_blank" href="https://prezet.com">Powered by Prezet</a>
+            <p>&copy;2014-<?= date("Y") ?> Ren Mervyn Fox</p>
+            <p><a target="_blank" href="https://prezet.com">Powered by Prezet</a></p>
         </div>
     </div>
 </div>
