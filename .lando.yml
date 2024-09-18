@@ -13,21 +13,26 @@ services:
     xdebug: true
     config:
       php: .lando/config/php.ini
-    run:
-      - composer install
-      - php artisan key:generate
-      - php artisan migrate
   node:
     type: node:20
     scanner: false
     ports:
       - 3009:3009
-    build:
-      - npm install
 
 proxy:
   appserver:
     - renfox.lndo.site
+
+events:
+  pre-start:
+    - appserver: composer install
+    - node: npm install
+  post-start:
+    - appserver: php artisan key:generate
+    - appserver: php artisan migrate
+    - appserver: touch /app/prezet.sqlite
+    - appserver: php artisan prezet:index
+#    - node: npm run dev &
 
 tooling:
   npm:
