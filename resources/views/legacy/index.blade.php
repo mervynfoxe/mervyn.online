@@ -7,19 +7,17 @@
         Home
     </title>
     <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="/img/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ Vite::asset('resources/legacy/img/favicon.ico') }}">
     <!--[if IE]>
-    <link rel="shortcut icon" href="/img/favicon.ico"><![endif]-->
+    <link rel="shortcut icon" href="{{ Vite::asset('resources/legacy/img/favicon.ico') }}"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta property="og:title" content="Mervyn's Hub"/>
     <meta property="og:url" content="{{ config('app.url') }}"/>
 
-    <meta property="og:image" content="{{ config('app.url') }}/img/logo-a.png"/>
+    <meta property="og:image" content="{{ Vite::asset('resources/legacy/img/logo-a.png') }}"/>
 
-    <link rel="stylesheet" href="{{ Vite::asset('resources/legacy/css/vendor/bootstrap.min.css') }}"/>
-    <link rel="stylesheet" href="{{ Vite::asset('resources/legacy/css/vendor/jquery-ui.min.css') }}"/>
-    <link rel="stylesheet" href="{{ Vite::asset('resources/legacy/css/style.css') }}"/>
+    @vite(['resources/css/legacy.css', 'resources/js/legacy.js'])
 </head>
 <body>
 
@@ -35,14 +33,11 @@
     </div>
 </div>
 
-<script>
+<script type="module">
     <?= 'var sEmail = \'era.z.sbk@tznvy.pbz\';' ?>
 </script>
 
-<script type="text/javascript" src="{{ Vite::asset('resources/legacy/js/vendor/jquery-1.10.2.min.js') }}"></script>
-<script type="text/javascript" src="{{ Vite::asset('resources/legacy/js/vendor/jquery-ui.min.js') }}"></script>
-<script type="text/javascript" src="{{ Vite::asset('resources/legacy/js/vendor/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ Vite::asset('resources/legacy/js/script.js') }}"></script>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </body>
 </html>
