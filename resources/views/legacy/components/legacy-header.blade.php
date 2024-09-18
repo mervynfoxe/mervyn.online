@@ -1,6 +1,4 @@
 <?php
-    $env = 'public';
-
     $text_arrs = [
         'public' => [
             'Web Dev',
@@ -24,8 +22,8 @@
         ],
     ];
 
-    $text_arr = $text_arrs[$env];
-    if ($env === 'public') {
+    $text_arr = $text_arrs[$environment];
+    if ($environment === 'public') {
         $name = 'Mervyn Fox';
         shuffle($text_arr);
     } else {

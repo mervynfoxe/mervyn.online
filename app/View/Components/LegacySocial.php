@@ -8,12 +8,14 @@ use Illuminate\View\Component;
 
 class LegacySocial extends Component
 {
+    public string $environment;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($environment)
     {
-        //
+        $this->environment = $environment;
     }
 
     /**

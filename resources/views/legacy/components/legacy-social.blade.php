@@ -1,6 +1,4 @@
 <?php
-    $env = 'public';
-
     $links = [
         'public' => [
             array(
@@ -163,8 +161,8 @@ $panels = [
     ]
 ];
 
-$link_set = $links[$env];
-$panel_set = $panels[$env];
+$link_set = $links[$environment];
+$panel_set = $panels[$environment];
 ?>
 
 <div id="social">
@@ -203,7 +201,7 @@ $panel_set = $panels[$env];
         </div>
         <?php endforeach; ?>
     </div>
-    <?php if ($env === 'public'): ?>
+    <?php if ($environment === 'public'): ?>
     <div class="panel panel-default nobg">
         <div id="codePanel" class="panel-collapse collapse">
             <div class="panel-body encoded">

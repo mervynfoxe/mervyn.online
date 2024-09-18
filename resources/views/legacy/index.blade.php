@@ -28,10 +28,10 @@
     <div class="row-fluid">
         <div class="col-lg-6 col-lg-offset-4 col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center"
              id="mainContent">
-            <x-legacy-header />
-            <x-legacy-social />
+            <x-legacy-header :environment="$env" />
+            <x-legacy-social :environment="$env" />
         </div>
-        <x-legacy-copyright />
+        <x-legacy-copyright :environment="$env" />
     </div>
 </div>
 
