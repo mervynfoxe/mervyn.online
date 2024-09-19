@@ -2,7 +2,7 @@
 title: About Mervyn
 date: 2024-09-17
 type: page
-draft: true
+draft: false
 slug: about
 category: 
 tags: []

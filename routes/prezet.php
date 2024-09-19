@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\BlogIndexController as IndexController;
+
 use BenBjurstrom\Prezet\Http\Controllers\ImageController;
-use BenBjurstrom\Prezet\Http\Controllers\IndexController;
 use BenBjurstrom\Prezet\Http\Controllers\OgimageController;
 use BenBjurstrom\Prezet\Http\Controllers\ShowController;
 use Illuminate\Foundation\Http\Middleware\ValidateCsrfToken;

@@ -268,3 +268,4 @@ Temporary Items
 prezet.sqlite
 public/prezet_sitemap.xml
 public/build
+.vite/
