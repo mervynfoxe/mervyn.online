@@ -82,9 +82,10 @@ fi
 if [ "$(git status --porcelain 2>/dev/null | wc -l)" -ne 0 ]; then
     echo "Stashing changes and checking out ${BRANCH}..."
     git stash push -u -m "Stashed changes before automated deployment"
-    git checkout --quiet "${BRANCH}"
     DID_STASH=1
 fi
+
+git checkout --quiet "${BRANCH}"
 
 echo "Setting file permissions..."
 echo "App database"
@@ -106,9 +107,10 @@ rsync_status=$?
 
 [ $rsync_status -eq 0 ] || echo "A problem was encountered during deployment. Please check the logs and try again."
 
+git checkout --quiet "${ORIG_BRANCH}"
+
 if [ $DID_STASH -eq 1 ]; then
     echo "Restoring stashed changes to ${ORIG_BRANCH}..."
-    git checkout --quiet "${ORIG_BRANCH}"
     git stash apply
     stash_status=$?
     if [ $stash_status -eq 0 ]; then
