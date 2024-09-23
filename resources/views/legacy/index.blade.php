@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+    if ($env === 'professional') {
+        $site_title = "Ren Fox";
+    } else {
+        $site_title = config('app.name');
+    }
+    ?>
     <meta charset="utf-8">
     <title>
-        {{ config('app.name') }}
-        Home
+        {{ $site_title }} - Home
     </title>
     <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="/img/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="{{ Vite::asset('resources/legacy/img/favicon.ico') }}">
@@ -12,7 +18,7 @@
     <link rel="shortcut icon" href="{{ Vite::asset('resources/legacy/img/favicon.ico') }}"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="Mervyn's Hub"/>
+    <meta property="og:title" content="{{ $site_title }}"/>
     <meta property="og:url" content="{{ config('app.url') }}"/>
 
     <meta property="og:image" content="{{ Vite::asset('resources/legacy/img/logo-a.png') }}"/>
