@@ -1,0 +1,75 @@
+name: mervyn-online
+recipe: laravel
+config:
+  webroot: public
+  php: '8.3'
+  via: apache
+  database: 'mariadb:10.6'
+  cache: redis
+  xdebug: 'develop,debug'
+
+services:
+  appserver:
+    xdebug: true
+    config:
+      php: .lando/config/php.ini
+  node:
+    type: node:20
+    scanner: false
+    ports:
+      - 3009:3009
+
+proxy:
+  appserver:
+    - renfox.lndo.site
+
+events:
+  pre-start:
+    - appserver: composer install
+    - node: npm install
+  post-start:
+    - appserver: php artisan key:generate
+    - appserver: php artisan migrate
+    - appserver: touch /app/prezet.sqlite
+    - appserver: php artisan prezet:index
+#    - node: npm run dev &
+
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  dev:
+    description: Start the node dev server
+    service: node
+    cmd: npm run dev
+  build:
+    description: Build and package site assets
+    service: node
+    cmd: npm run build
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for apache.
+    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for apache.
+    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    user: root
+  # For deploy scripts: set the following environment variables in your override landofile:
+  # TARGET_HOST, TARGET_USER, TARGET_DIR, (optional) BRANCH
+  deploy-dev:
+    description: Build site packages and deploy to dev server
+    cmd:
+      - node: npm run build
+      - appserver: FROM_LANDO=1 scripts/deploy.sh
+    env:
+      BRANCH: develop
+  deploy-prod:
+    description: Build site packages and deploy to production server
+    cmd:
+      - node: npm run build
+      - appserver: FROM_LANDO=1 scripts/deploy.sh
+    env:
+      BRANCH: main

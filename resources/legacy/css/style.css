@@ -1,0 +1,148 @@
+@import url("fonts.css");
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../img/pattern.png) repeat center 0 #fff;
+}
+
+a.link-light {
+    color: #ccc;
+}
+
+a.link-light:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.background {
+    background: #222;
+    border-bottom: 4px solid rgb(46, 130, 138);
+    height: 50%;
+    width: 100%;
+    position: fixed;
+}
+
+.logo {
+    position: fixed;
+    background: url(../img/logo.png) no-repeat;
+    width: 700px;
+    height: 80px;
+}
+
+.logo.small {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.container-fluid {
+    height: 100%;
+    display: table;
+    width: 100%;
+    padding: 0;
+}
+
+.row-fluid {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container .flex-item {
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.disclaimer {
+    color: #767676;
+    font-style: italic;
+}
+
+/*
+	Social link styles
+*/
+.panel-group {
+    margin: 0;
+}
+
+.panel {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    color: #000;
+}
+
+.panel.nobg {
+    color: #fff;
+    background-color: inherit;
+}
+
+#mainContent {
+    background: rgb(46, 130, 138);
+    color: #fff;
+    padding: 18px;
+    box-shadow: 0 0 188px rgb(101, 102, 101);
+    float: none;
+    margin: 0 auto;
+}
+
+#mainContent h1 {
+    font-family: bebas_neue, sans-serif;
+    font-size: 4em;
+    line-height: 60px;
+    margin: 0;
+}
+
+#mainContent p {
+    margin: 0 0 14px;
+}
+
+#social {
+    padding-bottom: 10px;
+}
+
+#social span + span {
+    margin-left: 4px;
+}
+
+#social a {
+    display: inline-block;
+}
+
+#social a:link,
+#social a:active {
+    outline: none;
+}
+
+#social img {
+    width: 45px;
+    cursor: pointer;
+}
+
+#social a:focus,
+#social img:hover,
+#social a[aria-expanded="true"] {
+    opacity: 0.75;
+}
+
+#copyright {
+    color: #444;
+}
