@@ -1,6 +1,6 @@
 ---
 title: Hello, (my) world
-date: 2024-09-17
+date: 2024-09-23
 type: post
 draft: false
 slug: hello-world
@@ -36,9 +36,9 @@ I'm not 100% married to Prezet yet, and it does have some shortcomings I'm alrea
 
 ## So, really, what now?
 
-Now? Now I see if I can stick with this, see what kinda things I feel good about writing about, and hope that I can carve out a little spot for myself here on a page that's entirely mine.
+Now? Now I see if I can stick with this, see what kinda things I feel good writing about, and hope that I can carve out a little spot for myself here on a page that's entirely mine.
 
-If you do want to stay in touch with me directly, I still maintain a list of links on [my homepage](https://mervyn.online) that you can find me at. Time will tell how much I get back into bigger social media sites but I welcome chatting with new and old friends alike, so feel free to hit me up on Discord or Telegram or wherever (I hear Revolt Chat is up and coming, may look into that).
+If you do want to stay in touch with me directly, I still maintain a list of links on [my homepage](https://mervyn.online) that you can find me at. Time will tell how much I get back into bigger social media sites, but I welcome chatting with new and old friends alike, so feel free to hit me up on Discord or Telegram or wherever (I hear Revolt Chat is up and coming, may look into that).
 
 Until then!
 

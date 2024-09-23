@@ -10,3 +10,5 @@ excerpt: About Mervyn
 image: 
 ---
 Hi, I'm Mervyn! I'll fill this out eventually.
+
+For now, if you're looking for how to find/contact me, check out the [landing page](/).
