@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<script type="module">
+<script>
     <?= 'var sEmail = \'era.z.sbk@tznvy.pbz\';' ?>
 </script>
 
