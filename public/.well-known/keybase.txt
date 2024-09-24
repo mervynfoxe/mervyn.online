@@ -1,0 +1,223 @@
+==================================================================
+https://keybase.io/amv_ph34r
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://amv-ph34r.com
+  * I am amv_ph34r (https://keybase.io/amv_ph34r) on keybase.
+  * I have a public key ASC0-fAdPY8Bn7T9AwnnplogYrjdick_NJJEZPIacTOGEAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "host": "keybase.io",
+            "kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "uid": "7c4173eb6b3b0dc5d2d16d14487bcc19",
+            "username": "amv_ph34r"
+        },
+        "service": {
+            "hostname": "amv-ph34r.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.22"
+    },
+    "ctime": 1495638069,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1495638056,
+        "hash": "563a1306b4047e295e341fc6c44685375d6899988783cadb182750bdc58429c6b06559a2bca084953d66c2bb901dd0c7c9469b3614f498f7e3f31a26411d026d",
+        "seqno": 1106562
+    },
+    "prev": "7c59232e8e0cffb55e7352bb8667b4f91ffdbbf2950983897117889ae3c77870",
+    "seqno": 38,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtPnwHT2PAZ+0/QMJ56ZaIGK43YnJPzSSRGTyGnEzhhAKp3BheWxvYWTFAvh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwidWlkIjoiN2M0MTczZWI2YjNiMGRjNWQyZDE2ZDE0NDg3YmNjMTkiLCJ1c2VybmFtZSI6ImFtdl9waDM0ciJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYW12LXBoMzRyLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIyIn0sImN0aW1lIjoxNDk1NjM4MDY5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTU2MzgwNTYsImhhc2giOiI1NjNhMTMwNmI0MDQ3ZTI5NWUzNDFmYzZjNDQ2ODUzNzVkNjg5OTk4ODc4M2NhZGIxODI3NTBiZGM1ODQyOWM2YjA2NTU5YTJiY2EwODQ5NTNkNjZjMmJiOTAxZGQwYzdjOTQ2OWIzNjE0ZjQ5OGY3ZTNmMzFhMjY0MTFkMDI2ZCIsInNlcW5vIjoxMTA2NTYyfSwicHJldiI6IjdjNTkyMzJlOGUwY2ZmYjU1ZTczNTJiYjg2NjdiNGY5MWZmZGJiZjI5NTA5ODM4OTcxMTc4ODlhZTNjNzc4NzAiLCJzZXFubyI6MzgsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RACnRB6DxZREcXPlONFz4Fy8aJDJc74i97/q2x5TKW1oP+LDOD1u+zbh1djh50eYbgAgYULySyy8H2DsQ5nvH5AahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICqzKjgz5n4lK7R8wP3PqFHbSWzTWa9kcMokXpSvdtJuo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/amv_ph34r
+
+==================================================================
+
+==================================================================
+https://keybase.io/amv_ph34r
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://arschaeffer.com
+  * I am amv_ph34r (https://keybase.io/amv_ph34r) on keybase.
+  * I have a public key ASC0-fAdPY8Bn7T9AwnnplogYrjdick_NJJEZPIacTOGEAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "host": "keybase.io",
+            "kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+            "uid": "7c4173eb6b3b0dc5d2d16d14487bcc19",
+            "username": "amv_ph34r"
+        },
+        "service": {
+            "hostname": "arschaeffer.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.22"
+    },
+    "ctime": 1495638186,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1495638165,
+        "hash": "aa26aa403a5742f2f40c7055d46446f027b8a6ffb60bec3cbf7b84c87b5e40e332d9333c504bfcaa8bd24a242c51e0c736a16c0d954b2d2d06681521b72cbd5e",
+        "seqno": 1106571
+    },
+    "prev": "4f3d2f4eefc7f0d2b53aa8c0b2b6daa92805a2b9a8daed5d6b44c8a67bed3be1",
+    "seqno": 39,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtPnwHT2PAZ+0/QMJ56ZaIGK43YnJPzSSRGTyGnEzhhAKp3BheWxvYWTFAvl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYjRmOWYwMWQzZDhmMDE5ZmI0ZmQwMzA5ZTdhNjVhMjA2MmI4ZGQ4OWM5M2YzNDkyNDQ2NGYyMWE3MTMzODYxMDBhIiwidWlkIjoiN2M0MTczZWI2YjNiMGRjNWQyZDE2ZDE0NDg3YmNjMTkiLCJ1c2VybmFtZSI6ImFtdl9waDM0ciJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYXJzY2hhZWZmZXIuY29tIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMiJ9LCJjdGltZSI6MTQ5NTYzODE4NiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDk1NjM4MTY1LCJoYXNoIjoiYWEyNmFhNDAzYTU3NDJmMmY0MGM3MDU1ZDQ2NDQ2ZjAyN2I4YTZmZmI2MGJlYzNjYmY3Yjg0Yzg3YjVlNDBlMzMyZDkzMzNjNTA0YmZjYWE4YmQyNGEyNDJjNTFlMGM3MzZhMTZjMGQ5NTRiMmQyZDA2NjgxNTIxYjcyY2JkNWUiLCJzZXFubyI6MTEwNjU3MX0sInByZXYiOiI0ZjNkMmY0ZWVmYzdmMGQyYjUzYWE4YzBiMmI2ZGFhOTI4MDVhMmI5YThkYWVkNWQ2YjQ0YzhhNjdiZWQzYmUxIiwic2Vxbm8iOjM5LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJoGLNcUvGaPFxXPiZUl9aSAnIovGP6GVhQt+on3IVbD0TL6Uux6b4ajyVF/6hXLwnPK5N6tZ4NXMZdVLNzlgw6oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCBPAe1vI2nG4c6tETHGGanXodb/Iqk1ZIu236DaSjY6/aN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/amv_ph34r
+
+==================================================================
+
+==================================================================
+https://keybase.io/amv_ph34r
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mervyn.online
+  * I am amv_ph34r (https://keybase.io/amv_ph34r) on keybase.
+  * I have a public key ASC0-fAdPY8Bn7T9AwnnplogYrjdick_NJJEZPIacTOGEAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+      "host": "keybase.io",
+      "kid": "0120b4f9f01d3d8f019fb4fd0309e7a65a2062b8dd89c93f34924464f21a713386100a",
+      "uid": "7c4173eb6b3b0dc5d2d16d14487bcc19",
+      "username": "amv_ph34r"
+    },
+    "merkle_root": {
+      "ctime": 1547491120,
+      "hash": "cdd1113ffad4edf8e43298d1d937319d35a5ec718d4fd91c7c44fba79bc85eb32f8185721dece79950b76238f2ebbb6cea8e4ed31edf4751c53db590d0e6bfd6",
+      "hash_meta": "5906f68d9e8159454998587beaf03932a03e799bcb4b610f0797206207fd5736",
+      "seqno": 4381800
+    },
+    "service": {
+      "entropy": "Ga1HVMPWGCdXaOZgG419xWSZ",
+      "hostname": "mervyn.online",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.12.6"
+  },
+  "ctime": 1547491132,
+  "expire_in": 504576000,
+  "prev": "0eb21d73e6e79064ba7ef8bcffa0f8c8753441e603c31af9754652d95dfcca31",
+  "seqno": 74,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtPnwHT2PAZ+0/QMJ56ZaIGK43YnJPzSSRGTyGnEzhhAKp3BheWxvYWTESpcCSsQgDrIdc+bnkGS6fvi8/6D4yHU0QeYDwxr5dUZS2V38yjHEIMdmn7j64GK/w9JM6WL7cIXFBzwbXCrCPWIy1bXrX6LSAgHCo3NpZ8RAQi+1hn5dkC1IFLjAvPgdNOl8VFeYZANvtkQHd8cbSQs1Fjg9gRJ9Npn6LuxH4pLujyz9w3Jrvg3LTe4duVCfBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIIDgTEHKmQ//+A9px3ki6eAl8odW90yFp6Pw9Smvakd7o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/amv_ph34r
+
+==================================================================
+
+==================================================================
+https://keybase.io/mervynfoxe
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mervyn.online
+  * I am mervynfoxe (https://keybase.io/mervynfoxe) on keybase.
+  * I have a public key ASDvg-wlPr4K9IhQMaUb5jv4qnIePkmHt_KcILO6XDSQjgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ef83ec253ebe0af4885031a51be63bf8aa721e3e4987b7f29c20b3ba5c34908e0a",
+      "host": "keybase.io",
+      "kid": "0120ef83ec253ebe0af4885031a51be63bf8aa721e3e4987b7f29c20b3ba5c34908e0a",
+      "uid": "e2d4019bb70487ad2d50b85e47a45719",
+      "username": "mervynfoxe"
+    },
+    "merkle_root": {
+      "ctime": 1618965177,
+      "hash": "265c5b4a92c949910b88c83a280f8bfb12928805745760f3fd033e56362bb979b75a317bbf6a583791b8ee040398f63fca56a4079c8a3081714b3959cda4cf5e",
+      "hash_meta": "0167dae21c95048516794f30df64a7df9256c5cf20829cb8783cc7b478c475b0",
+      "seqno": 19693767
+    },
+    "service": {
+      "entropy": "Qt8RpymofNW5LqQRoQXjwqQM",
+      "hostname": "mervyn.online",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.2"
+  },
+  "ctime": 1618965188,
+  "expire_in": 504576000,
+  "prev": "0986171ae387e369b00aeee7e141a57a4ab4824f2dc91036d89b5b721abea686",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg74PsJT6+CvSIUDGlG+Y7+KpyHj5Jh7fynCCzulw0kI4Kp3BheWxvYWTESpcCCcQgCYYXGuOH42mwCu7n4UGlekq0gk8tyRA22Jtbchq+pobEIDI8OMliWRZQDgqnSt2mVRVGFjhxMKll8hrZMhDkhwslAgHCo3NpZ8RAprhrOZ3d6bDQt2IfFCpyWTiF6MH1DdjMuE92u/bGLq3Yj7F+yh/g6AF5Nfvc1CHacf2w4ur9EevwDipMuYXdBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIG0hGOChLFMF42P1tHz1pJxg5M46N5bc7rFOjJm99c4uo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mervynfoxe
+
+==================================================================
