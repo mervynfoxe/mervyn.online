@@ -47,6 +47,12 @@ tooling:
     description: Build and package site assets
     service: node
     cmd: npm run build
+  clean:
+    description: Remove build files and view cache
+    cmd:
+      - node: npm run clean
+      - appserver: php artisan view:clear
+      - appserver: php artisan cache:clear
   xdebug-on:
     service: appserver
     description: Enable xdebug for apache.
