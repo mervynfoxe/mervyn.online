@@ -6,11 +6,12 @@ use App\Data\CustomFrontmatterData as FrontmatterData;
 
 use BenBjurstrom\Prezet\Models\Document as BaseDocument;
 use BenBjurstrom\Prezet\Models\Tag;
+use BenBjurstrom\Prezet\Prezet;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\Feed\Feedable;
-use Spatie\Feed\FeedItem;
+use App\Models\FeedItem;
 
 /**
  * @property string $slug
@@ -42,6 +43,9 @@ class Document extends BaseDocument implements Feedable
     }
 
     public function toFeedItem(): FeedItem {
+        $md = Prezet::getMarkdown($this->filepath);
+        $html = Prezet::getContent($md);
+
         return FeedItem::create()
             ->id($this->slug)
             ->title($this->frontmatter->title)
@@ -49,7 +53,8 @@ class Document extends BaseDocument implements Feedable
             ->category($this->frontmatter->category ?? '')
             ->updated($this->updated_at)
             ->link(route('prezet.show', $this->slug))
-            ->authorName(config('app.name'));
+            ->authorName(config('app.name'))
+            ->content($html);
     }
 
     public static function getFeedItems(): \Illuminate\Database\Eloquent\Collection {
