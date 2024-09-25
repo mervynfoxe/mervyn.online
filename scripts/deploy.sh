@@ -63,7 +63,7 @@ if [[ $FROM_LANDO -ne 1 ]]; then
     # We can't access the node service from here,
     # direct the user towards next steps
     echo "Script called from within Lando container, node is unavailable."
-    echo "If you have not built site assets, please do so from the host machine via 'npm run build' or 'lando build' before continuing."
+    echo "If you have not built site assets, please do so from the host machine via 'lando npm run build' or 'lando build' before continuing."
     if [ "$1" != "-y" ]; then
         read -rp "Press enter to continue"
     fi
@@ -80,24 +80,25 @@ if [ "$1" != "-y" ]; then
 fi
 
 if [ "$(git status --porcelain 2>/dev/null | wc -l)" -ne 0 ]; then
-    echo "Stashing changes and checking out ${BRANCH}..."
+    echo "Stashing changes before switching branches..."
     git stash push -u -m "Stashed changes before automated deployment"
     DID_STASH=1
 fi
 
+echo "Checking out ${BRANCH}..."
 git checkout --quiet "${BRANCH}"
 
-echo "Setting file permissions..."
-echo "App database"
+echo "Setting file permissions for server..."
+echo "\tApp database"
+touch "${deploy_from}/database/database.sqlite"
 chmod g+w "${deploy_from}/database/database.sqlite"
-echo "Blog database"
+echo "\tBlog database"
+touch "${deploy_from}/prezet.sqlite"
 chmod g+w "${deploy_from}/prezet.sqlite"
-echo "Framework directories"
+echo "\tFramework directories"
 chmod -R g+w "${deploy_from}/storage/framework"
 
 echo "Updating databases..."
-touch "${deploy_from}/database/database.sqlite"
-touch "${deploy_from}/prezet.sqlite"
 php artisan migrate
 php artisan prezet:index
 

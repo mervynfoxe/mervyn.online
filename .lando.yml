@@ -4,7 +4,6 @@ config:
   webroot: public
   php: '8.3'
   via: apache
-  database: 'mariadb:10.6'
   cache: redis
   xdebug: 'develop,debug'
 
@@ -18,6 +17,7 @@ services:
     scanner: false
     ports:
       - 3009:3009
+  database: disabled
 
 proxy:
   appserver:
@@ -32,7 +32,6 @@ events:
     - appserver: php artisan migrate
     - appserver: touch /app/prezet.sqlite
     - appserver: php artisan prezet:index
-#    - node: npm run dev &
 
 tooling:
   npm:
@@ -47,6 +46,12 @@ tooling:
     description: Build and package site assets
     service: node
     cmd: npm run build
+  clean:
+    description: Remove build files and view cache
+    cmd:
+      - node: npm run clean
+      - appserver: php artisan view:clear
+      - appserver: php artisan cache:clear
   xdebug-on:
     service: appserver
     description: Enable xdebug for apache.

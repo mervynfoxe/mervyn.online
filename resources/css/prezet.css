@@ -7,4 +7,12 @@ a.external-link::after {
     margin-left: 1px;
 }
 
+.sidebar {
+    .sidebar-icons {
+        img.sidebar-icon {
+            max-width: 20px;
+        }
+    }
+}
+
 @config "./../../tailwind.prezet.config.js";

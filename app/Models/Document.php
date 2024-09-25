@@ -6,9 +6,12 @@ use App\Data\CustomFrontmatterData as FrontmatterData;
 
 use BenBjurstrom\Prezet\Models\Document as BaseDocument;
 use BenBjurstrom\Prezet\Models\Tag;
+use BenBjurstrom\Prezet\Prezet;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Spatie\Feed\Feedable;
+use App\Models\FeedItem;
 
 /**
  * @property string $slug
@@ -19,7 +22,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property Carbon $created_at
  * @property Carbon $updated_at
  * */
-class Document extends BaseDocument
+class Document extends BaseDocument implements Feedable
 {
     /**
      * Get the attributes that should be cast.
@@ -37,5 +40,25 @@ class Document extends BaseDocument
     public function type(): string
     {
         return $this->frontmatter->type;
+    }
+
+    public function toFeedItem(): FeedItem {
+        $md = Prezet::getMarkdown($this->filepath);
+        $html = Prezet::getContent($md);
+
+        return FeedItem::create()
+            ->id($this->slug)
+            ->title($this->frontmatter->title)
+            ->summary($this->frontmatter->excerpt)
+            ->category($this->frontmatter->category ?? '')
+            ->updated($this->updated_at)
+            ->link(route('prezet.show', $this->slug))
+            ->authorName(config('app.name'))
+            ->content($html);
+    }
+
+    public static function getFeedItems(): \Illuminate\Database\Eloquent\Collection {
+        return self::where('draft', false)
+            ->where('frontmatter', 'like', '%"type":"post"%')->get();
     }
 }
