@@ -1,0 +1,15 @@
+.comments-container {
+    margin-top: 1rem;
+
+    &.has-header {
+        border-top: 1px solid #aaa;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .comments-header {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}

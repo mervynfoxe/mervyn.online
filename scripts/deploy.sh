@@ -88,19 +88,19 @@ fi
 echo "Checking out ${BRANCH}..."
 git checkout --quiet "${BRANCH}"
 
+echo "Updating databases..."
+touch "${deploy_from}/database/database.sqlite"
+touch "${deploy_from}/prezet.sqlite"
+php artisan migrate
+php artisan prezet:index
+
 echo "Setting file permissions for server..."
 echo "\tApp database"
-touch "${deploy_from}/database/database.sqlite"
 chmod g+w "${deploy_from}/database/database.sqlite"
 echo "\tBlog database"
-touch "${deploy_from}/prezet.sqlite"
 chmod g+w "${deploy_from}/prezet.sqlite"
 echo "\tFramework directories"
 chmod -R g+w "${deploy_from}/storage/framework"
-
-echo "Updating databases..."
-php artisan migrate
-php artisan prezet:index
 
 echo "Syncing site files..."
 rsync -alvz --delete --exclude-from="${DIR}/.deployignore" "$deploy_from" "${TARGET_USER}@${TARGET_HOST}:${TARGET_DIR}/"
