@@ -1,4 +1,15 @@
 <?php
+    // Cohost Countdown
+    $now = new DateTime();
+    $ch_dl = new DateTime('2024-10-01');
+    $ch_id = $now > $ch_dl;
+    $ch_td = $now->diff($ch_dl);
+    $ch_cd = [
+        'header' => $ch_id ? 'RIP Eggbug 😔' : $ch_td->d . ' days, ' . $ch_td->h . ' hours remain',
+        'link' => $ch_id ? 'https://web.archive.org/web/https://cohost.org/mervyn' : 'https://cohost.org/mervyn'
+    ];
+
+    // Social links array
     $links = [
         'public' => [
             array(
@@ -18,21 +29,14 @@
                 'panel_links' => NULL
             ),
             array(
-                'url' => 'https://www.flickr.com/photos/mervynfoxe',
-                'icon' => 'icon-flickr.png',
-                'id' => 'flickr-link',
-                'alt' => 'flickr',
-                'title' => 'Mervyn Fox on Flickr',
-                'panel_links' => NULL
+                'url' => '/blog',
+                'icon' => 'icon-document.png',
+                'id' => 'blog-link',
+                'alt' => 'blog',
+                'title' => 'My Blog',
+                'panel_links' => NULL,
+                'target' => '_self'
             ),
-            //	array(
-            //		'url' => 'https://twitch.tv/mervynfoxe',
-            //		'icon' => 'icon-twitch.png',
-            //		'id' => 'twitch-link',
-            //		'alt' => 'twitch',
-            //		'title' => 'MervynFoxe on Twitch',
-            //		'panel_links' => NULL
-            //	),
             array(
                 'url' => '#panel-other-links',
                 'icon' => 'icon-other.png',
@@ -78,91 +82,91 @@
         ]
     ];
 
-$panels = [
-    'public' => [
-        'panel-other-links' => array(
-            array(
-                'label' => 'Tumblr',
-                'url' => 'https://tumblr.mervyn.online/',
-                'title' => 'mervynfoxe'
+    $panels = [
+        'public' => [
+            'panel-other-links' => array(
+                array(
+                    'label' => 'Tumblr',
+                    'url' => 'https://tumblr.mervyn.online/',
+                    'title' => 'mervynfoxe'
+                ),
+                array(
+                    'label' => 'Cohost (' . $ch_cd['header'] . ')',
+                    'url' => $ch_cd['link'],
+                    'title' => 'mervyn'
+                ),
+                array(
+                    'label' => 'Mastodon',
+                    'url' => 'https://yiff.life/@mervyn',
+                    'title' => '@mervyn@yiff.life'
+                ),
+                array(
+                    'label' => 'Flickr',
+                    'url' => 'https://www.flickr.com/photos/mervynfoxe',
+                    'title' => 'Mervyn Fox'
+                ),
+                array(
+                    'label' => 'Instagram',
+                    'url' => 'https://www.instagram.com/mervynfoxe/',
+                    'title' => 'mervynfoxe'
+                ),
+                array(
+                    'label' => 'Discord',
+                    'url' => NULL,
+                    'title' => 'Mervyn#0827'
+                ),
+                array(
+                    'label' => 'Telegram',
+                    'url' => 'https://t.me/MervynFoxe',
+                    'title' => '@MervynFoxe'
+                ),
+                array(
+                    'label' => 'Battle.net',
+                    'url' => NULL,
+                    'title' => 'MervynFoxe#1946'
+                ),
+                array(
+                    'label' => 'Switch',
+                    'url' => NULL,
+                    'title' => 'SW-6318-7125-1032'
+                ),
             ),
-            array(
-                'label' => 'Cohost',
-                'url' => 'https://cohost.org/MervynFoxe',
-                'title' => 'mervynfoxe'
-            ),
-            array(
-                'label' => 'Instagram',
-                'url' => 'https://www.instagram.com/mervynfoxe/',
-                'title' => 'mervynfoxe'
-            ),
-            array(
-                'label' => 'Discord',
-                'url' => NULL,
-                'title' => 'Mervyn#0827'
-            ),
-            array(
-                'label' => 'Telegram',
-                'url' => 'https://t.me/MervynFoxe',
-                'title' => '@MervynFoxe'
-            ),
-            array(
-                'label' => 'Battle.net',
-                'url' => NULL,
-                'title' => 'MervynFoxe#1946'
-            ),
-            array(
-                'label' => '3DS',
-                'url' => NULL,
-                'title' => '4012-4350-8803'
-            ),
-            array(
-                'label' => 'Switch',
-                'url' => NULL,
-                'title' => 'SW-6318-7125-1032'
-            ),
-            //		array(
-            //			'label' => 'Mastodon',
-            //			'url' => 'https://yiff.life/@mervyn',
-            //			'title' => '@mervyn@yiff.life'
-            //		),
-        ),
-        'panel-support' => array(
-            array(
-                'label' => NULL,
-                'url' => 'https://paypal.me/AMVPh34r',
-                'title' => 'PayPal'
-            ),
-            array(
-                'label' => NULL,
-                'url' => 'https://cash.app/$MervynFoxe',
-                'title' => 'Cash App'
-            ),
-            array(
-                'label' => NULL,
-                'url' => 'https://ko-fi.com/mervyn',
-                'title' => 'Ko-fi'
-            ),
-            //		array(
-            //			'label' => NULL,
-            //			'url' => 'https://streamlabs.com/mervynfoxe/tip',
-            //			'title' => 'Streamlabs'
-            //		),
-        )
-    ],
-    'professional' => [
-        'panel-email-link' => [
-            [
-                'label' => NULL,
-                'url' => '#',
-                'title' => '%email%'
+            'panel-support' => array(
+                array(
+                    'label' => NULL,
+                    'url' => 'https://paypal.me/AMVPh34r',
+                    'title' => 'PayPal'
+                ),
+                array(
+                    'label' => NULL,
+                    'url' => 'https://cash.app/$MervynFoxe',
+                    'title' => 'Cash App'
+                ),
+                array(
+                    'label' => NULL,
+                    'url' => 'https://ko-fi.com/mervyn',
+                    'title' => 'Ko-fi'
+                ),
+    //            array(
+    //                'label' => NULL,
+    //                'url' => 'https://streamlabs.com/mervynfoxe/tip',
+    //                'title' => 'Streamlabs'
+    //            ),
+            )
+        ],
+        'professional' => [
+            'panel-email-link' => [
+                [
+                    'label' => NULL,
+                    'url' => '#',
+                    'title' => '%email%'
+                ]
             ]
         ]
-    ]
-];
+    ];
 
-$link_set = $links[$environment];
-$panel_set = $panels[$environment];
+    $link_set = $links[$environment];
+    $panel_set = $panels[$environment];
 ?>
 
 <div id="social">
@@ -173,7 +177,9 @@ $panel_set = $panels[$environment];
     <span><a href="<?= $item->url ?>" id="<?= $item->id ?>"
              title="<?= $item->title ?>"
              <?= !empty($item->panel_links) ? 'data-toggle="collapse" data-parent="#socialPanels"' : '' ?>
-             target="_blank"><img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/></a></span>
+             target="<?= $item->target ?? '_blank' ?>">
+            <img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/>
+        </a></span>
     <?php endforeach; ?>
 </div>
 
@@ -191,7 +197,7 @@ $panel_set = $panels[$environment];
                     <strong><?= $link->label ?></strong><br/>
                     <?php endif; ?>
                         <?php if (!empty($link->url)): ?>
-                    <a href="<?= $link->url ?>" target="_blank"><?= $link->title ?></a>
+                    <a href="<?= $link->url ?>" target="<?= $link->target ?? '_blank' ?>"><?= $link->title ?></a>
                     <?php else: ?>
                         <?= $link->title ?>
                     <?php endif; ?>
