@@ -1,7 +1,9 @@
-## Navigation
+## Pages
 
--  [About](content/page/about)
+- [About](content/page/about)
+- [Shoutbox](content/page/shoutbox)
 
-## Pinned Posts
+## Categories
 
-- [Hello, (my) world](content/2024/09/23-hello-world)
+- [Yaps](?category=Yaps)
+- [Development](?category=Development)
