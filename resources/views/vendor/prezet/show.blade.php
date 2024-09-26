@@ -51,6 +51,7 @@
             class="hidden xl:sticky xl:top-[4.75rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.75rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6"
         >
             <nav aria-labelledby="on-this-page-title" class="w-56">
+                <?php if (!empty($headings)): ?>
                 <p
                     id="on-this-page-title"
                     class="font-display text-sm font-medium text-gray-900"
@@ -91,6 +92,7 @@
                         </li>
                     @endforeach
                 </ol>
+                <?php endif; ?>
             </nav>
         </div>
     </x-slot>
