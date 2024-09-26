@@ -7,3 +7,4 @@
 
 - [Yaps](?category=Yaps)
 - [Development](?category=Development)
+- [Site updates](?category=Updates)
