@@ -10,9 +10,9 @@
         <div id="cusdis_thread"
              data-host="https://cusdis.com"
              data-app-id="{{ config('blog.comments.app_id') }}"
-             data-page-id="{{ $page_id }}"
+             data-page-id="{{ $post_slug }}"
              data-page-url="{{ $page_url }}"
-             data-page-title="{{ $page_title }}"
+             data-page-title="{{ $title }}"
         ></div>
         <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </div>

@@ -41,7 +41,7 @@
         </div>
 
         <?php if ($frontmatter->type === 'post'): ?>
-            <x-comment-widget header="Leave a comment" :page-id="$frontmatter->slug" :page-url="$frontmatter->slug" :page-title="$frontmatter->title" />
+            <x-comment-widget header="Leave a comment" :slug="$frontmatter->slug" :title="$frontmatter->title" />
         <?php endif; ?>
     </article>
 

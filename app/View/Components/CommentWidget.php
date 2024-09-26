@@ -8,19 +8,19 @@ use Illuminate\View\Component;
 
 class CommentWidget extends Component
 {
-    public string $page_id;
+    public string $post_slug;
     public string $page_url;
-    public string $page_title;
+    public string $title;
     public string|bool $header;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($pageId, $pageUrl, $pageTitle, $header = FALSE)
+    public function __construct($slug, $title, $header = FALSE)
     {
-        $this->page_id = $pageId;
-        $this->page_url = $pageUrl;
-        $this->page_title = $pageTitle;
+        $this->post_slug = $slug;
+        $this->page_url = route('prezet.show', $this->post_slug);
+        $this->title = $title;
         $this->header = $header;
     }
 
