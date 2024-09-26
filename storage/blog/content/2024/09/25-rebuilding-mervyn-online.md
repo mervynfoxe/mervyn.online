@@ -4,11 +4,13 @@ date: 2024-09-25
 type: post
 draft: false
 slug: rebuilding-mervyn-online
-category: Yaps
+category: Development
 tags:
   - blog_meta
+  - web_dev
 excerpt: Learning Laravel, starting a blog, and crashing my production server for an entire afternoon.
 image:
+comments: true
 ---
 > Sure I'll throw a blog up on my server. How long could that take, ten minutes?
 
