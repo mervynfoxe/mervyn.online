@@ -40,8 +40,8 @@
             {!! $body !!}
         </div>
 
-        <?php if ($frontmatter->type === 'post'): ?>
-            <x-comment-widget header="Leave a comment" :slug="$frontmatter->slug" :title="$frontmatter->title" />
+        <?php if ($frontmatter->comments === true): ?>
+            <x-comment-widget :header="!empty($frontmatter->comments_header) ? $frontmatter->comments_header : false" :slug="$frontmatter->slug" :title="$frontmatter->title" />
         <?php endif; ?>
     </article>
 
