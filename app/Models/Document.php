@@ -51,7 +51,7 @@ class Document extends BaseDocument implements Feedable
             ->title($this->frontmatter->title)
             ->summary($this->frontmatter->excerpt)
             ->category($this->frontmatter->category ?? '')
-            ->updated($this->updated_at)
+            ->updated($this->created_at)
             ->link(route('prezet.show', $this->slug))
             ->authorName(config('app.name'))
             ->content($html);

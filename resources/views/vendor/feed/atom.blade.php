@@ -44,7 +44,7 @@
             @foreach($item->category as $category)
             <category term="{{ $category }}" />
             @endforeach
-            <updated>{{ $item->timestamp() }}</updated>
+            <updated>{{ $item->updated }}</updated>
             <content type="html">{{ $item->content }}</content>
         </entry>
     @endforeach
