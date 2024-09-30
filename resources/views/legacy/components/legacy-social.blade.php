@@ -5,7 +5,7 @@
     $ch_id = $now > $ch_dl;
     $ch_td = $now->diff($ch_dl);
     $ch_cd = [
-        'header' => $ch_id ? 'RIP Eggbug 😔' : $ch_td->d . ' days, ' . $ch_td->h . ' hours remain',
+        'header' => $ch_id ? 'RIP Eggbug 😔' : ($ch_td->d > 0 ? $ch_td->d . ' days, ' : '') . $ch_td->h . ' hours remain',
         'link' => $ch_id ? 'https://web.archive.org/web/https://cohost.org/mervyn' : 'https://cohost.org/mervyn'
     ];
 
