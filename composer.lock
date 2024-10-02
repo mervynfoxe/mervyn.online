@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d85cc9a6e49352ec62e26210194dc38",
+    "content-hash": "486c2dfa421fbca2bf320a892a027d52",
     "packages": [
         {
             "name": "archtechx/laravel-seo",
@@ -66,16 +66,16 @@
         },
         {
             "name": "benbjurstrom/prezet",
-            "version": "v0.12.0",
+            "version": "v0.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/benbjurstrom/prezet.git",
-                "reference": "bcb2d6ed89d529c25587afcaf729c1bb4d291225"
+                "reference": "559b11b8d8bc2274e398975817961e2c5b79be26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benbjurstrom/prezet/zipball/bcb2d6ed89d529c25587afcaf729c1bb4d291225",
-                "reference": "bcb2d6ed89d529c25587afcaf729c1bb4d291225",
+                "url": "https://api.github.com/repos/benbjurstrom/prezet/zipball/559b11b8d8bc2274e398975817961e2c5b79be26",
+                "reference": "559b11b8d8bc2274e398975817961e2c5b79be26",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
             ],
             "support": {
                 "issues": "https://github.com/benbjurstrom/prezet/issues",
-                "source": "https://github.com/benbjurstrom/prezet/tree/v0.12.0"
+                "source": "https://github.com/benbjurstrom/prezet/tree/v0.15.0"
             },
             "funding": [
                 {
@@ -147,7 +147,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-08T22:21:18+00:00"
+            "time": "2024-09-27T14:20:28+00:00"
         },
         {
             "name": "blade-ui-kit/blade-icons",
