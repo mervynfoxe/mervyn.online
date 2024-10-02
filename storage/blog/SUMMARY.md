@@ -1,5 +1,6 @@
 ## Pages
 
+- [Blog Index](/)
 - [About](content/page/about)
 - [Shoutbox](content/page/shoutbox)
 
