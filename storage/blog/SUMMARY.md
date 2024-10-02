@@ -5,6 +5,6 @@
 
 ## Categories
 
-- [Yaps](?category=Yaps)
+- [Life](?category=Life)
 - [Development](?category=Development)
 - [Site updates](?category=Updates)

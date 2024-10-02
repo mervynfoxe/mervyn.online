@@ -4,7 +4,7 @@ date: 2024-09-23
 type: post
 draft: false
 slug: hello-world
-category: Yaps
+category: Life
 tags: ['blog_meta', 'social_media', 'cohost']
 excerpt: Thoughts on social media, isolation, writing, and setting up this blog.
 image: /blog/img/construction.gif
