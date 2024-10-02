@@ -67,6 +67,8 @@ tooling:
   deploy-dev:
     description: Build site packages and deploy to dev server
     cmd:
+      - appserver: composer install
+      - node: npm install
       - node: npm run build
       - appserver: FROM_LANDO=1 scripts/deploy.sh
     env:
@@ -74,6 +76,8 @@ tooling:
   deploy-prod:
     description: Build site packages and deploy to production server
     cmd:
+      - appserver: composer install
+      - node: npm install
       - node: npm run build
       - appserver: FROM_LANDO=1 scripts/deploy.sh
     env:
