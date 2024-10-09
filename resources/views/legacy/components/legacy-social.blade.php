@@ -18,6 +18,7 @@
                 'id' => 'twitter-link',
                 'alt' => 'birdsite',
                 'title' => '@MervynFoxe on Twitter',
+                'rel' => 'me',
                 'panel_links' => NULL
             ),
             array(
@@ -26,6 +27,7 @@
                 'id' => 'steam-link',
                 'alt' => 'steam',
                 'title' => 'Mervyn on Steam',
+                'rel' => 'me',
                 'panel_links' => NULL
             ),
             array(
@@ -88,7 +90,8 @@
                 array(
                     'label' => 'Tumblr',
                     'url' => 'https://tumblr.mervyn.online/',
-                    'title' => 'mervynfoxe'
+                    'title' => 'mervynfoxe',
+                    'rel' => 'me'
                 ),
                 array(
                     'label' => 'Cohost (' . $ch_cd['header'] . ')',
@@ -98,17 +101,20 @@
                 array(
                     'label' => 'Mastodon',
                     'url' => 'https://yiff.life/@mervyn',
-                    'title' => '@mervyn@yiff.life'
+                    'title' => '@mervyn@yiff.life',
+                    'rel' => 'me'
                 ),
                 array(
                     'label' => 'Flickr',
                     'url' => 'https://www.flickr.com/photos/mervynfoxe',
-                    'title' => 'Mervyn Fox'
+                    'title' => 'Mervyn Fox',
+                    'rel' => 'me'
                 ),
                 array(
                     'label' => 'Instagram',
                     'url' => 'https://www.instagram.com/mervynfoxe/',
-                    'title' => 'mervynfoxe'
+                    'title' => 'mervynfoxe',
+                    'rel' => 'me'
                 ),
                 array(
                     'label' => 'Discord',
@@ -176,6 +182,7 @@
         ?>
     <span><a href="<?= $item->url ?>" id="<?= $item->id ?>"
              title="<?= $item->title ?>"
+             <?= !empty($item->rel) ? 'rel="' . $item->rel . '"' : '' ?>
              <?= !empty($item->panel_links) ? 'data-toggle="collapse" data-parent="#socialPanels"' : '' ?>
              target="<?= $item->target ?? '_blank' ?>">
             <img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/>
@@ -197,7 +204,11 @@
                     <strong><?= $link->label ?></strong><br/>
                     <?php endif; ?>
                         <?php if (!empty($link->url)): ?>
-                    <a href="<?= $link->url ?>" target="<?= $link->target ?? '_blank' ?>"><?= $link->title ?></a>
+                    <a href="<?= $link->url ?>"
+                       target="<?= $link->target ?? '_blank' ?>"
+                        <?= !empty($link->rel) ? 'rel="' . $link->rel . '"' : '' ?>>
+                        <?= $link->title ?>
+                    </a>
                     <?php else: ?>
                         <?= $link->title ?>
                     <?php endif; ?>

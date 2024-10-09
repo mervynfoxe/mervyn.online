@@ -28,7 +28,7 @@
     "license": "GPL-3.0-only",
     "require": {
         "php": "^8.3",
-        "benbjurstrom/prezet": "^0.12.0",
+        "benbjurstrom/prezet": "^0.15.0",
         "davidhsianturi/blade-bootstrap-icons": "^1.5",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
