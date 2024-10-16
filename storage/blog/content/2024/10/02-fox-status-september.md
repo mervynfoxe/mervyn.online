@@ -1,9 +1,9 @@
 ---
-title: "Fox status: October"
+title: "Fox status: September"
 date: 2024-10-02
 type: post
 draft: false
-slug: fox-status-october-2024
+slug: fox-status-september-2024
 category: Life
 tags: []
 excerpt: "The Expanse, FMA: Brotherhood, Dimension 20, and Drupal 7."
@@ -11,6 +11,8 @@ image:
 comments: true
 comments_header:
 ---
+(Update 2024/10/16: Renaming this for September since it probably makes more sense for these posts to be retrospectives of the past month lmao.)
+
 It's now been one day since [Cohost went read-only](https://web.archive.org/web/20241002111606/https://cohost.org/staff/post/7906102-the-final-age-of-pos) and, even though I didn't exactly post regularly there about what I've been up to, I'm already missing the sense of community and life updates and stuff. So gonna give a shot at semi-occasional posts like this where I just say "here's what I've been reading/watching/doing" that don't come with the pressure of having to write a full, thought-out post about A Topic or anything. I mean that's kinda what blogging is supposed to be anyway right? Don't wanna let this thing get *too* formal now.
 
 ## Reading
