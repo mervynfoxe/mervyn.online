@@ -40,7 +40,7 @@
 </div>
 
 <script>
-    <?= 'var sEmail = \'uv@erasbk.bayvar\';' ?>
+    <?= 'var sEmail = \'' . ($env === 'professional' ? 'uv@erasbk.bayvar' : 'uv@zreila.bayvar') . '\';' ?>
 </script>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>

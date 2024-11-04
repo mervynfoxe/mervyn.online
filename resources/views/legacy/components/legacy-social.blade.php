@@ -119,7 +119,7 @@
                 array(
                     'label' => 'Discord',
                     'url' => NULL,
-                    'title' => 'Mervyn#0827'
+                    'title' => 'mervyn'
                 ),
                 array(
                     'label' => 'Telegram',
@@ -136,6 +136,12 @@
                     'url' => NULL,
                     'title' => 'SW-6318-7125-1032'
                 ),
+                array(
+                    'label' => 'Email',
+                    'class' => 'email-link',
+                    'url' => '#',
+                    'title' => '%email%'
+                )
             ),
             'panel-support' => array(
                 array(
@@ -164,6 +170,7 @@
             'panel-email-link' => [
                 [
                     'label' => NULL,
+                    'class' => 'email-link',
                     'url' => '#',
                     'title' => '%email%'
                 ]
@@ -180,7 +187,9 @@
     foreach ($link_set as $item):
         $item = (object)$item;
         ?>
-    <span><a href="<?= $item->url ?>" id="<?= $item->id ?>"
+    <span><a href="<?= $item->url ?>"
+             class="social-link <?= $item->class ?? '' ?>"
+             id="<?= $item->id ?>"
              title="<?= $item->title ?>"
              <?= !empty($item->rel) ? 'rel="' . $item->rel . '"' : '' ?>
              <?= !empty($item->panel_links) ? 'data-toggle="collapse" data-parent="#socialPanels"' : '' ?>
@@ -205,6 +214,7 @@
                     <?php endif; ?>
                         <?php if (!empty($link->url)): ?>
                     <a href="<?= $link->url ?>"
+                       class="panel-link <?= $link->class ?? '' ?>"
                        target="<?= $link->target ?? '_blank' ?>"
                         <?= !empty($link->rel) ? 'rel="' . $link->rel . '"' : '' ?>>
                         <?= $link->title ?>
