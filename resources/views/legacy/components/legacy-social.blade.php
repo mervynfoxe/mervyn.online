@@ -15,6 +15,7 @@
             array(
                 'url' => 'https://twitter.com/MervynFoxe',
                 'icon' => 'icon-twitter.png',
+                'icon_buk' => 'ri-twitter-fill',
                 'id' => 'twitter-link',
                 'alt' => 'birdsite',
                 'title' => '@MervynFoxe on Twitter',
@@ -24,6 +25,7 @@
             array(
                 'url' => 'https://steamcommunity.com/id/MervynFoxe',
                 'icon' => 'icon-steam.png',
+                'icon_buk' => 'ri-steam-fill',
                 'id' => 'steam-link',
                 'alt' => 'steam',
                 'title' => 'Mervyn on Steam',
@@ -33,6 +35,7 @@
             array(
                 'url' => '/blog',
                 'icon' => 'icon-document.png',
+                'icon_buk' => 'ri-file-list-3-line',
                 'id' => 'blog-link',
                 'alt' => 'blog',
                 'title' => 'My Blog',
@@ -42,6 +45,7 @@
             array(
                 'url' => '#panel-other-links',
                 'icon' => 'icon-other.png',
+                'icon_buk' => 'bi-globe',
                 'id' => 'other-links',
                 'alt' => 'other',
                 'title' => 'Everywhere else',
@@ -50,6 +54,7 @@
             array(
                 'url' => '#panel-support',
                 'icon' => 'icon-money.png',
+                'icon_buk' => 'bi-currency-dollar',
                 'id' => 'support-me',
                 'alt' => 'support',
                 'title' => 'Support me',
@@ -60,6 +65,7 @@
             array(
                 'url' => 'https://renfox.s3.amazonaws.com/files/ref/resume.pdf',
                 'icon' => 'icon-document.png',
+                'icon_buk' => 'ri-file-copy-2-line',
                 'id' => 'resume-link',
                 'alt' => 'resume',
                 'title' => 'My Resume',
@@ -68,6 +74,7 @@
             array(
                 'url' => 'https://www.linkedin.com/in/renfox',
                 'icon' => 'icon-linkedin.png',
+                'icon_buk' => 'ri-linkedin-fill',
                 'id' => 'linkedin-link',
                 'alt' => 'linkedin',
                 'title' => 'Ren Fox on LinkedIn',
@@ -76,6 +83,7 @@
             array(
                 'url' => '#panel-email-link',
                 'icon' => 'icon-email.png',
+                'icon_buk' => 'ri-mail-line',
                 'id' => 'email-link',
                 'alt' => 'email',
                 'title' => 'Email me',
@@ -194,7 +202,11 @@
              <?= !empty($item->rel) ? 'rel="' . $item->rel . '"' : '' ?>
              <?= !empty($item->panel_links) ? 'data-toggle="collapse" data-parent="#socialPanels"' : '' ?>
              target="<?= $item->target ?? '_blank' ?>">
-            <img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/>
+            <?php if (!empty($item->icon_buk)): ?>
+                {{ svg($item->icon_buk) }}
+            <?php else: ?>
+                <img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/>
+            <?php endif; ?>
         </a></span>
     <?php endforeach; ?>
 </div>
