@@ -1,38 +1,11 @@
 <?php
-    // Cohost Countdown
-    $now = new DateTime();
-    $ch_dl = new DateTime('2024-10-01');
-    $ch_id = $now > $ch_dl;
-    $ch_td = $now->diff($ch_dl);
-    $ch_cd = [
-        'header' => $ch_id ? 'RIP Eggbug 😔' : ($ch_td->d > 0 ? $ch_td->d . ' days, ' : '') . $ch_td->h . ' hours remain',
-        'link' => $ch_id ? 'https://web.archive.org/web/https://cohost.org/mervyn' : 'https://cohost.org/mervyn'
-    ];
-
     // Social links array
     $links = [
         'public' => [
             array(
-                'url' => 'https://twitter.com/MervynFoxe',
-                'icon' => 'icon-twitter.png',
-                'id' => 'twitter-link',
-                'alt' => 'birdsite',
-                'title' => '@MervynFoxe on Twitter',
-                'rel' => 'me',
-                'panel_links' => NULL
-            ),
-            array(
-                'url' => 'https://steamcommunity.com/id/MervynFoxe',
-                'icon' => 'icon-steam.png',
-                'id' => 'steam-link',
-                'alt' => 'steam',
-                'title' => 'Mervyn on Steam',
-                'rel' => 'me',
-                'panel_links' => NULL
-            ),
-            array(
                 'url' => '/blog',
                 'icon' => 'icon-document.png',
+                'icon_buk' => 'ri-file-list-3-line',
                 'id' => 'blog-link',
                 'alt' => 'blog',
                 'title' => 'My Blog',
@@ -40,8 +13,37 @@
                 'target' => '_self'
             ),
             array(
+                'url' => 'https://bsky.app/profile/mervyn.online',
+                'icon_buk' => 'ri-bluesky-fill',
+                'id' => 'bsky-link',
+                'alt' => 'bluesky',
+                'title' => '@mervyn.online on Bluesky',
+                'rel' => 'me',
+                'panel_links' => NULL
+            ),
+            array(
+                'url' => 'https://yiff.life/@mervyn',
+                'icon_buk' => 'ri-mastodon-fill',
+                'id' => 'fedi-link',
+                'alt' => 'mastodon',
+                'title' => '@mervyn@yiff.life on Mastodon',
+                'rel' => 'me',
+                'panel_links' => NULL
+            ),
+            array(
+                'url' => 'https://steamcommunity.com/id/MervynFoxe',
+                'icon' => 'icon-steam.png',
+                'icon_buk' => 'ri-steam-fill',
+                'id' => 'steam-link',
+                'alt' => 'steam',
+                'title' => 'Mervyn on Steam',
+                'rel' => 'me',
+                'panel_links' => NULL
+            ),
+            array(
                 'url' => '#panel-other-links',
                 'icon' => 'icon-other.png',
+                'icon_buk' => 'bi-globe',
                 'id' => 'other-links',
                 'alt' => 'other',
                 'title' => 'Everywhere else',
@@ -50,6 +52,7 @@
             array(
                 'url' => '#panel-support',
                 'icon' => 'icon-money.png',
+                'icon_buk' => 'bi-currency-dollar',
                 'id' => 'support-me',
                 'alt' => 'support',
                 'title' => 'Support me',
@@ -60,6 +63,7 @@
             array(
                 'url' => 'https://renfox.s3.amazonaws.com/files/ref/resume.pdf',
                 'icon' => 'icon-document.png',
+                'icon_buk' => 'ri-file-copy-2-line',
                 'id' => 'resume-link',
                 'alt' => 'resume',
                 'title' => 'My Resume',
@@ -68,6 +72,7 @@
             array(
                 'url' => 'https://www.linkedin.com/in/renfox',
                 'icon' => 'icon-linkedin.png',
+                'icon_buk' => 'ri-linkedin-fill',
                 'id' => 'linkedin-link',
                 'alt' => 'linkedin',
                 'title' => 'Ren Fox on LinkedIn',
@@ -76,6 +81,7 @@
             array(
                 'url' => '#panel-email-link',
                 'icon' => 'icon-email.png',
+                'icon_buk' => 'ri-mail-line',
                 'id' => 'email-link',
                 'alt' => 'email',
                 'title' => 'Email me',
@@ -94,14 +100,9 @@
                     'rel' => 'me'
                 ),
                 array(
-                    'label' => 'Cohost (' . $ch_cd['header'] . ')',
-                    'url' => $ch_cd['link'],
-                    'title' => 'mervyn'
-                ),
-                array(
-                    'label' => 'Mastodon',
-                    'url' => 'https://yiff.life/@mervyn',
-                    'title' => '@mervyn@yiff.life',
+                    'label' => 'Twitter',
+                    'url' => 'https://twitter.com/MervynFoxe',
+                    'title' => 'mervynfoxe',
                     'rel' => 'me'
                 ),
                 array(
@@ -130,11 +131,6 @@
                     'label' => 'Battle.net',
                     'url' => NULL,
                     'title' => 'MervynFoxe#1946'
-                ),
-                array(
-                    'label' => 'Switch',
-                    'url' => NULL,
-                    'title' => 'SW-6318-7125-1032'
                 ),
                 array(
                     'label' => 'Email',
@@ -194,7 +190,11 @@
              <?= !empty($item->rel) ? 'rel="' . $item->rel . '"' : '' ?>
              <?= !empty($item->panel_links) ? 'data-toggle="collapse" data-parent="#socialPanels"' : '' ?>
              target="<?= $item->target ?? '_blank' ?>">
-            <img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/>
+            <?php if (!empty($item->icon_buk)): ?>
+                {{ svg($item->icon_buk) }}
+            <?php else: ?>
+                <img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/>
+            <?php endif; ?>
         </a></span>
     <?php endforeach; ?>
 </div>
