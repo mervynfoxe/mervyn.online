@@ -132,13 +132,24 @@ a.link-light:hover {
     outline: none;
 }
 
-#social img {
+#social img,
+#social a.social-link svg {
     width: 45px;
+    height: 45px;
     cursor: pointer;
+}
+
+#social a.social-link svg {
+    fill: rgb(46, 130, 138);
+    background: #fff;
+    padding: 3px;
+    border-radius: 5px;
+    vertical-align: middle;
 }
 
 #social a:focus,
 #social img:hover,
+#social svg:hover,
 #social a[aria-expanded="true"] {
     opacity: 0.75;
 }
