@@ -1,24 +1,32 @@
 <?php
-    // Cohost Countdown
-    $now = new DateTime();
-    $ch_dl = new DateTime('2024-10-01');
-    $ch_id = $now > $ch_dl;
-    $ch_td = $now->diff($ch_dl);
-    $ch_cd = [
-        'header' => $ch_id ? 'RIP Eggbug 😔' : ($ch_td->d > 0 ? $ch_td->d . ' days, ' : '') . $ch_td->h . ' hours remain',
-        'link' => $ch_id ? 'https://web.archive.org/web/https://cohost.org/mervyn' : 'https://cohost.org/mervyn'
-    ];
-
     // Social links array
     $links = [
         'public' => [
             array(
-                'url' => 'https://twitter.com/MervynFoxe',
-                'icon' => 'icon-twitter.png',
-                'icon_buk' => 'ri-twitter-fill',
-                'id' => 'twitter-link',
-                'alt' => 'birdsite',
-                'title' => '@MervynFoxe on Twitter',
+                'url' => '/blog',
+                'icon' => 'icon-document.png',
+                'icon_buk' => 'ri-file-list-3-line',
+                'id' => 'blog-link',
+                'alt' => 'blog',
+                'title' => 'My Blog',
+                'panel_links' => NULL,
+                'target' => '_self'
+            ),
+            array(
+                'url' => 'https://bsky.app/profile/mervyn.online',
+                'icon_buk' => 'ri-bluesky-fill',
+                'id' => 'bsky-link',
+                'alt' => 'bluesky',
+                'title' => '@mervyn.online on Bluesky',
+                'rel' => 'me',
+                'panel_links' => NULL
+            ),
+            array(
+                'url' => 'https://yiff.life/@mervyn',
+                'icon_buk' => 'ri-mastodon-fill',
+                'id' => 'fedi-link',
+                'alt' => 'mastodon',
+                'title' => '@mervyn@yiff.life on Mastodon',
                 'rel' => 'me',
                 'panel_links' => NULL
             ),
@@ -31,16 +39,6 @@
                 'title' => 'Mervyn on Steam',
                 'rel' => 'me',
                 'panel_links' => NULL
-            ),
-            array(
-                'url' => '/blog',
-                'icon' => 'icon-document.png',
-                'icon_buk' => 'ri-file-list-3-line',
-                'id' => 'blog-link',
-                'alt' => 'blog',
-                'title' => 'My Blog',
-                'panel_links' => NULL,
-                'target' => '_self'
             ),
             array(
                 'url' => '#panel-other-links',
@@ -102,14 +100,9 @@
                     'rel' => 'me'
                 ),
                 array(
-                    'label' => 'Cohost (' . $ch_cd['header'] . ')',
-                    'url' => $ch_cd['link'],
-                    'title' => 'mervyn'
-                ),
-                array(
-                    'label' => 'Mastodon',
-                    'url' => 'https://yiff.life/@mervyn',
-                    'title' => '@mervyn@yiff.life',
+                    'label' => 'Twitter',
+                    'url' => 'https://twitter.com/MervynFoxe',
+                    'title' => 'mervynfoxe',
                     'rel' => 'me'
                 ),
                 array(
@@ -138,11 +131,6 @@
                     'label' => 'Battle.net',
                     'url' => NULL,
                     'title' => 'MervynFoxe#1946'
-                ),
-                array(
-                    'label' => 'Switch',
-                    'url' => NULL,
-                    'title' => 'SW-6318-7125-1032'
                 ),
                 array(
                     'label' => 'Email',
