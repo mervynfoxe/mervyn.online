@@ -17,4 +17,13 @@ a.external-link::after {
     }
 }
 
+.prose :not(pre) :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    background-color: rgb(245 245 244);
+
+    &::before,
+    &::after {
+        content: "";
+    }
+}
+
 @config "./../../tailwind.prezet.config.js";
