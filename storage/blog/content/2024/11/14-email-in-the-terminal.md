@@ -6,12 +6,12 @@ draft: true
 slug: email-in-the-terminal
 category: Development
 tags: [email]
-excerpt:
+excerpt: Lorem ipsum
 image:
 comments: true
 comments_header:
 ---
-Since my [last post](08-the-great-email-migration) kinda got away from me as I was writing it, I thought it best to split off all the stuff on setting up and using email through the terminal into its own post. I was hesitant to do this since now I'm basically just reiterating all of the other blog posts I referenced in getting this setup going, but it's probably better than delaying getting *something* posted even longer, and I don't want to scare people off with one single 10,000-word post out of nowhere.
+Since my [last post](14-the-great-email-migration) kinda got away from me as I was writing it, I thought it best to split off all the stuff on setting up and using email through the terminal into its own post. I was hesitant to do this since now I'm basically just reiterating all of the other blog posts I referenced in getting this setup going, but it's probably better than delaying getting *something* posted even longer, and I don't want to scare people off with one single 10,000-word post out of nowhere.
 
 ## Picking up where we left off...
 
@@ -37,21 +37,14 @@ First off, here's a list of everything to install. Some of these aren't absolute
 
 required: **[aerc](https://aerc-mail.org/)**
 
+(technically *aerc* specifically isn't required if you want to use any other MUA but this is about doing things my way)
+
 ```shell
 $ brew install aerc
 ```
-Try to ensure you have at least version 0.18 to ensure all the custom commands and templates I'll touch on will work, I've noticed some repositories are pretty out of date.
+Try to ensure you have at least version 0.18 to ensure all the custom commands and templates I'll touch on will work, I've noticed some repositories are pretty out of date, and have had to build from source to get a recent version running under WSL.
 
-This is the TUI MUA (text-based user interface mail user agent) itself, and the one program I actually manually invoke to do Email Things. Technically this is all we really need to take in and manage email, if the server supports IMAP/JMAP we can use aerc as a "live" client and maintain a persistent connection to the server, seeing emails as they come in and being able to move them around or delete them. We'll still need to configure *sending* mail over SMTP separately in either case, but we'll get to that. In the meantime, ideally we'd like to be able to still have access to the mailbox without needing a persistent connection, so let's get a tool to handle that.
-
-highly recommended: **[isync](https://isync.sourceforge.io/)**
-
-```shell
-$ brew install isync
-```
-Be *absolutely* sure you have at least version 1.5.0 for this, as it has some significant changes that'll affect your config. Most repositories are out of date at the time I'm writing this so if you're on anything but MacOS you'll probably need to build from source.
-
-`isync` (the executable itself is called `mbsync`) is a tool to synchronize mailboxes between an IMAP server and a local maildir store. Maildir is a method of storing emails on a file system that makes things work nicely with a multitude of clients, aerc included. We'll configure this to run in the background periodically to download new email and push up any changes to our local folders and sent mail.
+This is the TUI MUA (text-based user interface mail user agent) itself, and the one program I actually manually invoke to do Email Things. Technically this is all we really need to take in and manage email, if the server supports IMAP/JMAP we can use aerc as a "live" client and maintain a persistent connection to the server, seeing emails as they come in and being able to move them around or delete them. We'll still need to configure *sending* mail over SMTP separately in either case, so let's get that installed too.
 
 required: **[msmtp](https://marlam.de/msmtp/)**
 
@@ -62,11 +55,22 @@ As far as I can tell, a recent enough version of this package is in all common r
 
 This is the program to handle sending email. On its own you can call it from the terminal to send individual emails through an SMTP server, but we'll configure it to work with aerc so it can all happen within the client.
 
+Back to IMAP, ideally we'd like to be able to have access to the mailbox without needing a persistent connection, so we can read mail while offline or set up separate scripts to monitor the mailbox, so let's get a tool to handle that.
+
+highly recommended: **[isync](https://isync.sourceforge.io/)**
+
+```shell
+$ brew install isync
+```
+Be *absolutely* sure you have at least version 1.5.0 for this, as it has some significant changes that'll affect your config. Most repositories are out of date at the time I'm writing this so if you're on anything but MacOS you'll probably need to build from source.
+
+`isync` (the executable itself is called `mbsync`) is a tool to synchronize mailboxes between an IMAP server and a local maildir store. Maildir is a method of storing emails on a file system that makes things work nicely with a multitude of clients, aerc included. We'll configure this to run in the background periodically to download new email and push up any changes to our local folders and sent mail.
+
 highly recommended: **[msmtp*q*](https://github.com/neuhalje/msmtp-queue/)**
 
-This is a wrapper script and associated set of services to queue outgoing messages and send them when able. By default `msmtp` will simply try to send an email when called, and if it fails (e.g. if you're offline) then it just panics and quits. With msmtpq we can instead add any emails we want to send to the queue, and the service will keep trying to send them until it's successful. So if you're going to be offline for a bit but want to have some emails ready to shoot off instead of sitting in drafts, this helps a ton.
+This is a wrapper script and associated set of services to queue outgoing messages and send them when able. By default `msmtp` will simply try to send an email when called, and if it fails (e.g. if you're offline) then it just panics and quits. With `msmtpq` we can instead add any emails we want to send to the queue, and the service will keep trying to send them until it's successful. So if you're going to be offline for a bit but want to have some emails ready to shoot off instead of sitting in drafts, this helps a ton.
 
-Full disclosure here: I personally haven't tried this exact script, which is modified explicitly for MacOS support. I should give it a try tbh, but what I've got right now is [this script](https://git.marlam.de/gitweb/?p=msmtp.git;a=blob_plain;f=scripts/msmtpq/msmtpq;hb=HEAD) from within the msmtp repository. It doesn't work with MacOS out of the box, and I personally just hacked at it until I could get it to work by commenting out various lines in the script, so I wouldn't recommend following in my footsteps there unless you really want to.
+Full disclosure here: I personally haven't tried the exact script linked above, which is modified explicitly for MacOS support. I should give it a try tbh, but what I've got right now is [this script](https://git.marlam.de/gitweb/?p=msmtp.git;a=blob_plain;f=scripts/msmtpq/msmtpq;hb=HEAD) from within the msmtp repository. It doesn't work with MacOS out of the box (I think due to the bash version incompatibilities the fork's readme mentions), and I personally just hacked at it until I could get it to work by commenting out various lines in the script, so I wouldn't recommend following in my footsteps there unless you really want to.
 
 highly recommended: **[gnupg](https://gnupg.org/)/[pass](https://www.passwordstore.org/)**
 
@@ -93,13 +97,11 @@ optional: **[w3m](https://w3m.sourceforge.net/)/[dante](https://www.inet.no/dant
 
 These are just a few helper packages for managing HTML email. Ideally, we'd love to only ever [use plaintext email](https://useplaintext.email/), but the reality is a lot of incoming email (especially from companies that want to shove a host of [tracking pixels](https://en.wikipedia.org/wiki/Spy_pixel) at you) comes in HTML format only, and if they do include a `text/plain` alternative they tend to be pretty poorly formatted.
 
-By default aerc doesn't want to deal with HTML, and will only offer to open such emails in your default browser for viewing (thereby loading any remote content and tracking embedded). This set of packages helps by giving you an option to keep everything within aerc, though it won't always be the prettiest-looking.
+By default aerc doesn't want to deal with HTML, and will only offer to open such emails in your default browser for viewing (thereby loading any remote content and tracking embedded). This set of packages helps by giving you an option to keep everything within aerc, though it won't always be the prettiest-looking:
 
-`w3m` is a text-based web browser. It's pretty neat in and of itself, but for our purposes it will allow us to reformat those HTML emails into something readable in the terminal.
-
-`dante` is a [SOCKS](https://en.wikipedia.org/wiki/SOCKS) proxy server/client, which aerc's HTML formatter invokes alongside `w3m` in order to redirect any embedded links in HTML emails and prevent them from alerting the home server that the email was downloaded/opened.
-
-Finally, `pandoc` is a tool for converting text between various formats. This is mostly helpful for writing HTML emails, as we can configure it to take in something like Markdown and process it into HTML before sending off the email.
+- `w3m` is a text-based web browser. It's pretty neat in and of itself, but for our purposes it will allow us to reformat those HTML emails into something readable in the terminal.
+- `dante` is a [SOCKS](https://en.wikipedia.org/wiki/SOCKS) proxy server/client, which aerc's HTML formatter invokes alongside `w3m` in order to redirect any embedded links in HTML emails and prevent them from alerting the home server that the email was downloaded/opened.
+- Finally, `pandoc` is a tool for converting text between various formats. This is mostly helpful for writing HTML emails, as we can configure it to take in something like Markdown and process it into HTML before sending off the email.
 
 And that's pretty much it! The only other package I personally have installed is `notmuch`, a database for quickly indexing and searching emails, but I haven't actually configured aerc to work with it yet, since the Homebrew version of aerc isn't built with notmuch support by default. Oops.
 
