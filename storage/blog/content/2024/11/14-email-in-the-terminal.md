@@ -11,7 +11,7 @@ image:
 comments: true
 comments_header:
 ---
-Since my [last post](14-the-great-email-migration) kinda got away from me as I was writing it, I thought it best to split off all the stuff on setting up and using email through the terminal into its own post. I was hesitant to do this since now I'm basically just reiterating all of the other blog posts I referenced in getting this setup going, but it's probably better than delaying getting *something* posted even longer, and I don't want to scare people off with one single 10,000-word post out of nowhere.
+Since my [last post](14-the-great-email-migration.md) kinda got away from me as I was writing it, I thought it best to split off all the stuff on setting up and using email through the terminal into its own post. I was hesitant to do this since now I'm basically just reiterating all of the other blog posts I referenced in getting this setup going, but it's probably better than delaying getting *something* posted even longer, and I don't want to scare people off with one single 10,000-word post out of nowhere.
 
 ## Picking up where we left off...
 
@@ -37,25 +37,12 @@ First off, here's a list of everything to install. Some of these aren't absolute
 
 required: **[aerc](https://aerc-mail.org/)**
 
-(technically *aerc* specifically isn't required if you want to use any other MUA but this is about doing things my way)
-
 ```shell
 $ brew install aerc
 ```
-Try to ensure you have at least version 0.18 to ensure all the custom commands and templates I'll touch on will work, I've noticed some repositories are pretty out of date, and have had to build from source to get a recent version running under WSL.
+Try to ensure you have at least version 0.18 to ensure all the custom commands and templates I'll touch on will work, I've noticed some repositories are pretty out of date.
 
-This is the TUI MUA (text-based user interface mail user agent) itself, and the one program I actually manually invoke to do Email Things. Technically this is all we really need to take in and manage email, if the server supports IMAP/JMAP we can use aerc as a "live" client and maintain a persistent connection to the server, seeing emails as they come in and being able to move them around or delete them. We'll still need to configure *sending* mail over SMTP separately in either case, so let's get that installed too.
-
-required: **[msmtp](https://marlam.de/msmtp/)**
-
-```shell
-$ brew install msmtp
-```
-As far as I can tell, a recent enough version of this package is in all common repositories. I personally have 1.8.27 installed currently.
-
-This is the program to handle sending email. On its own you can call it from the terminal to send individual emails through an SMTP server, but we'll configure it to work with aerc so it can all happen within the client.
-
-Back to IMAP, ideally we'd like to be able to have access to the mailbox without needing a persistent connection, so we can read mail while offline or set up separate scripts to monitor the mailbox, so let's get a tool to handle that.
+This is the TUI MUA (text-based user interface mail user agent) itself, and the one program I actually manually invoke to do Email Things. Technically this is all we really need to take in and manage email, if the server supports IMAP/JMAP we can use aerc as a "live" client and maintain a persistent connection to the server, seeing emails as they come in and being able to move them around or delete them. We'll still need to configure *sending* mail over SMTP separately in either case, but we'll get to that. In the meantime, ideally we'd like to be able to still have access to the mailbox without needing a persistent connection, so let's get a tool to handle that.
 
 highly recommended: **[isync](https://isync.sourceforge.io/)**
 
@@ -66,11 +53,20 @@ Be *absolutely* sure you have at least version 1.5.0 for this, as it has some si
 
 `isync` (the executable itself is called `mbsync`) is a tool to synchronize mailboxes between an IMAP server and a local maildir store. Maildir is a method of storing emails on a file system that makes things work nicely with a multitude of clients, aerc included. We'll configure this to run in the background periodically to download new email and push up any changes to our local folders and sent mail.
 
+required: **[msmtp](https://marlam.de/msmtp/)**
+
+```shell
+$ brew install msmtp
+```
+As far as I can tell, a recent enough version of this package is in all common repositories. I personally have 1.8.27 installed currently.
+
+This is the program to handle sending email. On its own you can call it from the terminal to send individual emails through an SMTP server, but we'll configure it to work with aerc so it can all happen within the client.
+
 highly recommended: **[msmtp*q*](https://github.com/neuhalje/msmtp-queue/)**
 
-This is a wrapper script and associated set of services to queue outgoing messages and send them when able. By default `msmtp` will simply try to send an email when called, and if it fails (e.g. if you're offline) then it just panics and quits. With `msmtpq` we can instead add any emails we want to send to the queue, and the service will keep trying to send them until it's successful. So if you're going to be offline for a bit but want to have some emails ready to shoot off instead of sitting in drafts, this helps a ton.
+This is a wrapper script and associated set of services to queue outgoing messages and send them when able. By default `msmtp` will simply try to send an email when called, and if it fails (e.g. if you're offline) then it just panics and quits. With msmtpq we can instead add any emails we want to send to the queue, and the service will keep trying to send them until it's successful. So if you're going to be offline for a bit but want to have some emails ready to shoot off instead of sitting in drafts, this helps a ton.
 
-Full disclosure here: I personally haven't tried the exact script linked above, which is modified explicitly for MacOS support. I should give it a try tbh, but what I've got right now is [this script](https://git.marlam.de/gitweb/?p=msmtp.git;a=blob_plain;f=scripts/msmtpq/msmtpq;hb=HEAD) from within the msmtp repository. It doesn't work with MacOS out of the box (I think due to the bash version incompatibilities the fork's readme mentions), and I personally just hacked at it until I could get it to work by commenting out various lines in the script, so I wouldn't recommend following in my footsteps there unless you really want to.
+Full disclosure here: I personally haven't tried this exact script, which is modified explicitly for MacOS support. I should give it a try tbh, but what I've got right now is [this script](https://git.marlam.de/gitweb/?p=msmtp.git;a=blob_plain;f=scripts/msmtpq/msmtpq;hb=HEAD) from within the msmtp repository. It doesn't work with MacOS out of the box, and I personally just hacked at it until I could get it to work by commenting out various lines in the script, so I wouldn't recommend following in my footsteps there unless you really want to.
 
 highly recommended: **[gnupg](https://gnupg.org/)/[pass](https://www.passwordstore.org/)**
 
@@ -97,11 +93,13 @@ optional: **[w3m](https://w3m.sourceforge.net/)/[dante](https://www.inet.no/dant
 
 These are just a few helper packages for managing HTML email. Ideally, we'd love to only ever [use plaintext email](https://useplaintext.email/), but the reality is a lot of incoming email (especially from companies that want to shove a host of [tracking pixels](https://en.wikipedia.org/wiki/Spy_pixel) at you) comes in HTML format only, and if they do include a `text/plain` alternative they tend to be pretty poorly formatted.
 
-By default aerc doesn't want to deal with HTML, and will only offer to open such emails in your default browser for viewing (thereby loading any remote content and tracking embedded). This set of packages helps by giving you an option to keep everything within aerc, though it won't always be the prettiest-looking:
+By default aerc doesn't want to deal with HTML, and will only offer to open such emails in your default browser for viewing (thereby loading any remote content and tracking embedded). This set of packages helps by giving you an option to keep everything within aerc, though it won't always be the prettiest-looking.
 
-- `w3m` is a text-based web browser. It's pretty neat in and of itself, but for our purposes it will allow us to reformat those HTML emails into something readable in the terminal.
-- `dante` is a [SOCKS](https://en.wikipedia.org/wiki/SOCKS) proxy server/client, which aerc's HTML formatter invokes alongside `w3m` in order to redirect any embedded links in HTML emails and prevent them from alerting the home server that the email was downloaded/opened.
-- Finally, `pandoc` is a tool for converting text between various formats. This is mostly helpful for writing HTML emails, as we can configure it to take in something like Markdown and process it into HTML before sending off the email.
+`w3m` is a text-based web browser. It's pretty neat in and of itself, but for our purposes it will allow us to reformat those HTML emails into something readable in the terminal.
+
+`dante` is a [SOCKS](https://en.wikipedia.org/wiki/SOCKS) proxy server/client, which aerc's HTML formatter invokes alongside `w3m` in order to redirect any embedded links in HTML emails and prevent them from alerting the home server that the email was downloaded/opened.
+
+Finally, `pandoc` is a tool for converting text between various formats. This is mostly helpful for writing HTML emails, as we can configure it to take in something like Markdown and process it into HTML before sending off the email.
 
 And that's pretty much it! The only other package I personally have installed is `notmuch`, a database for quickly indexing and searching emails, but I haven't actually configured aerc to work with it yet, since the Homebrew version of aerc isn't built with notmuch support by default. Oops.
 
@@ -109,7 +107,162 @@ And that's pretty much it! The only other package I personally have installed is
 
 Alright, enough installing things, let's make it all *work*!
 
-First off we'll handle
+First off we'll handle mailbox syncing with isync. This is what's going to let us keep our mail on our computer with regular background updates, so if you're somewhere without internet access for a while, you can still check up on anything that came in while you did have a connection, and even manage/organize your mail to have it sync back up to the IMAP server when you come back online.
+
+![Screenshot of a terminal emulator running an email agent, showing a selected inbox with two messages from "Lufthansa Flight Servi..."](aerc-inbox-offline.png)
+> In fact, I'm writing this section of the post while on a plane above the Atlantic Ocean, and I can still see the email that came in before I finished packing!
+
+To start, you'll need to make sure you can authenticate reliably with the IMAP server. I've personally set myself up with a handful of app passwords through Fastmail for this, since it's much more straightforward (oAuth is great for security, but a pain in the entire ass to get working with terminal applications, so I'm keeping it simple).
+
+The isync config is generally stored in `~/.config/isyncrc` and is where we're going to define credential info, as well as mappings between remote and local mailboxes. A very very basic version of my own config looks more or less like this:
+
+```
+Sync All
+Expunge Near
+Create Both
+Remove Both
+SyncState *
+CopyArrivalDate yes
+
+IMAPAccount fastmail
+Host imap.fastmail.com
+Port 993
+AuthMechs LOGIN
+User <username>
+PassCmd "gpg -d --batch --passphrase-file ~/.secrets/email.pass ~/.secrets/mail-key | head -n1"
+TLSType IMAPS
+TLSVersions +1.2
+
+IMAPStore fastmail-remote
+Account fastmail
+
+# Local maildir
+MaildirStore fastmail-local
+Path ~/.mail/fastmail/
+Inbox ~/.mail/fastmail/Inbox
+SubFolders Verbatim
+
+# Sync everything
+Channel fastmail-all
+Far :fastmail-remote:
+Near :fastmail-local:
+Patterns *
+```
+
+Here, the first section defines some defaults that get applied to all accounts and mail stores. I have everything synced by default, with `Create` and `Remove` directives telling isync to create/delete folders within my mailbox as I do so on either end. `Expunge Near` means that emails that are fully deleted (rather than moved to the trash) will be reflected only on the downstream&mdash;if I fully delete a local file it shouldn't propagate up to the server, but anything permanently deleted server-side should reflect locally. I set this mostly because I'm afraid of accidentally `rm`-ing a file locally and not being able to get it back, but files that Fastmail clears from trash/spam after a month still get properly removed on my machine. `CopyArrivalDate` ensures that the file created/modified timestamps match the "arrival" timestamp from the email, so that your folders are sorted properly.
+
+The `IMAPAccount` section is pretty straightforward, providing creds for the IMAP server to make sure you can connect and sync. The `PassCmd` setting takes any shell command available on your `PATH` and passes the resulting output to the server. Depending on your setup you can change this up a bit; you can just use `Pass` to set a plaintext password (if you do so, make sure your file perms are set restrictively for the config file), or if you use `password-store` you can set it to your `pass path/to/password` command (though as I mentioned earlier this can lead to random GPG passphrase prompts when isync runs in the background).
+
+---
+
+(remaining isync config)
+```
+# Sync just the inboxes
+Channel fastmail-inbox
+Far :fastmail-remote:INBOX
+Near :fastmail-local:Inbox
+Create Near
+Remove None
+
+# Sync archive folder
+Channel fasatmail-archive
+Far :fastmail-remote:Archive
+Near :fastmail-local:Archive
+
+# Sync drafts folder
+Channel fastmail-drafts
+Far :fastmail-remote:Drafts
+Near :fastmail-local:Drafts
+
+# Sync sent folder
+Channel fastmail-sent
+Far :fastmail-remote:Sent
+Near :fastmail-local:Sent
+
+# Sync important non-inbox folders
+Channel fastmail-folders
+Far :fastmail-remote:
+Near :fastmail-local:
+Patterns * !"INBOX" !"Archive" !"Drafts" !"Sent" !"Junk" !"Junk Mail" !"Spam" !"Trash"
+
+# Sync unimportant folders
+Channel fastmail-junk
+Far :fastmail-remote:
+Near :fastmail-local:
+Patterns "Junk" "Junk Mail" "Spam" "Trash"
+Expunge Both
+
+Group fastmail
+Channel fastmail-inbox
+Channel fasatmail-archive
+Channel fastmail-drafts
+Channel fastmail-sent
+Channel fastmail-folders
+Channel fastmail-junk
+
+Group fastmail-important
+Channel fastmail-inbox
+Channel fastmail-folders
+```
+
+(msmtp config)
+```
+# Set default values for all following accounts.
+defaults
+auth           on
+tls            on
+tls_trust_file /opt/homebrew/etc/openssl@3/cert.pem
+logfile        ~/.msmtp.log
+
+account        fastmail
+host           smtp.fastmail.com
+port           465
+auth           on
+tls            on
+tls_starttls   off
+tls_certcheck  on
+from           Jane Smith <name@example.com>
+user           <smtp_login>
+passwordeval   "gpg -d --batch --passphrase-file ~/.secrets/email.pass ~/.secrets/mail-key | head -n1"
+account default : fastmail
+```
+
+(aerc config)
+```
+[Fastmail]
+source                     = maildir://~/.mail/fastmail
+outgoing                   = msmtpq -a fastmail
+from                       = Jane Smith <name@example.com>
+folder-map                 = ~/Library/Preferences/aerc/maps/fmap-fastmail.conf
+default                    = Inbox
+copy-to                    = Sent
+folders-sort               = Inbox,GInbox,1.Today,2.This Week,3.This Month,4.Backlog,Social,Dev,Work,Lists,Updates,Promos,Finance,Health,Home,Travel,Commissions,Downloads,Masked,LearnSpam,LearnHam
+pgp-key-id                 = 0x12345678ABCDEFG0
+pgp-auto-sign              = true
+pgp-self-encrypt           = true
+pgp-attach-key             = false
+pgp-opportunistic-encrypt  = true
+```
+
+(goimapnotify config)
+```
+configurations:
+    -
+        host: imap.fastmail.com
+        port: 993
+        tls: true
+        tlsOptions:
+            rejectUnauthorized: false
+        username: '<username>'
+        passwordCMD: 'gpg -d --batch --passphrase-file ~/.secrets/email.pass ~/.secrets/mail-key | head -n1'
+        onNewMail: 'mbsync fastmail'
+        onNewMailPost: 'notmuch new'
+        boxes:
+            -
+                mailbox: INBOX
+                onNewMail: 'mbsync fastmail-inbox'
+                onNewMailPost: 'notmuch new'
+```
 
 (details on installing aerc, testing with IMAP, then configuring isync and msmtpq, cron, IDLE push, etc. discuss custom keybinds to work with my workflow)
 
