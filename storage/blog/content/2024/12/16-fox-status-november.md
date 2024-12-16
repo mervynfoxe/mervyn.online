@@ -6,8 +6,8 @@ draft: false
 slug: fox-status-november-2024
 category: Life
 tags:
-	- travel
-	- social_media
+    - travel
+    - social_media
 excerpt: Europe, TV, Bluesky, and more doing-stuff-in-the-terminal nonsense
 image: 
 comments: true
