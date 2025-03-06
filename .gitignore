@@ -265,7 +265,12 @@ Temporary Items
 
 ### Project-specific
 .lando.local.yml
+# Blog DB and generated files
 prezet.sqlite
 public/prezet_sitemap.xml
 public/build
 .vite/
+# laravel-ide-helper files
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
