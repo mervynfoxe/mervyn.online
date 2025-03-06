@@ -27,7 +27,7 @@
              id="mainContent">
             @yield('content')
         </div>
-        <x-legacy-copyright :environment="$env" />
+        <x-legacy-copyright />
     </div>
 </div>
 
