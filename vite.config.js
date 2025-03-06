@@ -19,5 +19,10 @@ export default defineConfig({
         host: true,
         port: 3009,
         hmr: {host: 'localhost', protocol: 'ws'},
+        cors: {
+            origin: [
+                /^https?:\/\/.*\.lndo\.site(:\d+)?$/, // allow lando dev origins
+            ]
+        }
     },
 });

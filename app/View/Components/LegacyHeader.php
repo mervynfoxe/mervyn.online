@@ -23,6 +23,6 @@ class LegacyHeader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('legacy.components.legacy-header');
+        return view('legacy.partials.legacy-header');
     }
 }

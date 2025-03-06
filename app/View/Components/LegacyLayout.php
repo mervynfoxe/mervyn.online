@@ -6,16 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class LegacySocial extends Component
+class LegacyLayout extends Component
 {
-    public string $environment;
-
     /**
      * Create a new component instance.
      */
-    public function __construct($environment)
+    public function __construct()
     {
-        $this->environment = $environment;
+        //
     }
 
     /**
@@ -23,6 +21,6 @@ class LegacySocial extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('legacy.partials.legacy-social');
+        return view('legacy.layout');
     }
 }

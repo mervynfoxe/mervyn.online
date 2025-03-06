@@ -8,14 +8,12 @@ use Illuminate\View\Component;
 
 class LegacyCopyright extends Component
 {
-    public string $environment;
-
     /**
      * Create a new component instance.
      */
-    public function __construct($environment)
+    public function __construct()
     {
-        $this->environment = $environment;
+        //
     }
 
     /**

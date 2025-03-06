@@ -21,6 +21,6 @@ class Legacy404 extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('legacy.components.legacy404');
+        return view('legacy.partials.legacy404');
     }
 }

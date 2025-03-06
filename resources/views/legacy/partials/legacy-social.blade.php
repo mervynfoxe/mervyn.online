@@ -179,23 +179,19 @@
 ?>
 
 <div id="social">
-    <?php
-    foreach ($link_set as $item):
-        $item = (object)$item;
-        ?>
-    <span><a href="<?= $item->url ?>"
-             class="social-link <?= $item->class ?? '' ?>"
-             id="<?= $item->id ?>"
-             title="<?= $item->title ?>"
-             <?= !empty($item->rel) ? 'rel="' . $item->rel . '"' : '' ?>
-             <?= !empty($item->panel_links) ? 'data-toggle="collapse" data-parent="#socialPanels"' : '' ?>
-             target="<?= $item->target ?? '_blank' ?>">
-            <?php if (!empty($item->icon_buk)): ?>
-                {{ svg($item->icon_buk) }}
-            <?php else: ?>
-                <img src="{{ Vite::asset('resources/legacy/img/social/' . $item->icon) }}" alt="<?= $item->alt ?>"/>
-            <?php endif; ?>
-        </a></span>
+    <?php foreach ($link_set as $item): ?>
+    <x-social-icon
+        :url="$item['url']"
+        :icon="$item['icon_buk']"
+        :title="$item['title']"
+        :alt="$item['alt']"
+        :target="$item['target'] ?? '_blank'"
+        :class="$item['class'] ?? NULL"
+        :rel="$item['rel'] ?? NULL"
+        :id="$item['id']"
+        :icon-img="$item['icon'] ?? NULL"
+        :panel-links="$item['panel_links'] ?? NULL"
+    />
     <?php endforeach; ?>
 </div>
 
@@ -204,25 +200,15 @@
         <?php foreach ($panel_set as $id => $links): ?>
         <div id="<?= $id ?>" class="panel-collapse collapse">
             <div class="panel-body flex-container">
-                    <?php
-                foreach ($links as $link):
-                    $link = (object)$link;
-                    ?>
-                <div class="flex-item">
-                        <?php if (!empty($link->label)): ?>
-                    <strong><?= $link->label ?></strong><br/>
-                    <?php endif; ?>
-                        <?php if (!empty($link->url)): ?>
-                    <a href="<?= $link->url ?>"
-                       class="panel-link <?= $link->class ?? '' ?>"
-                       target="<?= $link->target ?? '_blank' ?>"
-                        <?= !empty($link->rel) ? 'rel="' . $link->rel . '"' : '' ?>>
-                        <?= $link->title ?>
-                    </a>
-                    <?php else: ?>
-                        <?= $link->title ?>
-                    <?php endif; ?>
-                </div>
+                <?php foreach ($links as $link): ?>
+                    <x-panel-social-link
+                        :header="$link['label'] ?? ''"
+                        :url="$link['url'] ?? ''"
+                        :label="$link['title']"
+                        :target="$link['target'] ?? '_blank'"
+                        :class="$link['class'] ?? NULL"
+                        :rel="$link['rel'] ?? NULL"
+                    />
                 <?php endforeach; ?>
             </div>
         </div>

@@ -12,12 +12,12 @@ body {
 }
 
 a.link-light {
-    color: #ccc;
+    color: #ddd;
 }
 
 a.link-light:hover {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .background {
