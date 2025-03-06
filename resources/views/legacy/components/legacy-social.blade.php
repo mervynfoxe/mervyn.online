@@ -180,7 +180,18 @@
 
 <div id="social">
     <?php foreach ($link_set as $item): ?>
-        <x-social-icon :item="(object)$item" />
+    <x-social-icon
+        :url="$item['url']"
+        :icon="$item['icon_buk']"
+        :title="$item['title']"
+        :alt="$item['alt']"
+        :target="$item['target'] ?? '_blank'"
+        :class="$item['class'] ?? NULL"
+        :rel="$item['rel'] ?? NULL"
+        :id="$item['id']"
+        :icon-img="$item['icon'] ?? NULL"
+        :panel-links="$item['panel_links'] ?? NULL"
+    />
     <?php endforeach; ?>
 </div>
 
@@ -190,7 +201,14 @@
         <div id="<?= $id ?>" class="panel-collapse collapse">
             <div class="panel-body flex-container">
                 <?php foreach ($links as $link): ?>
-                    <x-panel-social-link :link="(object)$link" />
+                    <x-panel-social-link
+                        :header="$link['label'] ?? ''"
+                        :url="$link['url'] ?? ''"
+                        :label="$link['title']"
+                        :target="$link['target'] ?? '_blank'"
+                        :class="$link['class'] ?? NULL"
+                        :rel="$link['rel'] ?? NULL"
+                    />
                 <?php endforeach; ?>
             </div>
         </div>

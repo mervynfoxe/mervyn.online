@@ -1,15 +1,15 @@
 <div class="flex-item">
-    <?php if (!empty($link->label)): ?>
-        <strong><?= $link->label ?></strong><br/>
+    <?php if (!empty($header)): ?>
+        <strong><?= $header ?></strong><br/>
     <?php endif; ?>
-    <?php if (!empty($link->url)): ?>
-        <a href="<?= $link->url ?>"
-           class="panel-link <?= $link->class ?? '' ?>"
-           target="<?= $link->target ?? '_blank' ?>"
-                <?= !empty($link->rel) ? 'rel="' . $link->rel . '"' : '' ?>>
-                <?= $link->title ?>
+    <?php if (!empty($url)): ?>
+        <a href="<?= $url ?>"
+           class="panel-link <?= $class ?? '' ?>"
+           target="<?= $target ?? '_blank' ?>"
+                <?= !empty($rel) ? 'rel="' . $rel . '"' : '' ?>>
+                <?= $label ?>
         </a>
     <?php else: ?>
-        <?= $link->title ?>
+        <?= $label ?>
     <?php endif; ?>
 </div>

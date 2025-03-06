@@ -8,15 +8,17 @@ use Illuminate\View\Component;
 
 class PanelSocialLink extends Component
 {
-    public object $link;
-
     /**
      * Create a new component instance.
      */
-    public function __construct($link)
-    {
-        $this->link = $link;
-    }
+    public function __construct(
+        public string $header,
+        public string $url,
+        public string $label,
+        public string $target = '_blank',
+        public string|null $class = NULL,
+        public string|null $rel = NULL
+    ) {}
 
     /**
      * Get the view / contents that represent the component.

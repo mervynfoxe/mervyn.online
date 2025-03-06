@@ -8,14 +8,21 @@ use Illuminate\View\Component;
 
 class SocialIcon extends Component
 {
-    public object $item;
     /**
      * Create a new component instance.
      */
-    public function __construct($item)
-    {
-        $this->item = $item;
-    }
+    public function __construct(
+        public string $icon,
+        public string $url,
+        public string $title,
+        public string $target = '_blank',
+        public string $alt = '',
+        public string|null $class = NULL,
+        public string|null $rel = NULL,
+        public string|null $id = NULL,
+        public string|null $iconImg = NULL,
+        public array|null $panelLinks = NULL
+    ) {}
 
     /**
      * Get the view / contents that represent the component.
