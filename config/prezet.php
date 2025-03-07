@@ -155,6 +155,12 @@ return [
 
     // https://schema.org/author
     'authors' => [
+        'default' => [
+            '@type' => 'Person',
+            'name' => 'Mervyn Fox',
+            'url' => 'https://mervyn.online',
+            'image' => '',
+        ],
         'mervyn' => [
             '@type' => 'Person',
             'name' => 'Mervyn Fox',
