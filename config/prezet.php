@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Name
@@ -12,7 +11,7 @@ return [
     |
     */
 
-    'name' => env('PREZET_NAME', env('APP_NAME', 'Prezet')),
+    'name' => env('PREZET_NAME', env('APP_NAME', 'Blog')),
 
     /*
     |--------------------------------------------------------------------------
@@ -45,6 +44,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Slug Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Configure how document slugs are generated. The source can be 'filepath'
+    | or 'title'. Note that a slug defined in front matter will take precedence
+    | over the generated slug. When 'keyed' is true, the key present in the
+    | front matter key will be appended to the slug (e.g., my-post-123).
+    |
+    */
+
+    'slug' => [
+        'source' => 'filepath', // 'filepath' or 'title'
+        'keyed' => false, // 'true' or 'false'
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | CommonMark
     |--------------------------------------------------------------------------
     |
@@ -67,7 +83,7 @@ return [
 
         'config' => [
             'heading_permalink' => [
-                'html_class' => 'mr-2 scroll-mt-12',
+                'html_class' => 'prezet-heading',
                 'id_prefix' => 'content',
                 'apply_id_to_heading' => false,
                 'heading_class' => '',
@@ -97,9 +113,9 @@ return [
     |
     | Configure how image tags are handled when converting from markdown.
     |
-    | 'path' specifies the route for serving images.
     | 'widths' defines the various widths for responsive images.
     | 'sizes' indicates the sizes attribute for responsive images.
+    | 'zoomable' determines if images are zoomable.
     */
 
     'image' => [
@@ -109,5 +125,50 @@ return [
         ],
 
         'sizes' => '92vw, (max-width: 1024px) 92vw, 768px',
+
+        'zoomable' => true,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Sitemap
+    |--------------------------------------------------------------------------
+    | The sitemap origin is used to generate absolute URLs for the sitemap.
+    | An origin consists of a scheme/host/port combination, but no path.
+    | (e.g., https://example.com:8000) https://www.rfc-editor.org/rfc/rfc6454
+    */
+
+    'sitemap' => [
+        'origin' => env('PREZET_SITEMAP_ORIGIN', env('APP_URL')),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Structured Data
+    |--------------------------------------------------------------------------
+    |
+    | Prezet uses these values for JSON-LD structured data. 'authors' defines
+    | named authors you can reference in front matter, and 'publisher' is used
+    | as the default publisher for all content.
+    |
+    */
+
+    // https://schema.org/author
+    'authors' => [
+        'mervyn' => [
+            '@type' => 'Person',
+            'name' => 'Mervyn Fox',
+            'url' => 'https://mervyn.online',
+            'image' => '',
+        ],
+    ],
+
+    // https://schema.org/publisher
+    'publisher' => [
+        '@type' => 'Person',
+        'name' => 'Mervyn Fox',
+        'url' => 'https://mervyn.online',
+        'logo' => '',
+        'image' => '',
     ],
 ];

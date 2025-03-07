@@ -1,16 +1,22 @@
 @php
-/* @var string $body */
-/* @var array $nav */
-/* @var array $headings */
-/* @var App\Data\CustomFrontmatterData $frontmatter */
+    /* @var string $body */
+    /* @var array $nav */
+    /* @var array $headings */
+    /* @var string $linkedData */
+    /* @var \BenBjurstrom\Prezet\Data\DocumentData $document */
 @endphp
+
 <x-prezet::template>
     @seo([
-        'title' => $frontmatter->title . ' - ' . config('prezet.name'),
-        'description' => $frontmatter->excerpt,
-        'url' => route('prezet.show', ['slug' => $frontmatter->slug]),
-        'image' => $frontmatter->image,
+        'title' => $document->frontmatter->title,
+        'description' => $document->frontmatter->excerpt,
+        'url' => route('prezet.show', ['slug' => $document->slug]),
+        'image' => url($document->frontmatter->image || null),
     ])
+
+    @push('jsonld')
+        <script type="application/ld+json">{!! $linkedData !!}</script>
+    @endpush
 
     {{-- Left Sidebar --}}
     <x-slot name="left">
@@ -21,28 +27,27 @@
     <article>
         <header class="mb-9 space-y-1">
             <p class="font-display text-sm font-medium text-primary-600">
-                {{ $frontmatter->category }}
+                {{ $document->category }}
             </p>
             <h1
                 class="font-display text-4xl font-medium tracking-tight text-gray-900"
             >
-                {{ $frontmatter->title }}
+                {{ $document->frontmatter->title }}
             </h1>
-            <?php if ($frontmatter->type === 'post'): ?>
-            <p class="font-display text-sm font-medium text-primary-600">
-                {{ $frontmatter->createdAt->toFormattedDateString() }}
-            </p>
-            <?php endif; ?>
         </header>
         <div
-            class="prose-headings:font-display prose prose-gray max-w-none prose-a:border-b prose-a:border-dashed prose-a:border-black/30 prose-a:font-semibold prose-a:no-underline hover:prose-a:border-solid prose-img:rounded"
+            class="prose-headings:font-display prose prose-gray max-w-none prose-a:border-b prose-a:border-dashed prose-a:border-black/30 prose-a:font-semibold prose-a:no-underline prose-a:hover:border-solid prose-img:rounded-xs"
         >
             {!! $body !!}
         </div>
 
-        <?php if ($frontmatter->comments === true): ?>
-            <x-comment-widget :header="!empty($frontmatter->comments_header) ? $frontmatter->comments_header : false" :slug="$frontmatter->slug" :title="$frontmatter->title" />
-        <?php endif; ?>
+        @if($document->frontmatter->comments === true)
+            <x-comment-widget
+                :header="!empty($document->frontmatter->comments_header) ? $document->frontmatter->comments_header : false"
+                :slug="$document->frontmatter->slug"
+                :title="$document->frontmatter->title"
+            />
+        @endif
     </article>
 
     {{-- Right Sidebar --}}
@@ -51,7 +56,6 @@
             class="hidden xl:sticky xl:top-[4.75rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.75rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6"
         >
             <nav aria-labelledby="on-this-page-title" class="w-56">
-                <?php if (!empty($headings)): ?>
                 <p
                     id="on-this-page-title"
                     class="font-display text-sm font-medium text-gray-900"
@@ -63,7 +67,7 @@
                         <li>
                             <a
                                 href="#{{ $h2['id'] }}"
-                                :class="{'text-primary-500 hover:text-primary-500': activeHeading === '#{{ $h2['title'] }}'}"
+                                :class="{'text-primary-500 hover:text-primary-500': activeHeading === '{{ $h2['id'] }}'}"
                                 x-on:click.prevent="scrollToHeading('{{ $h2['id'] }}')"
                                 class="transition-colors"
                             >
@@ -79,7 +83,7 @@
                                         <li>
                                             <a
                                                 href="#{{ $h3['id'] }}"
-                                                :class="{'text-primary-700 hover:text-primary-700': activeHeading === '#{{ $h3['title'] }}'}"
+                                                :class="{'text-primary-700 hover:text-primary-700': activeHeading === '{{ $h3['id'] }}'}"
                                                 x-on:click.prevent="scrollToHeading('{{ $h3['id'] }}')"
                                                 class="transition-colors"
                                             >
@@ -92,7 +96,6 @@
                         </li>
                     @endforeach
                 </ol>
-                <?php endif; ?>
             </nav>
         </div>
     </x-slot>
