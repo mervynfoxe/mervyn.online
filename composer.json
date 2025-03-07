@@ -28,13 +28,13 @@
     "license": "GPL-3.0-only",
     "require": {
         "php": "^8.3",
+        "ext-gd": "*",
         "andreiio/blade-remix-icon": "^3.5",
-        "benbjurstrom/prezet": "^0.15.0",
+        "benbjurstrom/prezet": "1.0.0-rc5",
         "davidhsianturi/blade-bootstrap-icons": "^1.5",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
-        "spatie/laravel-feed": "^4.4",
-        "ext-gd": "*"
+        "spatie/laravel-feed": "^4.4"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.5",
