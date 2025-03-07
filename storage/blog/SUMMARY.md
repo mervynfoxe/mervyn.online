@@ -1,8 +1,8 @@
 ## Pages
 
 - [Blog Index](/)
-- [About](content/page/about)
-- [Shoutbox](content/page/shoutbox)
+- [About](content/about)
+- [Shoutbox](content/shoutbox)
 
 ## Categories
 
