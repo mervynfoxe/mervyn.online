@@ -37,7 +37,7 @@ The big thing that I've forced myself to deal with now is... I have about 210,00
 ## Other stuff I've been up to
 Like I said, October was kind of a weirdly nothing-month for me. Whether it's early-onset seasonal depression or just a lull in things to do, I don't have like... any "news" to share, other than a couple things that I've been up to with the polycule.
 
-I mentioned [last month](../10/02-fox-status-september#content-watching) that I was excited about the new D20 season, and it's more than lived up to the hype! No spoilers but goddamn has this season been a wild ride so far, and a hell of a lot heavier than I was expecting at points. Episode 6 (Code Crimson) was one of my favorite episodes of anything ever I think.
+I mentioned [last month](fox-status-september-2024#content-watching) that I was excited about the new D20 season, and it's more than lived up to the hype! No spoilers but goddamn has this season been a wild ride so far, and a hell of a lot heavier than I was expecting at points. Episode 6 (Code Crimson) was one of my favorite episodes of anything ever I think.
 
 We've also been continuing to play a lot of Warframe with the polycule lately, it's been a really nice way to spend evenings together, and we're all hyped for the 1999 expansion coming... sometime next month? I haven't had quite as much time to play as the others since I have an earlier bedtime, but I finally got around to unlocking Steel Path and doing a few circuit runs to unlock some incarnon weapons! I like seeing the Big Damage Numbers :3
 
