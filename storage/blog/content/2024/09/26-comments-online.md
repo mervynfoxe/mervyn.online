@@ -18,4 +18,4 @@ I gave in and went ahead and added a little comment widget to my posts here! Def
 
 Because it's an open, anyone-can-comment type system, all comments have to be manually reviewed/approved before they show up, so it may take a bit before they're visible since it's all down to my schedule and when I check the dashboard, but I'll try and be good about that.
 
-I also added a [shoutbox](../../page/shoutbox) page not tied to any one post, because I still miss my old freewebs homepage and all the shouts I got there.
+I also added a [shoutbox](shoutbox) page not tied to any one post, because I still miss my old freewebs homepage and all the shouts I got there.
