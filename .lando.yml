@@ -31,7 +31,29 @@ events:
     - appserver: php artisan key:generate
     - appserver: php artisan migrate
     - appserver: touch /app/prezet.sqlite
-    - appserver: php artisan prezet:index
+    - appserver: php artisan prezet:index --fresh
+  pre-deploy-dev:
+    - appserver: echo "Killing dev server before build."
+    - node: pgrep "npm run dev" | xargs -r kill
+  post-deploy-dev:
+    - appserver: echo "Cleaning build files after deployment..."
+    # Run commands from `clean` tooling command since it cannot be directly called here
+    - node: npm run clean
+    - appserver: php artisan view:clear
+    - appserver: php artisan cache:clear
+#    - appserver: echo "Restarting dev server..."
+#    - node: npm run dev &
+  pre-deploy-prod:
+    - appserver: echo "Killing dev server before build."
+    - node: pgrep "npm run dev" | xargs -r kill
+  post-deploy-prod:
+    - appserver: echo "Cleaning build files after deployment..."
+    # Run commands from `clean` tooling command since it cannot be directly called here
+    - node: npm run clean
+    - appserver: php artisan view:clear
+    - appserver: php artisan cache:clear
+#    - appserver: echo "Restarting dev server after deployment."
+#    - node: npm run dev &
 
 tooling:
   npm:
