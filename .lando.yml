@@ -32,6 +32,20 @@ events:
     - appserver: php artisan migrate
     - appserver: touch /app/prezet.sqlite
     - appserver: php artisan prezet:index
+# WIP: events to auto-start/stop dev server
+#    - node: npm run dev &
+#  pre-deploy-dev:
+#    - appserver: echo "Killing dev server before build."
+#    - node: kill $(pgrep 'npm run dev')
+#  post-deploy-dev:
+#    - appserver: echo "Restarting dev server after deployment."
+#    - node: npm run dev &
+#  pre-deploy-prod:
+#    - appserver: echo "Restarting dev server after deployment."
+#    - node: kill $(pgrep 'npm run dev')
+#  post-deploy-prod:
+#    - appserver: echo "Killing dev server before build."
+#    - node: npm run dev &
 
 tooling:
   npm:
