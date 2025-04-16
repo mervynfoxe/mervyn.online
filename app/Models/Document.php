@@ -43,8 +43,11 @@ class Document extends BaseDocument implements Feedable
     }
 
     public function toFeedItem(): FeedItem {
+        $authors = config('prezet.authors');
+        $author = $authors[$this->frontmatter->author]['name'] ?? $authors['default']['name'];
+
         $md = Prezet::getMarkdown($this->filepath);
-        $html = Prezet::getContent($md);
+        $html = Prezet::parseMarkdown($md)->getContent();
 
         return FeedItem::create()
             ->id($this->slug)
@@ -53,7 +56,7 @@ class Document extends BaseDocument implements Feedable
             ->category($this->frontmatter->category ?? '')
             ->updated($this->created_at)
             ->link(route('prezet.show', $this->slug))
-            ->authorName(config('app.name'))
+            ->authorName($author)
             ->content($html);
     }
 

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Document;
 
+use BenBjurstrom\Prezet\Data\DocumentData;
 use BenBjurstrom\Prezet\Http\Controllers\IndexController as BaseIndexController;
-use BenBjurstrom\Prezet\Actions\UpdateIndex;
 use BenBjurstrom\Prezet\Prezet;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -14,15 +14,11 @@ class BlogIndexController extends BaseIndexController
 {
     public function __invoke(Request $request): View
     {
-        if (config('app.env') === 'local') {
-            UpdateIndex::handle();
-        }
-
         $category = $request->input('category');
         $tag = $request->input('tag');
         $type = $request->input('type', 'post');
 
-        $query = Document::where('draft', false);
+        $query = app(Document::class)::where('draft', false);
 
         if ($category) {
             $query->where('category', $category);
@@ -38,14 +34,15 @@ class BlogIndexController extends BaseIndexController
             $query->where('frontmatter', 'like', '%"type":"' . $type . '"%');
         }
 
-
-        $nav = Prezet::getNav();
-        $docs = $query->orderBy('date', 'desc')
+        $nav = Prezet::getSummary();
+        $docs = $query->orderBy('created_at', 'desc')
             ->paginate(4);
+
+        $docsData = $docs->map(fn (Document $doc) => app(DocumentData::class)::fromModel($doc));
 
         return view('prezet::index', [
             'nav' => $nav,
-            'articles' => $docs->pluck('frontmatter'),
+            'articles' => $docsData,
             'paginator' => $docs,
             'currentTag' => request()->query('tag'),
             'currentCategory' => request()->query('category'),

@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogIndexController as IndexController;
 
 use BenBjurstrom\Prezet\Http\Controllers\ImageController;
 use BenBjurstrom\Prezet\Http\Controllers\OgimageController;
+use BenBjurstrom\Prezet\Http\Controllers\SearchController;
 use BenBjurstrom\Prezet\Http\Controllers\ShowController;
 use Illuminate\Foundation\Http\Middleware\ValidateCsrfToken;
 use Illuminate\Session\Middleware\StartSession;
@@ -16,6 +17,8 @@ Route::withoutMiddleware([
     ValidateCsrfToken::class,
 ])
     ->group(function () {
+        Route::get('prezet/search', SearchController::class)->name('prezet.search');
+
         Route::get('blog/img/{path}', ImageController::class)
             ->name('prezet.image')
             ->where('path', '.*');
