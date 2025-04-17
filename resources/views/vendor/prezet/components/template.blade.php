@@ -21,7 +21,7 @@
             defer
             src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"
         ></script>
-        @vite(['resources/css/prezet.css', 'resources/js/app.js'])
+        @vite(['resources/css/prezet.css', 'resources/js/app.js', 'resources/js/fixes.js'])
         @stack('jsonld')
     </head>
     <body class="font-sans antialiased">
