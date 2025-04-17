@@ -7,7 +7,7 @@
 <div
     {{ $attributes->merge([
     'id' => 'profile',
-    'class' => 'w-full z-10 lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white dark:bg-gray-900 mx-6 lg:mx-0 lg:transition-transform motion-reduce:transition-none delay-300 duration-400 ease-in-out translate-none lg:translate-x-50 motion-reduce:lg:translate-none in-[.loaded]:lg:translate-none',
+    'class' => 'w-full z-10 lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white dark:bg-gray-900 mx-6 lg:mx-0 motion-safe:lg:transition-transform delay-300 duration-400 ease-in-out translate-none motion-safe:lg:translate-x-50 motion-safe:in-[.loaded]:lg:translate-none',
     ]) }} >
     <div class="p-4 md:p-12 text-center lg:text-left">
         <!-- Image for mobile view-->
