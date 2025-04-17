@@ -36,7 +36,7 @@ class LandingController extends Controller
     }
 
     public function index(Request $request) {
-        return view('legacy.index')
+        return view('index-' . $this->environment)
             ->with('env', $this->environment)
             ->with('host', $this->host);
     }

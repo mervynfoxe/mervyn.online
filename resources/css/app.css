@@ -1,1 +1,5 @@
+@import 'tailwindcss';
 @import './_components.css';
+
+/*@custom-variant dark (&:where(.dark, .dark *));*/
+/*@custom-variant motion-reduce (&:where(.motion-reduce, .motion-reduce *));*/
