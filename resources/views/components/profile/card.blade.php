@@ -39,7 +39,7 @@
                         @class([
                             'block',
                             'lg:inline',
-                            'encoded email-link' => strpos($link['href'], 'mailto:') !== FALSE
+                            'encoded email-link noscript:hidden' => str_contains($link['href'], 'mailto:') !== FALSE,
                         ])>
                         {{ svg($link['icon'], [
                           'class' => 'inline h-5 fill-current text-current align-middle',
