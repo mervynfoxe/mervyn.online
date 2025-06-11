@@ -2,13 +2,13 @@
     site-title="Ren Fox"
     page-title="Home"
     seo-description="A description"
-    email-enc="uv@erasbk.bayvar"
+    email-enc="pbagnpg@erasbk.bayvar"
 >
     <x-slot:content>
         @php
             $links = [
                 [
-                    'href' => 'https://renfox.s3.amazonaws.com/files/ref/resume.pdf',
+                    'href' => 'https://cdn.renfox.online/assets/doc/RenFox-Resume.pdf',
                     'icon' => 'bi-file-earmark-text',
                     'title' => 'My Resume',
                 ],
@@ -38,7 +38,7 @@
                     Lexington, KY, USA
                 </x-slot:location>
                 <x-slot:description>
-                    {{-- TODO write descriptoin --}}
+                    {{-- TODO write description --}}
                 </x-slot:description>
             </x-profile.card>
 
