@@ -25,6 +25,7 @@ quit() {
 DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 ORIG_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 DID_STASH=0
+DEPLOY_CONTENT=${DEPLOY_CONTENT:-0}
 
 # Check if we are running this script from within the lando container
 # (e.g. via `lando deploy-prod` or after entering `lando ssh`)
@@ -103,7 +104,14 @@ echo "\tFramework directories"
 chmod -R g+w "${deploy_from}/storage/framework"
 
 echo "Syncing site files..."
-rsync -alvz --delete --exclude-from="${DIR}/.deployignore" "$deploy_from" "${TARGET_USER}@${TARGET_HOST}:${TARGET_DIR}/"
+if [[ $DEPLOY_CONTENT -eq 1 ]]; then
+    echo "Including blog storage."
+    rsync_exclude=""
+else
+    echo "Excluding blog storage. Please sync content separately."
+    rsync_exclude=" --exclude='storage/blog'"
+fi
+rsync -alvz --delete --exclude-from="${DIR}/.deployignore"${rsync_exclude} "${deploy_from}" "${TARGET_USER}@${TARGET_HOST}:${TARGET_DIR}/"
 rsync_status=$?
 
 [ $rsync_status -eq 0 ] || echo "A problem was encountered during deployment. Please check the logs and try again."
