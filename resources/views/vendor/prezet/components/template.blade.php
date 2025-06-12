@@ -24,12 +24,12 @@
         @vite(['resources/css/prezet.css', 'resources/js/app.js', 'resources/js/fixes.js'])
         @stack('jsonld')
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased ">
         <div class="min-h-screen">
             <x-prezet::alpine>
                 <x-prezet::header />
                 <div
-                    class="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12"
+                    class="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12 bg-white dark:bg-slate-700"
                 >
                     {{-- Left Sidebar --}}
                     @if (isset($left))

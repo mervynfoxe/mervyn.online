@@ -30,7 +30,7 @@
                 {{ $document->category }}
             </p>
             <h1
-                class="font-display text-4xl font-medium tracking-tight text-gray-900"
+                class="font-display text-4xl font-medium tracking-tight text-gray-900 dark:text-gray-200"
             >
                 {{ $document->frontmatter->title }}
             </h1>
@@ -58,7 +58,7 @@
             <nav aria-labelledby="on-this-page-title" class="w-56">
                 <p
                     id="on-this-page-title"
-                    class="font-display text-sm font-medium text-gray-900"
+                    class="font-display text-sm font-medium text-gray-900 dark:text-gray-200"
                 >
                     On this page
                 </p>
@@ -67,7 +67,10 @@
                         <li>
                             <a
                                 href="#{{ $h2['id'] }}"
-                                :class="{'text-primary-500 hover:text-primary-500': activeHeading === '{{ $h2['id'] }}'}"
+                                :class="{
+                                'text-primary-500 hover:text-primary-500 dark:text-primary-400': activeHeading === '{{ $h2['id'] }}',
+                                'text-gray-800 dark:text-gray-300': activeHeading !== '{{ $h2['id'] }}',
+                                }"
                                 x-on:click.prevent="scrollToHeading('{{ $h2['id'] }}')"
                                 class="transition-colors"
                             >
@@ -83,7 +86,10 @@
                                         <li>
                                             <a
                                                 href="#{{ $h3['id'] }}"
-                                                :class="{'text-primary-700 hover:text-primary-700': activeHeading === '{{ $h3['id'] }}'}"
+                                                :class="{
+                                                'text-primary-500 hover:text-primary-500 dark:text-primary-400': activeHeading === '{{ $h3['id'] }}',
+                                                'text-gray-800 dark:text-gray-300': activeHeading !== '{{ $h3['id'] }}',
+                                                }"
                                                 x-on:click.prevent="scrollToHeading('{{ $h3['id'] }}')"
                                                 class="transition-colors"
                                             >

@@ -4,7 +4,7 @@
     >
         <dl>
             <dt class="sr-only">Published on</dt>
-            <dd class="text-base font-medium leading-6 text-gray-500">
+            <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-200">
                 <time datetime="{{ $article->createdAt->toIso8601String() }}">
                     {{ $article->createdAt->format('F j, Y') }}
                 </time>
@@ -15,7 +15,7 @@
                 <div>
                     <h2 class="text-2xl font-bold leading-8 tracking-tight">
                         <a
-                            class="text-gray-900"
+                            class="transition-colors text-gray-900 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-400"
                             href="{{ route('prezet.show', $article->slug) }}"
                         >
                             {{ $article->frontmatter->title }}
@@ -38,7 +38,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="prose max-w-none text-gray-500">
+                <div class="prose max-w-none text-gray-500 dark:text-gray-200">
                     {{ $article->frontmatter->excerpt }}
                 </div>
             </div>
