@@ -36,7 +36,7 @@
             </h1>
         </header>
         <div
-            class="prose-headings:font-display prose prose-gray max-w-none prose-a:border-b prose-a:border-dashed prose-a:border-black/30 prose-a:font-semibold prose-a:no-underline prose-a:hover:border-solid prose-img:rounded-xs"
+            class="prose prose-gray dark:prose-invert prose-headings:font-display max-w-none prose-a:border-b prose-a:border-dashed prose-a:border-black/30 prose-a:font-semibold prose-a:no-underline prose-a:hover:border-solid prose-img:rounded-xs"
         >
             {!! $body !!}
         </div>
