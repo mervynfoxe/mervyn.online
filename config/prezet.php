@@ -83,7 +83,7 @@ return [
 
         'config' => [
             'heading_permalink' => [
-                'html_class' => 'prezet-heading',
+                'html_class' => 'prezet-heading mr-1',
                 'id_prefix' => 'content',
                 'apply_id_to_heading' => false,
                 'heading_class' => '',
