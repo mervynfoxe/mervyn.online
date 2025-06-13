@@ -109,9 +109,9 @@ if [[ $DEPLOY_CONTENT -eq 1 ]]; then
     rsync_exclude=""
 else
     echo "Excluding blog storage. Please sync content separately."
-    rsync_exclude=" --exclude='storage/blog'"
+    rsync_exclude="storage/blog"
 fi
-rsync -alvz --delete --exclude-from="${DIR}/.deployignore"${rsync_exclude} "${deploy_from}" "${TARGET_USER}@${TARGET_HOST}:${TARGET_DIR}/"
+rsync -alvz --delete --exclude-from="${DIR}/.deployignore" --exclude="${rsync_exclude}" "${deploy_from}" "${TARGET_USER}@${TARGET_HOST}:${TARGET_DIR}/"
 rsync_status=$?
 
 [ $rsync_status -eq 0 ] || echo "A problem was encountered during deployment. Please check the logs and try again."
