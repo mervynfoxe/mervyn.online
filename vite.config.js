@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/prezet.css',
                 'resources/js/app.js',
+                'resources/js/fixes.js',
                 'resources/css/legacy.css',
                 'resources/js/legacy.js',
             ],
