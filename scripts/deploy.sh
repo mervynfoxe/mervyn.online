@@ -96,11 +96,11 @@ php artisan migrate
 php artisan prezet:index
 
 echo "Setting file permissions for server..."
-echo "\tApp database"
+echo -e "\tApp database"
 chmod g+w "${deploy_from}/database/database.sqlite"
-echo "\tBlog database"
+echo -e "\tBlog database"
 chmod g+w "${deploy_from}/prezet.sqlite"
-echo "\tFramework directories"
+echo -e "\tFramework directories"
 chmod -R g+w "${deploy_from}/storage/framework"
 
 echo "Syncing site files..."
@@ -130,3 +130,7 @@ if [ $DID_STASH -eq 1 ]; then
 fi
 
 [ $rsync_status -eq 0 ] && echo "Deploy complete!"
+
+if [[ ! $DEPLOY_CONTENT -eq 1 ]]; then
+    echo "Blog content and images were NOT synced. Please run the sync_blog.sh script to publish content."
+fi

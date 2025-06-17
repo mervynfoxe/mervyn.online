@@ -44,10 +44,14 @@ if [[ -z ${DO_BUCKET} || -z ${DO_FOLDER} ]]; then
 fi
 
 echo "Ready to sync content from ${LOCAL_DIR}/* to s3://${DO_BUCKET}/${DO_FOLDER}"
+echo "Permissions will be set to PRIVATE for content and PUBLIC for images."
+echo "Files no longer in the local directory tree will be DELETED."
 confirm "Is this okay?" || quit 0 "Exiting..."
 
 echo "Syncing blog content to S3..."
-s3cmd sync ${LOCAL_DIR}/* "s3://${DO_BUCKET}/${DO_FOLDER}/" --recursive --delete-removed --exclude '.DS_Store'
+s3cmd sync ${LOCAL_DIR}/*.md ${LOCAL_DIR}/content "s3://${DO_BUCKET}/${DO_FOLDER}/" --recursive --delete-removed --exclude '.DS_Store'
+echo -e "\nSyncing blog images to S3..."
+s3cmd sync ${LOCAL_DIR}/images "s3://${DO_BUCKET}/${DO_FOLDER}/" --recursive --acl-public --delete-removed --exclude '.DS_Store'
 s3cmd_status=$?
 
 [ $s3cmd_status -eq 0 ] || echo "A problem was encountered during content sync. Please check the logs and try again."
