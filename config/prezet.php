@@ -78,7 +78,7 @@ return [
             League\CommonMark\Extension\ExternalLink\ExternalLinkExtension::class,
             League\CommonMark\Extension\FrontMatter\FrontMatterExtension::class,
             BenBjurstrom\Prezet\Extensions\MarkdownBladeExtension::class,
-            BenBjurstrom\Prezet\Extensions\MarkdownImageExtension::class,
+            App\Extensions\MarkdownImageExtension::class,
         ],
 
         'config' => [
