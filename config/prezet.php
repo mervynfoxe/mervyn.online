@@ -78,12 +78,12 @@ return [
             League\CommonMark\Extension\ExternalLink\ExternalLinkExtension::class,
             League\CommonMark\Extension\FrontMatter\FrontMatterExtension::class,
             BenBjurstrom\Prezet\Extensions\MarkdownBladeExtension::class,
-            BenBjurstrom\Prezet\Extensions\MarkdownImageExtension::class,
+            App\Extensions\MarkdownImageExtension::class,
         ],
 
         'config' => [
             'heading_permalink' => [
-                'html_class' => 'prezet-heading',
+                'html_class' => 'prezet-heading mr-1',
                 'id_prefix' => 'content',
                 'apply_id_to_heading' => false,
                 'heading_class' => '',

@@ -1,14 +1,14 @@
 <header
-    class="sticky top-0 z-50 flex flex-none flex-wrap items-center justify-between bg-white px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 sm:px-6 lg:px-8"
+    class="sticky top-0 z-50 flex flex-none flex-wrap items-center justify-between bg-white dark:bg-slate-700 px-4 py-5 shadow-md shadow-gray-900/5 transition duration-500 sm:px-6 lg:px-8"
 >
     <div class="relative flex grow basis-0 items-center">
         <button
             aria-label="Menu"
-            class="mr-4 rounded-lg p-1.5 hover:bg-gray-100 active:bg-gray-200 lg:hidden"
+            class="mr-4 rounded-lg p-1.5 hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-slate-800 dark:active:bg-slate-900 lg:hidden"
             x-on:click="showSidebar = ! showSidebar"
         >
             <svg
-                class="h-6 w-6 text-gray-600"
+                class="h-6 w-6 text-gray-600 dark:text-gray-300"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -28,7 +28,7 @@
             href="{{ route('prezet.index') }}"
             class="block flex items-center space-x-2"
         >
-            <span class="text-2xl font-bold text-gray-900">
+            <span class="text-2xl font-bold text-gray-900 dark:text-gray-300">
                 {{ strtoupper(config('prezet.name', config('app.name'))) }}
             </span>
         </a>
@@ -43,7 +43,7 @@
             title="Homepage"
             href="{{ route('app.home') }}"
         >
-            <x-bi-house-door class="h-6 w-6 fill-gray-400 group-hover:fill-gray-500" />
+            <x-bi-house-door class="h-6 w-6 fill-gray-400 dark:fill-gray-200 group-hover:fill-gray-500" />
         </a>
         <a
             class="group"
@@ -52,7 +52,7 @@
             href="https://github.com/mervynfoxe/mervyn.online"
             target="_blank"
         >
-            <x-bi-github class="h-6 w-6 fill-gray-400 group-hover:fill-gray-500" />
+            <x-bi-github class="h-6 w-6 fill-gray-400 dark:fill-gray-200 group-hover:fill-gray-500" />
         </a>
     </div>
 </header>

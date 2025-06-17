@@ -1,1 +1,6 @@
 @import './_components.css';
+
+/* TODO: remove these comments when done with dev/verification */
+/*@config "./../../tailwind.landing.config.js";*/
+/*@custom-variant dark (&:where(.dark, .dark *));*/
+/*@custom-variant motion-reduce (&:where(.motion-reduce, .motion-reduce *));*/

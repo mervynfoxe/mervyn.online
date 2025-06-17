@@ -9,6 +9,7 @@ config:
 
 services:
   appserver:
+    composer_version: 2-latest
     xdebug: true
     config:
       php: .lando/config/php.ini
