@@ -18,7 +18,7 @@ Route::withoutMiddleware([
     ->group(function () {
         Route::get('blog/search', SearchController::class)->name('prezet.search');
 
-        Route::get('blog/img/{path}', ImageController::class)
+        Route::get('blog/images/{path}', ImageController::class)
             ->name('prezet.image')
             ->where('path', '.*');
 

@@ -32,6 +32,7 @@ return [
         'blog' => [
             'driver' => 'local',
             'root' => storage_path('blog'),
+            'url' => env('APP_URL') . '/blog',
             'throw' => false,
         ],
 
