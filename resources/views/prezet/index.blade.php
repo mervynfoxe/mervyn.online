@@ -2,10 +2,10 @@
     /* @var array $nav */
     /* @var array|null|string $currentTag */
     /* @var array|null|string $currentCategory */
-    /* @var \Illuminate\Support\Collection<int,\BenBjurstrom\Prezet\Data\DocumentData> $articles */
+    /* @var \Illuminate\Support\Collection<int,\Prezet\Prezet\Data\DocumentData> $articles */
 @endphp
 
-<x-prezet::template>
+<x-prezet.template>
     @seo([
         'title' => config('prezet.name', config('app.name')),
         'description' =>
@@ -13,7 +13,7 @@
         'url' => route('prezet.index'),
     ])
     <x-slot name="left">
-        <x-prezet::sidebar :nav="$nav" />
+        <x-prezet.sidebar :nav="$nav" />
     </x-slot>
     <section>
         <div class="divide-y divide-gray-200 dark:divide-slate-600">
@@ -76,7 +76,7 @@
             <ul class="divide-y divide-gray-200 dark:divide-slate-600">
                 @foreach ($articles as $article)
                     <li class="py-12">
-                        <x-prezet::article :article="$article" />
+                        <x-prezet.article :article="$article" />
                     </li>
                 @endforeach
             </ul>
@@ -85,4 +85,4 @@
             </div>
         </div>
     </section>
-</x-prezet::template>
+</x-prezet.template>

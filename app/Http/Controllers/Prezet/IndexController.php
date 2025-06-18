@@ -1,22 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Prezet;
 
-use App\Models\Document;
-
-use Prezet\Prezet\Data\DocumentData;
-use App\Http\Controllers\Prezet\IndexController as BaseIndexController;
-use Prezet\Prezet\Prezet;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Prezet\Prezet\Data\DocumentData;
+use Prezet\Prezet\Models\Document;
+use Prezet\Prezet\Prezet;
 
-class BlogIndexController extends BaseIndexController
+class IndexController
 {
     public function __invoke(Request $request): View
     {
         $category = $request->input('category');
         $tag = $request->input('tag');
-        $type = $request->input('type', 'post');
 
         $query = app(Document::class)::where('draft', false);
 
@@ -28,10 +25,6 @@ class BlogIndexController extends BaseIndexController
             $query->whereHas('tags', function ($q) use ($tag) {
                 $q->where('name', $tag);
             });
-        }
-
-        if ($type !== 'all') {
-            $query->where('frontmatter', 'like', '%"type":"' . $type . '"%');
         }
 
         $nav = Prezet::getSummary();

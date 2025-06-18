@@ -36,7 +36,7 @@
     <div
         class="relative flex basis-0 items-center justify-end gap-3 sm:gap-8 md:grow lg:gap-6"
     >
-        <x-prezet::search />
+        <x-prezet.search />
         <a
             class="group"
             aria-label="Homepage"
