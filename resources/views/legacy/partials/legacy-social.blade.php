@@ -61,7 +61,7 @@
         ],
         'professional' => [
             array(
-                'url' => 'https://renfox.s3.amazonaws.com/files/ref/resume.pdf',
+                'url' => 'https://cdn.renfox.online/assets/doc/RenFox-Resume.pdf',
                 'icon' => 'icon-document.png',
                 'icon_buk' => 'ri-file-copy-2-line',
                 'id' => 'resume-link',
