@@ -10,10 +10,10 @@ use Prezet\Prezet\Prezet;
 
 class IndexController
 {
-    public function __invoke(Request $request): View
+    public function __invoke(Request $request, $filter = NULL): View
     {
-        $category = $request->input('category');
-        $tag = $request->input('tag');
+        $category = $filter && $request->routeIs('prezet.category') ? $filter : $request->input('category');
+        $tag = $filter && $request->routeIs('prezet.tag') ? $filter : $request->input('tag');
         $type = $request->input('type', 'post');
 
         $query = app(\App\Models\Document::class)::where('draft', false);
