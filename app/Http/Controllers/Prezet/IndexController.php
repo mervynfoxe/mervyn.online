@@ -14,8 +14,9 @@ class IndexController
     {
         $category = $request->input('category');
         $tag = $request->input('tag');
+        $type = $request->input('type', 'post');
 
-        $query = app(Document::class)::where('draft', false);
+        $query = app(\App\Models\Document::class)::where('draft', false);
 
         if ($category) {
             $query->where('category', $category);
@@ -25,6 +26,10 @@ class IndexController
             $query->whereHas('tags', function ($q) use ($tag) {
                 $q->where('name', $tag);
             });
+        }
+
+        if ($type !== 'all') {
+            $query->where('frontmatter', 'like', '%"type":"' . $type . '"%');
         }
 
         $nav = Prezet::getSummary();

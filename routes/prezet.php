@@ -1,11 +1,11 @@
 <?php
 
 use App\Http\Controllers\Prezet\ImageController;
+use App\Http\Controllers\Prezet\IndexController;
 use App\Http\Controllers\Prezet\OgimageController;
 use App\Http\Controllers\Prezet\SearchController;
 use App\Http\Controllers\Prezet\ShowController;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
-use App\Http\Controllers\BlogIndexController as IndexController;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
