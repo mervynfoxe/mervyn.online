@@ -9,23 +9,11 @@
         <x-prezet.meta />
 
         <!-- Scripts -->
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.min.js"
-        ></script>
-        <script
-            defer
-            src="https://unpkg.com/@benbjurstrom/alpinejs-zoomable@0.4.0/dist/cdn.min.js"
-        ></script>
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.14.1/dist/cdn.min.js"
-        ></script>
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"
-        ></script>
-        @vite(['resources/css/prezet.css', 'resources/js/app.js', 'resources/js/fixes.js'])
+        @vite([
+          'resources/css/prezet.css',
+          'resources/js/blog.js',
+          'resources/js/fixes.js',
+          ])
         @stack('jsonld')
     </head>
     <body class="font-sans antialiased">

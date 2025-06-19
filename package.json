@@ -7,6 +7,8 @@
         "clean": "rm -rf public/build/*"
     },
     "devDependencies": {
+        "@alpinejs/focus": "^3.14.9",
+        "@benbjurstrom/alpinejs-zoomable": "^0.5.0",
         "@tailwindcss/forms": "^0.5.10",
         "@tailwindcss/postcss": "^4.1.4",
         "@tailwindcss/typography": "^0.5.16",
@@ -14,6 +16,7 @@
         "alpinejs": "^3.14.9",
         "axios": "^1.8.4",
         "laravel-vite-plugin": "^1.2",
+        "lite-youtube-embed": "^0.3.3",
         "postcss": "^8.4.47",
         "tailwindcss": "^4.1.10",
         "vite": "^6.2",
