@@ -19,7 +19,7 @@
         "lite-youtube-embed": "^0.3.3",
         "postcss": "^8.4.47",
         "tailwindcss": "^4.1.10",
-        "vite": "^6.2",
+        "vite": "^6.3",
         "vite-plugin-watch-and-run": "^1.7.5"
     }
 }
