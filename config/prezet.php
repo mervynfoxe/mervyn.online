@@ -24,7 +24,7 @@ return [
     */
 
     'filesystem' => [
-        'disk' => env('PREZET_FILESYSTEM_DISK', 'prezet'),
+        'disk' => env('PREZET_FILESYSTEM_DISK', 'blog'),
     ],
 
     /*
@@ -77,7 +77,7 @@ return [
             League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
             League\CommonMark\Extension\ExternalLink\ExternalLinkExtension::class,
             League\CommonMark\Extension\FrontMatter\FrontMatterExtension::class,
-            BenBjurstrom\Prezet\Extensions\MarkdownBladeExtension::class,
+            Prezet\Prezet\Extensions\MarkdownBladeExtension::class,
             App\Extensions\MarkdownImageExtension::class,
         ],
 

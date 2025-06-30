@@ -4,9 +4,9 @@ namespace App\Models;
 
 use App\Data\CustomFrontmatterData as FrontmatterData;
 
-use BenBjurstrom\Prezet\Models\Document as BaseDocument;
-use BenBjurstrom\Prezet\Models\Tag;
-use BenBjurstrom\Prezet\Prezet;
+use Prezet\Prezet\Models\Document as BaseDocument;
+use Prezet\Prezet\Models\Tag;
+use Prezet\Prezet\Prezet;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;

@@ -6,7 +6,7 @@
     /* @var \BenBjurstrom\Prezet\Data\DocumentData $document */
 @endphp
 
-<x-prezet::template>
+<x-prezet.template>
     @seo([
         'title' => $document->frontmatter->title,
         'description' => $document->frontmatter->excerpt,
@@ -20,7 +20,7 @@
 
     {{-- Left Sidebar --}}
     <x-slot name="left">
-        <x-prezet::sidebar :nav="$nav" />
+        <x-prezet.sidebar :nav="$nav" />
     </x-slot>
 
     {{-- Main Content --}}
@@ -107,4 +107,4 @@
             </div>
         @endif
     </x-slot>
-</x-prezet::template>
+</x-prezet.template>

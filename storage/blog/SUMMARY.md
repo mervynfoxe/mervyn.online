@@ -6,6 +6,6 @@
 
 ## Categories
 
-- [Life](?category=Life)
-- [Development](?category=Development)
-- [Site updates](?category=Updates)
+- [Life](category/Life)
+- [Development](category/Development)
+- [Site updates](category/Updates)

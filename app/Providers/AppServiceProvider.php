@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use App\Data\CustomFrontmatterData;
-use BenBjurstrom\Prezet\Data\FrontmatterData;
+use Prezet\Prezet\Data\FrontmatterData;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

@@ -1,24 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Prezet;
 
-use App\Models\Document;
-
-use BenBjurstrom\Prezet\Data\DocumentData;
-use BenBjurstrom\Prezet\Http\Controllers\IndexController as BaseIndexController;
-use BenBjurstrom\Prezet\Prezet;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Prezet\Prezet\Data\DocumentData;
+use Prezet\Prezet\Models\Document;
+use Prezet\Prezet\Prezet;
 
-class BlogIndexController extends BaseIndexController
+class IndexController
 {
-    public function __invoke(Request $request): View
+    public function __invoke(Request $request, $filter = NULL): View
     {
-        $category = $request->input('category');
-        $tag = $request->input('tag');
+        $category = $filter && $request->routeIs('prezet.category') ? $filter : $request->input('category');
+        $tag = $filter && $request->routeIs('prezet.tag') ? $filter : $request->input('tag');
         $type = $request->input('type', 'post');
 
-        $query = app(Document::class)::where('draft', false);
+        $query = app(\App\Models\Document::class)::where('draft', false);
 
         if ($category) {
             $query->where('category', $category);
@@ -40,7 +38,7 @@ class BlogIndexController extends BaseIndexController
 
         $docsData = $docs->map(fn (Document $doc) => app(DocumentData::class)::fromModel($doc));
 
-        return view('prezet::index', [
+        return view('prezet.index', [
             'nav' => $nav,
             'articles' => $docsData,
             'paginator' => $docs,

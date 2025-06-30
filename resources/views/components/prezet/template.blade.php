@@ -6,28 +6,20 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <x-seo::meta />
+        <x-prezet.meta />
 
         <!-- Scripts -->
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/src/lite-yt-embed.min.js"
-        ></script>
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.14.1/dist/cdn.min.js"
-        ></script>
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"
-        ></script>
-        @vite(['resources/css/prezet.css', 'resources/js/app.js', 'resources/js/fixes.js'])
+        @vite([
+          'resources/css/prezet.css',
+          'resources/js/blog.js',
+          'resources/js/fixes.js',
+          ])
         @stack('jsonld')
     </head>
-    <body class="font-sans antialiased ">
+    <body class="font-sans antialiased">
         <div class="min-h-screen">
-            <x-prezet::alpine>
-                <x-prezet::header />
+            <x-prezet.alpine>
+                <x-prezet.header />
                 <div
                     class="relative mx-auto flex w-full max-w-8xl flex-auto justify-center sm:px-2 lg:px-8 xl:px-12 bg-white dark:bg-slate-700"
                 >
@@ -38,7 +30,7 @@
 
                     {{-- Main Content --}}
                     <main
-                        class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pl-8 lg:pr-0 xl:px-16"
+                        class="max-w-2xl min-w-0 flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16"
                     >
                         {{ $slot }}
                     </main>
@@ -48,7 +40,7 @@
                         {{ $right }}
                     @endif
                 </div>
-            </x-prezet::alpine>
+            </x-prezet.alpine>
         </div>
     </body>
 </html>

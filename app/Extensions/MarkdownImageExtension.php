@@ -2,7 +2,7 @@
 
 namespace App\Extensions;
 
-use BenBjurstrom\Prezet\Prezet;
+use Prezet\Prezet\Prezet;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use League\CommonMark\Environment\EnvironmentBuilderInterface;
