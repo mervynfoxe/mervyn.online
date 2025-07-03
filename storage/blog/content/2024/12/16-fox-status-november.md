@@ -2,6 +2,7 @@
 title: "Fox Status: November"
 date: 2024-12-16
 type: post
+content_type: article
 draft: false
 slug: fox-status-november-2024
 category: Life

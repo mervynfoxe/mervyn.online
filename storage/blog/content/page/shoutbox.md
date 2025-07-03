@@ -2,6 +2,7 @@
 title: Shoutbox
 date: 2024-09-26
 type: page
+content_type: article
 draft: false
 slug: shoutbox
 category: 

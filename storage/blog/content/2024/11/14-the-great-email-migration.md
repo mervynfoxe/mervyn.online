@@ -2,6 +2,7 @@
 title: "The Great Email Migration"
 date: 2024-11-14
 type: post
+content_type: article
 draft: false
 slug: the-great-email-migration
 category: Life
