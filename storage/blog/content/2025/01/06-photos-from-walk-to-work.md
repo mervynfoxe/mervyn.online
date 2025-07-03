@@ -2,6 +2,7 @@
 title: Photos From my Walk to Work
 date: 2025-01-06
 type: post
+content_type: article
 draft: false
 slug: 2025-01-photos-from-my-walk-to-work
 category: Life

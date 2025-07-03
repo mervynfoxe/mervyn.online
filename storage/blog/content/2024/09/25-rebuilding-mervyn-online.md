@@ -2,6 +2,7 @@
 title: On rebuilding mervyn.online
 date: 2024-09-25
 type: post
+content_type: article
 draft: false
 slug: rebuilding-mervyn-online
 category: Development

@@ -2,6 +2,7 @@
 title: Hello, (my) world
 date: 2024-09-23
 type: post
+content_type: article
 draft: false
 slug: hello-world
 category: Life

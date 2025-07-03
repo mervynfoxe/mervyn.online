@@ -2,6 +2,7 @@
 title: Comments online!
 date: 2024-09-26
 type: post
+content_type: article
 draft: false
 slug: comments-online
 category: Updates

@@ -2,6 +2,7 @@
 title: New Server!
 date: 2024-12-23
 type: post
+content_type: article
 draft: false
 slug: new-server
 category: Updates

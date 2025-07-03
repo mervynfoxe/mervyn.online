@@ -2,6 +2,7 @@
 title: "Fox status: September"
 date: 2024-10-02
 type: post
+content_type: article
 draft: false
 slug: fox-status-september-2024
 category: Life
