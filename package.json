@@ -14,7 +14,7 @@
         "@tailwindcss/typography": "^0.5.16",
         "@tailwindcss/vite": "^4.1.10",
         "alpinejs": "^3.14.9",
-        "axios": "^1.8.4",
+        "axios": "^1.11.0",
         "laravel-vite-plugin": "^1.2",
         "lite-youtube-embed": "^0.3.3",
         "postcss": "^8.4.47",
