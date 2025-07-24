@@ -250,6 +250,13 @@
                         </div>
                     </div>
                 @endif
+                @if($document->frontmatter->comments === true)
+                    <x-comment-widget
+                        :header="!empty($document->frontmatter->comments_header) ? $document->frontmatter->comments_header : false"
+                        :slug="$document->frontmatter->slug"
+                        :title="$document->frontmatter->title"
+                    />
+                @endif
             </div>
         </div>
     </x-prezet.alpine>

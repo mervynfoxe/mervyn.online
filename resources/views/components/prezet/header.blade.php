@@ -5,7 +5,7 @@
         <div
             class="col-span-12 flex flex-none flex-wrap items-center justify-between xl:col-span-10 xl:col-start-2"
         >
-            <div class="relative flex grow basis-0 items-center">
+            <div class="relative flex gap-4 grow basis-0 items-center">
                 <button
                     aria-label="Menu"
                     class="mr-4 rounded-lg p-1.5 hover:bg-gray-100 active:bg-gray-200 lg:hidden"
@@ -38,6 +38,30 @@
                         {{ config('app.name') }}
                     </span>
                 </a>
+
+                {{--
+                <a
+                    href="{{ route('prezet.index') }}/about"
+                    class="block flex items-center space-x-2"
+                >
+                    <span
+                        class="text-lg text-gray-900 dark:text-gray-300"
+                    >
+                        About
+                    </span>
+                </a>
+                <a
+                    aria-label="Home"
+                    href="{{ route('prezet.index') }}/shoutbox"
+                    class="block flex items-center space-x-2"
+                >
+                    <span
+                        class="text-lg text-gray-900 dark:text-gray-300"
+                    >
+                        Shoutbox
+                    </span>
+                </a>
+                --}}
             </div>
             <div
                 class="relative flex basis-0 items-center justify-end gap-3 sm:gap-8 md:grow lg:gap-6"
