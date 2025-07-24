@@ -57,7 +57,7 @@ class IndexController
 
         return view('prezet.index', [
             'articles' => $docsData,
-            'paginator' => $docs,
+            'docs' => $docs,
             'currentTag' => request()->query('tag'),
             'currentCategory' => request()->query('category'),
             'currentAuthor' => $currentAuthor,

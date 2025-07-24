@@ -144,7 +144,7 @@
             </section>
         @endforeach
         <div class="pb-12">
-            {{ $paginator->links() }}
+            {{ $docs->links() }}
         </div>
     </div>
 </x-prezet.template>
