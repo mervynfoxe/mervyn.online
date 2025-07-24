@@ -2,6 +2,7 @@
 
 namespace App\Extensions;
 
+use Prezet\Prezet\Exceptions\InvalidConfigurationException;
 use Prezet\Prezet\Prezet;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -34,13 +35,40 @@ class MarkdownImageExtension implements ExtensionInterface
                 $originalUrl = $storage->url('images/' . $node->getUrl());
                 $node->setUrl($originalUrl);
 
+                // Generate the srcset attribute
+//                $srcset = $this->generateSrcset($originalUrl);
                 $node->data->set('attributes', [
                     'x-zoomable' => config('prezet.image.zoomable', true),
+//                    'srcset' => $srcset,
+//                    'sizes' => config('prezet.image.sizes'),
                     'loading' => 'lazy',
                     'decoding' => 'async',
                     'fetchpriority' => 'auto',
                 ]);
             }
         }
+    }
+
+    private function generateSrcset(string $url): string
+    {
+        $srcset = [];
+        $allowedSizes = config('prezet.image.widths');
+        if (! is_array($allowedSizes)) {
+            throw new InvalidConfigurationException('prezet.image.widths', $allowedSizes, 'is not a valid array');
+        }
+
+        foreach ($allowedSizes as $size) {
+            $srcset[] = $this->generateImageUrl($url, $size).' '.$size.'w';
+        }
+
+        return implode(', ', $srcset);
+    }
+
+    private function generateImageUrl(string $url, int $width): string
+    {
+        // Generate the image URL for the specified width
+        $filename = pathinfo($url, PATHINFO_FILENAME).'-'.$width.'w.'.pathinfo($url, PATHINFO_EXTENSION);
+
+        return Storage::disk(Prezet::getPrezetDisk())->url('images/' . $filename);
     }
 }

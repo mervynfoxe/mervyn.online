@@ -160,12 +160,14 @@ return [
             'name' => 'Mervyn Fox',
             'url' => 'https://mervyn.online',
             'image' => '',
+            'bio' => '',
         ],
         'mervyn' => [
             '@type' => 'Person',
             'name' => 'Mervyn Fox',
             'url' => 'https://mervyn.online',
             'image' => '',
+            'bio' => '',
         ],
     ],
 

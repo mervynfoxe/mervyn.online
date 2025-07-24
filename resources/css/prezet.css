@@ -1,6 +1,7 @@
-@import './_components.css' layer(base);
+@layer reset, base, theme, components, utilities;
 
-@import 'tailwindcss';
+@import './_components.css' layer(components);
+@import 'tailwindcss' layer(base);
 
 @plugin "@tailwindcss/typography";
 

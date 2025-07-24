@@ -10,6 +10,9 @@ class CustomFrontmatterData extends FrontmatterData
     #[Rules(['string'])]
     public string $type;
 
+    #[Rules(['string', 'in:article,page,category,video'])]
+    public string $contentType;
+
     #[Rules(['bool'])]
     public bool $comments;
 
