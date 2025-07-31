@@ -40,46 +40,49 @@
                 >
                     {{ $document->frontmatter->title }}
                 </h1>
-                <ul class="flex flex-wrap items-center gap-3 font-medium">
-                    <li class="w-full sm:w-auto dark:text-white">
-                        @if($author['bio'])
-                            <a
-                                href="#author"
-                                class="group flex items-center gap-x-2"
+                @if ($document->frontmatter->type !== 'page')
+                    <ul class="flex flex-wrap items-center gap-3 font-medium">
+                        <li class="w-full sm:w-auto dark:text-white">
+                            @if($author['bio'])
+                                <a
+                                    href="#author"
+                                    class="group flex items-center gap-x-2"
+                                >
+                            @endif
+                            @if($author['image'])
+                                <img
+                                    src="{{ $author['image'] }}"
+                                    alt="{{ $author['name'] }} profile image"
+                                    width="26"
+                                    height="26"
+                                    loading="lazy"
+                                    decoding="async"
+                                    class="h-[26px] w-[26px] rounded bg-zinc-100 object-cover transition-all duration-300 group-hover:opacity-75 dark:bg-zinc-800"
+                                />
+                            @endif
+                            <span
+                                class="group-hover:text-primary transition-all duration-300"
                             >
-                        @endif
-                        @if($author['image'])
-                            <img
-                                src="{{ $author['image'] }}"
-                                alt="{{ $author['name'] }} profile image"
-                                width="26"
-                                height="26"
-                                loading="lazy"
-                                decoding="async"
-                                class="h-[26px] w-[26px] rounded bg-zinc-100 object-cover transition-all duration-300 group-hover:opacity-75 dark:bg-zinc-800"
-                            />
-                        @endif
-                        <span
-                            class="group-hover:text-primary transition-all duration-300"
+                                {{ $author['name'] }}
+                            </span>
+                            @if($author['bio'])
+                                </a>
+                            @endif
+                        </li>
+
+                        <li
+                            class="hidden text-zinc-600 sm:inline-block dark:text-zinc-400"
                         >
-                            {{ $author['name'] }}
-                        </span>
-                        @if($author['bio'])
-                            </a>
-                        @endif
-                    </li>
-                    <li
-                        class="hidden text-zinc-600 sm:inline-block dark:text-zinc-400"
-                    >
-                        —
-                    </li>
-                    <li
-                        class="flex items-center gap-1 text-zinc-600 dark:text-zinc-400"
-                    >
-                        <x-prezet.icon-calendar class="size-5" />
-                        <span>{{ $document->createdAt->format('F j, Y') }}</span>
-                    </li>
-                </ul>
+                            —
+                        </li>
+                        <li
+                            class="flex items-center gap-1 text-zinc-600 dark:text-zinc-400"
+                        >
+                            <x-prezet.icon-calendar class="size-5" />
+                            <span>{{ $document->createdAt->format('F j, Y') }}</span>
+                        </li>
+                    </ul>
+                @endif
             </div>
             {{-- Hero Image --}}
             {{-- TMP: disable this --}}
