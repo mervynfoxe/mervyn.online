@@ -37,6 +37,7 @@
             <div class="container m-auto">
                 {{ $slot }}
             </div>
+            <x-prezet.footer />
         </div>
     </body>
 </html>

@@ -143,7 +143,7 @@
                 </div>
             </section>
         @endforeach
-        <div class="pb-12">
+        <div class="pb-6">
             {{ $docs->links() }}
         </div>
     </div>
