@@ -1,5 +1,5 @@
 <header
-    class="sticky top-0 z-50 mb-2 shadow-md bg-gray-400 px-4 py-5 sm:px-6 lg:px-8 dark:bg-zinc-800"
+    class="sticky top-0 z-50 mb-2 shadow-md bg-gray-300 px-4 py-5 sm:px-6 lg:px-8 dark:bg-zinc-800"
 >
     <div class="grid grid-cols-12">
         <div
@@ -73,7 +73,7 @@
                     title="Homepage"
                     href="{{ route('app.home') }}"
                 >
-                    <x-bi-house-door class="h-6 w-6 fill-gray-400 dark:fill-gray-200 group-hover:fill-gray-500" />
+                    <x-bi-house-door class="h-6 w-6 fill-gray-500 dark:fill-gray-200 group-hover:fill-gray-900 dark:group-hover:fill-gray-400" />
                 </a>
                 <a
                     class="group"
@@ -82,7 +82,7 @@
                     href="https://github.com/mervynfoxe/mervyn.online"
                     target="_blank"
                 >
-                    <x-bi-github class="h-6 w-6 fill-gray-400 dark:fill-gray-200 group-hover:fill-gray-500" />
+                    <x-bi-github class="h-6 w-6 fill-gray-500 dark:fill-gray-200 group-hover:fill-gray-900 dark:group-hover:fill-gray-400" />
                 </a>
 
                 {{-- <button

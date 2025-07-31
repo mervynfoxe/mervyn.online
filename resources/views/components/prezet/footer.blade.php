@@ -1,5 +1,5 @@
 <footer
-    class="bottom-0 mt-2 shadow-md bg-gray-400 px-4 py-5 sm:px-6 lg:px-8 dark:bg-zinc-800"
+    class="bottom-0 mt-2 shadow-md bg-gray-300 px-4 py-5 sm:px-6 lg:px-8 dark:bg-zinc-800"
 >
     <div class="grid grid-cols-12">
         <div
