@@ -1,10 +1,12 @@
-@import './_components.css' layer(base);
+@layer reset, base, theme, components, utilities;
 
-@import 'tailwindcss';
+@import './_components.css' layer(components);
+@import 'tailwindcss' layer(base);
 
 @plugin "@tailwindcss/typography";
 
-/*@config "./../../tailwind.prezet.config.js";*/
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
 @theme {
     --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
