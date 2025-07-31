@@ -6,8 +6,37 @@
             class="col-span-12 flex flex-none flex-wrap items-center justify-between xl:col-span-10 xl:col-start-2"
         >
             <div class="relative flex gap-4 justify-between grow basis-0 items-center text-sm text-gray-900 dark:text-gray-100">
-                <p>&copy;2014-<?= date("Y") ?> Ren Mervyn Fox</p>
-                <p><a target="_blank" href="https://prezet.com">Powered by Prezet</a></p>
+                <div>
+                &copy;2014-<?= date("Y") ?> Ren Mervyn Fox
+                </div>
+                <div class="grow">
+                    <nav class="flex gap-4">
+                        <a
+                            href="{{ route('prezet.index') }}/about"
+                            class="inline-block"
+                        >
+                    <span
+                        class="text-gray-900 dark:text-gray-300"
+                    >
+                        About
+                    </span>
+                        </a>
+                        <a
+                            aria-label="Home"
+                            href="{{ route('prezet.index') }}/shoutbox"
+                            class="inline-block"
+                        >
+                    <span
+                        class="text-gray-900 dark:text-gray-300"
+                    >
+                        Shoutbox
+                    </span>
+                        </a>
+                    </nav>
+                </div>
+                <div>
+                    <a target="_blank" href="https://prezet.com">Powered by Prezet</a>
+                </div>
             </div>
         </div>
     </div>
