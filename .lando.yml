@@ -3,7 +3,8 @@ recipe: laravel
 config:
   webroot: public
   php: '8.3'
-  via: apache
+  via: apache:2.4
+  database: mariadb:11.5
   cache: redis
   xdebug: 'develop,debug'
 
@@ -14,11 +15,10 @@ services:
     config:
       php: .lando/config/php.ini
   node:
-    type: node:20
+    type: node:23
     scanner: false
     ports:
       - 3009:3009
-  database: disabled
 
 proxy:
   appserver:
