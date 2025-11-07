@@ -10,7 +10,7 @@ up a raw Docker container or use another dev tool, feel free to adapt these step
 1. Install and set up [Lando](https://lando.dev/) and its requirements.
 2. Clone and enter this repository:
     ```shell
-    $ git clone https://github.com/mervynfoxe/mervyn.online.git
+    $ git clone https://git.mervyn.online/fox/mervyn.online.git
     $ cd mervyn.online
     ```
 4. Copy the environment definitions file, and modify the `APP_URL` to your Lando URL.

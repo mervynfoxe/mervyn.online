@@ -77,12 +77,12 @@
                 </a>
                 <a
                     class="group"
-                    aria-label="View on GitHub"
-                    title="View on GitHub"
-                    href="https://github.com/mervynfoxe/mervyn.online"
+                    aria-label="View source"
+                    title="View source"
+                    href="https://git.mervyn.online/fox/mervyn.online"
                     target="_blank"
                 >
-                    <x-bi-github class="h-6 w-6 fill-gray-500 dark:fill-gray-200 group-hover:fill-gray-900 dark:group-hover:fill-gray-400" />
+                    <x-bi-git class="h-6 w-6 fill-gray-500 dark:fill-gray-200 group-hover:fill-gray-900 dark:group-hover:fill-gray-400" />
                 </a>
 
                 {{-- <button
