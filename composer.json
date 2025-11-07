@@ -27,7 +27,7 @@
     ],
     "license": "GPL-3.0-only",
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "ext-gd": "*",
         "andreiio/blade-remix-icon": "^3.6",
         "codeat3/blade-forkawesome": "^1.11",
