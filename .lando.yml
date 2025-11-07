@@ -2,7 +2,7 @@ name: mervyn-online
 recipe: laravel
 config:
   webroot: public
-  php: '8.3'
+  php: '8.4'
   via: apache:2.4
   database: mariadb:11.5
   cache: redis

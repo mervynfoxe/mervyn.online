@@ -22,11 +22,11 @@
                 'panel_links' => NULL
             ),
             array(
-                'url' => 'https://yiff.life/@mervyn',
-                'icon_buk' => 'ri-mastodon-fill',
+                'url' => 'https://gts.mervyn.online/@fox',
+                'icon_buk' => 'forkawesome-fediverse',
                 'id' => 'fedi-link',
                 'alt' => 'mastodon',
-                'title' => '@mervyn@yiff.life on Mastodon',
+                'title' => '@fox@mervyn.online on Fedi',
                 'rel' => 'me',
                 'panel_links' => NULL
             ),
@@ -94,14 +94,14 @@
         'public' => [
             'panel-other-links' => array(
                 array(
-                    'label' => 'Tumblr',
-                    'url' => 'https://tumblr.mervyn.online/',
-                    'title' => 'mervynfoxe',
+                    'label' => 'Code Forge',
+                    'url' => 'https://git.mervyn.online/fox',
+                    'title' => 'fox',
                     'rel' => 'me'
                 ),
                 array(
-                    'label' => 'Twitter',
-                    'url' => 'https://twitter.com/MervynFoxe',
+                    'label' => 'Tumblr',
+                    'url' => 'https://tumblr.mervyn.online/',
                     'title' => 'mervynfoxe',
                     'rel' => 'me'
                 ),
@@ -131,6 +131,12 @@
                     'label' => 'Battle.net',
                     'url' => NULL,
                     'title' => 'MervynFoxe#1946'
+                ),
+                array(
+                    'label' => 'Twitter',
+                    'url' => 'https://twitter.com/MervynFoxe',
+                    'title' => 'mervynfoxe',
+                    'rel' => 'me'
                 ),
                 array(
                     'label' => 'Email',

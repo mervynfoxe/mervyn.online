@@ -18,6 +18,7 @@ class LandingController extends Controller
         ],
         'professional' => [
             'renfox.online',
+            'www.renfox.online',
             'dev.renfox.online',
             'renfox.lndo.site',
         ]
