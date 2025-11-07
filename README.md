@@ -10,7 +10,7 @@ up a raw Docker container or use another dev tool, feel free to adapt these step
 1. Install and set up [Lando](https://lando.dev/) and its requirements.
 2. Clone and enter this repository:
     ```shell
-    $ git clone https://github.com/mervynfoxe/mervyn.online.git
+    $ git clone https://git.mervyn.online/fox/mervyn.online.git
     $ cd mervyn.online
     ```
 4. Copy the environment definitions file, and modify the `APP_URL` to your Lando URL.
@@ -45,3 +45,12 @@ I have included a shell script and two Lando commands to help deploy the site.
 Create an override Landofile (e.g. `.lando.local.yml`) and use it to hook into the `deploy-dev` and `deploy-prod`
 commands, setting the environment variables as noted in the main Landofile. Calling these
 commands will build the site and deploy its production files to the specified server/directory.
+
+## Development
+The [canonical repository](https://git.mervyn.online/fox/mervyn.online) for this site is hosted on my own server, which is publicly accessible but not open to user registration. It is mirrored on [GitHub](https://github.com/mervynfoxe/mervyn.online) and [Codeberg](https://codeberg.org/mervynfoxe/mervyn.online), as well as various other Git hosts, though I only check those listed here for issues/PRs.
+
+Please base any features/enhancements or non-critical fixes on the `develop` branch, and any important or security-focused hotfixes on `main`. For sensitive or high security issues, please contact or email a patch to me directly.
+
+**My preferred method of accepting patches is via mailing list at [~mervynfoxe/site-patches@lists.sr.ht](mailto:~mervynfoxe/site-patches@lists.sr.ht)**, but I may review PRs opened on the mirrors for applying locally.
+
+If you need help sending patches over email, check out [git-send-email.io](https://git-send-email.io/).
