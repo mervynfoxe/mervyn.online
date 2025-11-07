@@ -94,9 +94,9 @@
         'public' => [
             'panel-other-links' => array(
                 array(
-                    'label' => 'Codeberg',
-                    'url' => 'https://codeberg.org/mervynfoxe',
-                    'title' => 'mervynfoxe',
+                    'label' => 'Code Forge',
+                    'url' => 'https://git.mervyn.online/fox',
+                    'title' => 'fox',
                     'rel' => 'me'
                 ),
                 array(
