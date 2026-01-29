@@ -2,7 +2,7 @@ Application code is licensed separately from website content.
 
 Content (blog posts and associated metadata, content hard-coded within view
 templates, and other text/visuals that are presented to the end-user as
-content) are Copyright (c) 2024 Ren Mervyn Fox, All Rights Reserved.
+content) are Copyright (c) 2026 Ren Mervyn Fox, All Rights Reserved.
 
 Application code and configuration is distributed and licensed under the MIT
 license, as defined below.
@@ -10,7 +10,7 @@ license, as defined below.
 ---
 ## MIT License
 
-Copyright (c) 2024 Ren Mervyn Fox
+Copyright (c) 2026 Ren Mervyn Fox
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
