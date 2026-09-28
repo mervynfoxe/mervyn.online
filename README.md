@@ -47,7 +47,4 @@ commands, setting the environment variables as noted in the main Landofile. Call
 commands will build the site and deploy its production files to the specified server/directory.
 
 ## Contributing
-The [canonical repository](https://git.mervyn.online/fox/mervyn.online) for this site is hosted on my own server, which is publicly accessible but not open to user registration. It is mirrored on [GitHub](https://github.com/mervynfoxe/mervyn.online) and [Codeberg](https://codeberg.org/mervynfoxe/mervyn.online), as well as various other Git hosts, though I only check those listed here for issues/PRs.
-
-
-**My preferred method of accepting patches is via email.** See my [.profile readme](https://git.mervyn.online/fox?tab=overview#contributing-patches) for details.
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
